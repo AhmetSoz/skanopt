@@ -1,0 +1,14 @@
+# Ignore heavy raw materials
+belgeler/
+videolar/
+görseller/
+özellikler bizim belgeler/
+
+# Ignore scratch and logs
+scratch/
+.tempmediaStorage/
+.system_generated/
+
+# OS files
+Thumbs.db
+.DS_Store

@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title data-i18n="meta.title">SKANOPT · Optik Ölçüm Sistemleri | Döner Tablalı, Telesentrik 2D Ölçüm</title>
+<meta name="description" data-i18n="meta.desc" content="SKANOPT yerli üretim telesentrik 2D optik ölçüm sistemleri: 360° döner tabla, alan tarayan tek çekim, marka bağımsız PLC/robot entegrasyonu, kullanıcı kalibrasyonu ve ~4 hafta teslim. Otomotiv, beyaz eşya, implant ve hassas kalite kontrol için.">
+<meta name="theme-color" content="#f26a1b">
+<meta name="robots" content="index,follow">
+
+<!-- Open Graph / Twitter -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="SKANOPT">
+<meta property="og:title" content="SKANOPT · Optik Ölçüm Sistemleri">
+<meta property="og:description" content="Döner tablalı, alan tarayan, PLC entegreli yerli optik ölçüm sistemleri. ~4 hafta teslim.">
+<meta property="og:image" content="assets/img/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- favicon -->
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/img/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+
+<!-- fontlar -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/styles.css">
+
+<!-- JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Organization",
+  "name":"SKANOPT",
+  "description":"Yerli üretim telesentrik 2D optik boyutsal ölçüm sistemleri.",
+  "url":"https://www.skanopt.com",
+  "logo":"https://www.skanopt.com/assets/img/apple-touch-icon.png",
+  "makesOffer":{"@type":"Product","name":"SKANOPT Optik Ölçüm Sistemi","category":"Optik Boyutsal Ölçüm Cihazı"}
+}
+</script>
+</head>
+<body>
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- ===================== HEADER ===================== -->
+<header class="header" id="header">
+  <div class="header__inner">
+    <a href="#top" class="brand" aria-label="SKANOPT">
+      <svg class="brand__mark" viewBox="0 0 40 40" aria-hidden="true">
+        <circle cx="20" cy="20" r="11" fill="none" stroke="#f26a1b" stroke-width="2.6"/>
+        <circle cx="20" cy="20" r="5"  fill="none" stroke="#f26a1b" stroke-width="2.6"/>
+        <g stroke="#f26a1b" stroke-width="2.6" stroke-linecap="round">
+          <line x1="20" y1="3" x2="20" y2="7.5"/><line x1="20" y1="32.5" x2="20" y2="37"/>
+          <line x1="3" y1="20" x2="7.5" y2="20"/><line x1="32.5" y1="20" x2="37" y2="20"/>
+        </g>
+        <circle cx="20" cy="20" r="2.4" fill="#1d2531"/>
+      </svg>
+      <span><b class="b-skan">SKAN</b><b class="b-opt">OPT</b></span>
+    </a>
+
+    <nav class="nav" aria-label="Ana menü">
+      <a href="#neden" data-i18n="nav.why">Neden SKANOPT</a>
+      <a href="#seriler" data-i18n="nav.series">Seriler</a>
+      <a href="#nasil" data-i18n="nav.how">Nasıl Çalışır</a>
+      <a href="#otomasyon" data-i18n="nav.automation">Otomasyon</a>
+      <a href="#yazilim" data-i18n="nav.software">Yazılım</a>
+      <a href="#karsilastirma" data-i18n="nav.compare">Karşılaştırma</a>
+      <a href="#sektorler" data-i18n="nav.sectors">Sektörler</a>
+    </nav>
+
+    <div class="header__actions">
+      <div class="lang" role="group" aria-label="Dil / Language">
+        <button data-lang="tr" class="active">TR</button>
+        <button data-lang="en">EN</button>
+      </div>
+      <a href="#iletisim" class="btn btn-primary" data-i18n="cta.demo">Demo Talep Et</a>
+      <button class="burger" id="burger" aria-label="Menü" aria-expanded="false"><span></span></button>
+    </div>
+  </div>
+</header>
+
+<!-- mobil menü -->
+<div class="mobile-nav" id="mobileNav">
+  <a href="#neden" data-i18n="nav.why">Neden SKANOPT</a>
+  <a href="#seriler" data-i18n="nav.series">Seriler</a>
+  <a href="#nasil" data-i18n="nav.how">Nasıl Çalışır</a>
+  <a href="#otomasyon" data-i18n="nav.automation">Otomasyon</a>
+  <a href="#yazilim" data-i18n="nav.software">Yazılım</a>
+  <a href="#karsilastirma" data-i18n="nav.compare">Karşılaştırma</a>
+  <a href="#sektorler" data-i18n="nav.sectors">Sektörler</a>
+  <a href="#iletisim" data-i18n="nav.contact">İletişim</a>
+  <a href="#iletisim" class="btn btn-primary btn-block" data-i18n="cta.demo">Demo Talep Et</a>
+</div>
+
+<main id="top">
+
+<!-- ===================== HERO ===================== -->
+<section class="hero">
+  <div class="container hero__grid">
+    <div class="hero__content">
+      <span class="eyebrow" data-i18n="hero.badge">Yerli Üretim · Telesentrik 2D Ölçüm</span>
+      <h1 class="hero__title">
+        <span data-i18n="hero.t1">Optik ölçümde</span>
+        <span class="text-brand" data-i18n="hero.t2">hassas, yerli</span>
+        <span data-i18n="hero.t3">çözüm</span>
+      </h1>
+      <p class="hero__sub" data-i18n="hero.sub">Döner tablalı, alan tarayan ve PLC entegreli optik boyutsal ölçüm sistemleri. Keyence muadili teknoloji; yerli üretim, hızlı teslim ve Türkçe destekle.</p>
+
+      <div class="hero__cta">
+        <a href="#iletisim" class="btn btn-accent btn-lg" data-i18n="cta.demo">Demo Talep Et</a>
+        <a href="#seriler" class="btn btn-ghost btn-lg" data-i18n="cta.series">Serileri İncele</a>
+      </div>
+
+      <div class="hero__stats">
+        <div class="stat"><div class="stat__num" data-count="0.001" data-decimals="3">0.001<span class="u">µm</span></div><div class="stat__label" data-i18n="hero.stat1">Hassasiyete kadar (VRE)</div></div>
+        <div class="stat"><div class="stat__num" data-count="360">360<span class="u">°</span></div><div class="stat__label" data-i18n="hero.stat2">Döner tabla</div></div>
+        <div class="stat"><div class="stat__num" data-count="4" data-prefix="~">~4<span class="u" data-i18n="hero.week">hafta</span></div><div class="stat__label" data-i18n="hero.stat3">Türkiye'ye teslim</div></div>
+      </div>
+
+      <div class="hero__trust">
+        <span class="tg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="hero.trust1">Marka bağımsız PLC / robot</span></span>
+        <span class="tg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="hero.trust2">Kullanıcı kalibrasyonu</span></span>
+        <span class="tg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="hero.trust3">Türkçe üretici desteği</span></span>
+      </div>
+    </div>
+
+    <div class="hero__media">
+      <span class="glow" aria-hidden="true"></span>
+      <div class="frame">
+        <video id="heroVideo" poster="assets/img/automation-poster.jpg?v=2" muted loop autoplay playsinline preload="metadata">
+          <source src="assets/video/automation.mp4?v=2" type="video/mp4">
+          <source src="assets/video/automation.webm?v=2" type="video/webm">
+        </video>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== NEDEN ===================== -->
+<section class="section" id="neden">
+  <div class="container">
+    <div class="section__head center" data-reveal>
+      <span class="eyebrow" data-i18n="why.eyebrow">Neden SKANOPT</span>
+      <h2 class="section__title" data-i18n="why.title">Rakiplerin sunmadığı avantajlar</h2>
+      <p class="section__sub" data-i18n="why.sub">Pazar lideri sistemlerin teknolojisini; döner tabla, esnek entegrasyon ve yerli üretim avantajlarıyla birleştiriyoruz.</p>
+    </div>
+    <div class="grid grid-3" id="whyGrid" data-reveal></div>
+  </div>
+</section>
+
+<!-- ===================== SERİLER ===================== -->
+<section class="section section--soft" id="seriler">
+  <div class="container">
+    <div class="section__head" data-reveal>
+      <span class="eyebrow" data-i18n="series.eyebrow">Ürün Serileri</span>
+      <h2 class="section__title" data-i18n="series.title">Her parça ve hat için doğru model</h2>
+      <p class="section__sub" data-i18n="series.sub">Kompakt döner tablalıdan büyük parça ve tam otomasyona kadar beş ürün ailesi. Tüm modeller IO hazır gelir.</p>
+    </div>
+    <div class="tabs" id="seriesTabs" role="tablist" data-reveal></div>
+    <div id="seriesPanels" data-reveal></div>
+  </div>
+</section>
+
+<!-- ===================== NASIL ÇALIŞIR ===================== -->
+<section class="section" id="nasil">
+  <div class="container">
+    <div class="section__head center" data-reveal>
+      <span class="eyebrow" data-i18n="how.eyebrow">Nasıl Çalışır</span>
+      <h2 class="section__title" data-i18n="how.title">Parçadan sonuca dört adımda</h2>
+      <p class="section__sub" data-i18n="how.sub">Telesentrik optik ve sub-piksel görüntü işleme ile operatör hatası olmadan, saniyeler içinde ölçüm.</p>
+    </div>
+    <div class="steps" id="stepsGrid" data-reveal></div>
+  </div>
+</section>
+
+<!-- ===================== OTOMASYON ===================== -->
+<section class="section section--soft" id="otomasyon">
+  <div class="container auto__grid">
+    <div data-reveal>
+      <span class="eyebrow" data-i18n="auto.eyebrow">Robot & Otomasyon</span>
+      <h2 class="section__title" data-i18n="auto.title">Hattınıza sorunsuz entegre</h2>
+      <p class="section__sub" data-i18n="auto.sub">Marka bağımsız PLC, robot ve konveyör uyumu. Ölçüm sonucunu doğrudan tezgâha gönderin, operatör müdahalesini sıfıra indirin.</p>
+      <div class="auto__points" id="autoPoints"></div>
+    </div>
+    <div data-reveal style="display:grid;gap:16px">
+      <div class="video-frame">
+        <video id="autoVideo" poster="assets/img/cell-poster.jpg" muted loop autoplay playsinline preload="metadata">
+          <source src="assets/video/cell.webm" type="video/webm">
+          <source src="assets/video/cell.mp4" type="video/mp4">
+        </video>
+        <div class="tag"><span class="live"></span><span data-i18n="auto.videoTag2">Robot hücresi — canlı</span></div>
+      </div>
+      <div class="video-frame">
+        <video muted loop autoplay playsinline preload="metadata">
+          <source src="assets/video/automation.mp4?v=2" type="video/mp4">
+          <source src="assets/video/automation.webm?v=2" type="video/webm">
+        </video>
+        <div class="tag"><span class="live"></span><span data-i18n="auto.videoTag">Canlı inline ölçüm</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== YAZILIM ===================== -->
+<section class="section" id="yazilim">
+  <div class="container">
+    <div class="section__head center" data-reveal>
+      <span class="eyebrow" data-i18n="sw.eyebrow">Z-Measure Yazılımı</span>
+      <h2 class="section__title" data-i18n="sw.title">Ölçümden raporlamaya tek arayüz</h2>
+      <p class="section__sub" data-i18n="sw.sub">Onlarca ölçüm tipi, sub-piksel hassasiyet, otomatik raporlama ve SPC. Türkçe ve İngilizce arayüz.</p>
+    </div>
+    <h3 class="apps" style="text-align:center;font-size:1rem;color:var(--ink-soft);margin-bottom:14px" data-i18n="sw.measHead" data-reveal>Desteklenen ölçüm tipleri</h3>
+    <div class="chips" style="justify-content:center" id="measChips" data-reveal></div>
+    <div class="grid grid-4" id="swCards" data-reveal></div>
+    <div class="badges" style="justify-content:center" id="swBadges" data-reveal></div>
+  </div>
+</section>
+
+<!-- ===================== KARŞILAŞTIRMA ===================== -->
+<section class="section section--soft" id="karsilastirma">
+  <div class="container">
+    <div class="section__head center" data-reveal>
+      <span class="eyebrow" data-i18n="cmp.eyebrow">Rakip Karşılaştırma</span>
+      <h2 class="section__title" data-i18n="cmp.title">Neden SKANOPT öne çıkıyor?</h2>
+      <p class="section__sub" data-i18n="cmp.sub">Pazar lideri ve yerli/ithal alternatiflerle teknik ve ticari karşılaştırma.</p>
+    </div>
+    <div class="compare-wrap" data-reveal>
+      <table class="compare" id="compareTable"></table>
+    </div>
+    <p class="compare-note" data-reveal>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v5M12 16h.01"/></svg>
+      <span data-i18n="cmp.note">360° döner tablaya sahip tek pahalı alternatif ViciVision (30.000 €+) iken, SKANOPT bu özelliği rekabetçi fiyatla sunar.</span>
+    </p>
+  </div>
+</section>
+
+<!-- ===================== SEKTÖRLER ===================== -->
+<section class="section" id="sektorler">
+  <div class="container">
+    <div class="section__head center" data-reveal>
+      <span class="eyebrow" data-i18n="sec.eyebrow">Sektörler & Uygulamalar</span>
+      <h2 class="section__title" data-i18n="sec.title">Hassas ölçüm gereken her yerde</h2>
+      <p class="section__sub" data-i18n="sec.sub">Otomotiv yan sanayiden implant ve beyaz eşyaya, kalite kontrolün kritik olduğu sektörlere yönelik.</p>
+    </div>
+    <div class="grid grid-4" id="sectorGrid" data-reveal></div>
+    <div class="apps" data-reveal>
+      <h3 data-i18n="sec.appsHead">Örnek ölçülen parçalar</h3>
+      <div class="apps__strip" id="appsStrip"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== REFERANSLAR ===================== -->
+<section class="section section--soft" id="referanslar">
+  <div class="container">
+    <div class="section__head center" data-reveal>
+      <span class="eyebrow" data-i18n="ref.eyebrow">Global Pazarlar</span>
+      <h2 class="section__title" data-i18n="ref.title">Türkiye'den dünyaya</h2>
+      <p class="section__sub" data-i18n="ref.sub">Yerli pazarda aktif satış, Almanya'ya ihracat ve ABD ortaklığı ile büyüyen bir ağ.</p>
+    </div>
+    <div class="refs" id="refsGrid" data-reveal></div>
+    <p class="ref-note" data-i18n="ref.note" data-reveal>CE sertifikasyon süreci devam etmektedir. Distribütör ve referans bilgileri talep üzerine paylaşılır.</p>
+  </div>
+</section>
+
+<!-- ===================== İLETİŞİM ===================== -->
+<section class="section" id="iletisim">
+  <div class="container">
+    <div class="section__head center" data-reveal>
+      <span class="eyebrow" data-i18n="contact.eyebrow">İletişim</span>
+      <h2 class="section__title" data-i18n="contact.title">Demo veya teklif için bize ulaşın</h2>
+      <p class="section__sub" data-i18n="contact.sub">Uygulamanızı paylaşın, doğru konfigürasyonu birlikte belirleyelim. Türkiye'ye ~4 haftada teslim.</p>
+    </div>
+
+    <div class="contact__grid">
+      <form class="form" id="contactForm" data-reveal novalidate>
+        <div class="form__row">
+          <div class="field"><label for="f-name" data-i18n="contact.name">Ad Soyad</label><input id="f-name" name="name" type="text" required></div>
+          <div class="field"><label for="f-company" data-i18n="contact.company">Firma</label><input id="f-company" name="company" type="text"></div>
+        </div>
+        <div class="form__row">
+          <div class="field"><label for="f-email" data-i18n="contact.email">E-posta</label><input id="f-email" name="email" type="email" required></div>
+          <div class="field"><label for="f-phone" data-i18n="contact.phone">Telefon</label><input id="f-phone" name="phone" type="tel"></div>
+        </div>
+        <div class="field"><label for="f-msg" data-i18n="contact.message">Mesajınız / uygulamanız</label><textarea id="f-msg" name="message" required></textarea></div>
+        <button type="submit" class="btn btn-accent btn-lg btn-block" data-i18n="contact.submit">Talebi Gönder</button>
+        <p class="form__note" data-i18n="contact.note">Bilgileriniz yalnızca size dönüş yapmak için kullanılır.</p>
+        <div class="form__msg" id="formMsg" role="status"></div>
+      </form>
+
+      <div>
+        <div class="contact__methods" id="contactMethods"></div>
+        <div class="contact__cta">
+          <h3 data-i18n="contact.ctaTitle">Hızlı yanıt mı istiyorsunuz?</h3>
+          <p data-i18n="contact.ctaText">WhatsApp üzerinden ulaşın, uygulamanıza en uygun modeli birlikte belirleyelim.</p>
+          <a href="#" id="waCta" class="btn btn-block" style="background:#fff;color:var(--brand)" data-i18n="contact.ctaBtn">WhatsApp'tan Yaz</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <div class="brand"><b class="b-skan">SKAN</b><b class="b-opt">OPT</b></div>
+        <p class="footer__about" data-i18n="footer.about">Yerli üretim telesentrik 2D optik ölçüm sistemleri. Döner tablalı, alan tarayan ve PLC entegreli — hassas kalite kontrol için.</p>
+      </div>
+      <div>
+        <h4 data-i18n="footer.quick">Hızlı Linkler</h4>
+        <ul class="footer__links">
+          <li><a href="#neden" data-i18n="nav.why">Neden SKANOPT</a></li>
+          <li><a href="#seriler" data-i18n="nav.series">Seriler</a></li>
+          <li><a href="#yazilim" data-i18n="nav.software">Yazılım</a></li>
+          <li><a href="#karsilastirma" data-i18n="nav.compare">Karşılaştırma</a></li>
+          <li><a href="#iletisim" data-i18n="nav.contact">İletişim</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-i18n="footer.contactH">İletişim</h4>
+        <ul class="footer__contact" id="footerContact"></ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© <span id="year"></span> SKANOPT. <span data-i18n="footer.rights">Tüm hakları saklıdır.</span></span>
+      <span data-i18n="footer.disclaimer">Optik ölçüm sistemleri · Türkiye</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
