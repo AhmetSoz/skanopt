@@ -12,3 +12,9 @@ scratch/
 # OS files
 Thumbs.db
 .DS_Store
+desktop.ini
+
+# Editors
+.vscode/
+.idea/
+*.log

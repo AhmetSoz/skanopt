@@ -34,47 +34,47 @@ window.I18N = {
   /* ===================== TÜRKÇE ===================== */
   tr:{
     meta:{
-      title:"SKANOPT · Optik Ölçüm Sistemleri | Döner Tablalı, Telesentrik 2D Ölçüm",
-      desc:"SKANOPT yerli üretim telesentrik 2D optik ölçüm sistemleri: 360° döner tabla, alan tarayan tek çekim, marka bağımsız PLC/robot entegrasyonu, kullanıcı kalibrasyonu ve ~4 hafta teslim."
+      title:"SKANOPT · Telesentrik Optik Ölçüm Modülleri | 2D Boyutsal Muayene",
+      desc:"SKANOPT modüler telesentrik 2D optik ölçüm modülleri: yüksek çözünürlüklü tek çekim alan tarama, marka bağımsız PLC ve robot entegrasyonu, kullanıcı dostu kalibrasyon ve sipariş bazlı kısa teslim süreleri."
     },
     nav:{why:"Neden SKANOPT",series:"Seriler",how:"Nasıl Çalışır",automation:"Otomasyon",software:"Yazılım",compare:"Karşılaştırma",sectors:"Sektörler",contact:"İletişim"},
     cta:{demo:"Demo Talep Et",quote:"Teklif Al",series:"Serileri İncele"},
     hero:{
-      badge:"Yerli Üretim · Telesentrik 2D Ölçüm",
-      t1:"Optik ölçümde",t2:"hassas, yerli",t3:"çözüm",
-      sub:"Döner tablalı, alan tarayan ve PLC entegreli optik boyutsal ölçüm sistemleri. Pazar lideri muadili teknoloji; yerli üretim, hızlı teslim ve Türkçe destekle.",
-      stat1:"Hassasiyete kadar (VRE)",stat2:"Döner tabla",stat3:"Türkiye'ye teslim",week:"hafta",
-      trust1:"Marka bağımsız PLC / robot",trust2:"Kullanıcı kalibrasyonu",trust3:"Türkçe üretici desteği",
+      badge:"Yerli Üretim · Telesentrik 2D Ölçüm Sensörü",
+      t1:"Optik ölçümde",t2:"hassas, modüler",t3:"çözüm",
+      sub:"Yüksek hassasiyetli boyutsal kontrol için modüler telesentrik 2D optik ölçüm sensörleri. Entegre aydınlatma ve kamera ünitesiyle üretim hattına veya robot hücresine kolay entegrasyon.",
+      stat1:"Yüksek Hassasiyet (VRE)",stat2:"Ölçüm Süresi",stat3:"Maks. Çözünürlük",secUnit:"sn",resolUnit:"MP",
+      trust1:"Marka bağımsız PLC / robot entegrasyonu",trust2:"Kullanıcı kalibrasyonu ve arayüzü",trust3:"Türkiye'de doğrudan üretici desteği",
       f1s:"Tek çekim",f1b:"20 × 20 mm alan",f2s:"Ölçüm süresi"
     },
     why:{
       eyebrow:"Neden SKANOPT",title:"Rakiplerin sunmadığı avantajlar",
-      sub:"Pazar lideri sistemlerin teknolojisini; döner tabla, esnek entegrasyon ve yerli üretim avantajlarıyla birleştiriyoruz.",
+      sub:"Yüksek hassasiyetli telesentrik teknolojisini; esnek entegrasyon, kullanıcı kalibrasyonu ve yerli üretim avantajlarıyla sunuyoruz.",
       cards:[
-        {icon:"rotary",t:"360° Döner Tabla",d:"Keyence, OPT ve Janpos'ta yok. Şaft ve mil ölçümünü tek kurulumda, her açıdan yapın."},
-        {icon:"scan",t:"Alan Tarayan — Tek Çekim",d:"Rakipler çizgi çizgi tarar; SKANOPT 20×20 mm alanı tek çekimde ölçer."},
-        {icon:"plc",t:"Marka Bağımsız Entegrasyon",d:"Siemens, Mitsubishi, Fanuc, Omron; Stäubli ve uFactory robotlarıyla doğrudan çalışır."},
-        {icon:"calib",t:"Kullanıcı Kalibrasyonu",d:"Müşteri yazılım arayüzünden istediği zaman kalibre eder — sabit değil."},
-        {icon:"camera",t:"5–25 MP Kamera Seçeneği",d:"İhtiyacınıza göre çözünürlük. Pazar liderinde maksimum 5 MP iken sizde 25 MP'e kadar."},
-        {icon:"truck",t:"~4 Hafta Yerli Teslim",d:"İthal rakipler 4–16 hafta. Yerli üretim, döviz avantajı ve Türkçe destek."}
+        {icon:"rotary",t:"Modüler & Esnek Yapı",d:"Atölye ortamında, hat kenarında veya doğrudan konveyör/robot hatlarında inline ölçüm için esnek montaj imkanı."},
+        {icon:"scan",t:"Çift Telesentrik Optik (Dual-Telecentric)",d:"Bozulmasız, derin odak alanı ve yüksek çözünürlüklü tek çekim alan tarama teknolojisiyle hatasız ölçüm."},
+        {icon:"plc",t:"PLC ve Robot Entegrasyonu",d:"Siemens, Mitsubishi, Fanuc, Omron gibi popüler PLC'ler ve robot kollarıyla Ethernet/IO üzerinden doğrudan haberleşme."},
+        {icon:"calib",t:"Kullanıcı Dostu Kalibrasyon",d:"Müşterinin yazılım arayüzünden dilediği zaman yapabileceği pratik kalibrasyon altyapısı."},
+        {icon:"camera",t:"Endüstriyel Kamera Çözünürlüğü",d:"İhtiyaca uygun 5 MP ile 25 MP aralığında yüksek çözünürlüklü CMOS sensör yapılandırmaları."},
+        {icon:"truck",t:"Kısa Teslimat Süreleri",d:"Sipariş üzerine esnek üretim planlaması, hızlı yerli teslimat ve doğrudan üreticiden Türkçe teknik destek."}
       ]
     },
     series:{
       eyebrow:"Ürün Serileri",title:"Her parça ve hat için doğru model",
-      sub:"Kompakt döner tablalıdan büyük parça ve tam otomasyona kadar beş ürün ailesi. Tüm modeller IO hazır gelir.",
+      sub:"Kompakt sensör modüllerinden büyük parça ölçüm ve tam otomasyon sistemlerine kadar beş ürün ailesi. Tüm modeller IO hazır gelir.",
       headers:{model:"Model",fovh:"Yatay FOV (mm)",fovv:"Dikey FOV (mm)",acc:"Hassasiyet (µm)"},
       note:"Görüş alanı (FOV) ve hassasiyet değerleri modele göredir. Uygulamanıza özel konfigürasyon için bize ulaşın.",
       order:["V","VR","VRE","W","H"],
       items:{
-        V:{name:"V Serisi",tag:"Kompakt · Alan kamerası",desc:"Kompakt gövde, alan kamerası ve 0.4 saniyede ölçüm. Atölye ve hat kenarı kalite kontrol için ideal.",
-           feats:["0.4 saniyede ölçüm sonucu","Otomasyona uygun, IO hazır gelir","Sistem kalibrasyonlu; kullanıcı kalibrasyonu","Otomatik raporlama + CNC wear offset"]},
-        VR:{name:"VR Serisi",tag:"Döner tabla · Form ölçümü",desc:"V serisinin tüm yetenekleri + 360° döner tabla ile dairesellik, eşmerkezlilik ve ovallik ölçümü.",
-           feats:["Dairesellik, eşmerkezlilik, ovallik ölçümü","360° döner tabla ile şaft/mil ölçümü","Otomasyona uygun, IO hazır","Otomatik raporlama + CNC wear offset"]},
-        VRE:{name:"VRE Serisi",tag:"Ultra hassas · Uzun parça",desc:"Ultra yüksek hassasiyet ve uzun parça ölçümü. Dikeyde 100–600 mm ölçüm boyu.",
-           feats:["0.001 µm'e varan hassasiyet","Dikeyde 100–600 mm ölçüm boyu","VR serisinin tüm özellikleri","Uzun parça ve yüksek hassasiyet uygulamaları"]},
-        W:{name:"W Serisi",tag:"Büyük parça · Çizgisel kamera",desc:"Büyük ve uzun parçalar için. Telesentrik sistemde çizgisel kamera kullanarak hassasiyeti artırır.",
+        V:{name:"V Serisi",tag:"Kompakt · Alan Kamerası",desc:"Kompakt gövde tasarımı, alan kamerası ve 0.4 saniyede ölçüm. Atölye ve hat kenarı kalite kontrol için ideal.",
+           feats:["0.4 saniyede ölçüm sonucu","Otomasyona uygun, IO hazır gelir","Fabrika çıkışlı sistem kalibrasyonu","Otomatik raporlama ve veri entegrasyonu"]},
+        VR:{name:"VR Serisi",tag:"Opsiyonel Döner Tabla Entegrasyonu",desc:"V serisi sensör modülüne entegre 360° döner tabla opsiyonu ile mil, şaft ve dairesel parçalarda dairesellik, eşmerkezlilik ve salgı ölçümü.",
+           feats:["Dairesellik, eşmerkezlilik ve ovallik ölçümü","360° döner tabla entegrasyonu ile şaft/mil ölçümü","Otomasyona uygun, IO hazır arayüz","CNC wear offset ve otomatik raporlama"]},
+        VRE:{name:"VRE Serisi",tag:"Ultra Hassas · Uzun Parça",desc:"Ultra yüksek hassasiyet ve dikeyde 100–600 mm uzun parça ölçüm desteği.",
+           feats:["0.001 µm çözünürlüğe varan hassasiyet","Dikeyde 100–600 mm ölçüm boyu","VR serisi entegrasyon opsiyonları","Uzun parça ve yüksek hassasiyet uygulamaları"]},
+        W:{name:"W Serisi",tag:"Büyük Parça · Çizgisel Kamera",desc:"Büyük ve uzun parçalar için çizgisel (lineer) kamera teknolojisine sahip telecentric sistem.",
            feats:["Büyük ve uzun parça ölçümü","Çizgisel kamera ile artırılmış hassasiyet","Dikeyde 300–1500 mm","WE modelleri ile daha yüksek hassasiyet"]},
-        H:{name:"H Serisi",tag:"Otomasyon · 10 model",desc:"Tam otomasyon odaklı geniş yelpaze. 0.4 saniyede ölçüm, 10 farklı model seçeneği.",
+        H:{name:"H Serisi",tag:"Hat Boyu Otomasyon",desc:"Tam otomasyon odaklı, 0.4 saniyede ölçüm yapabilen geniş modül yelpazesi.",
            feats:["0.4 saniyede ölçüm","Geniş ölçüm aralığı, 10 model","Otomasyona uygun, IO hazır","Sistem + kullanıcı kalibrasyonu"]}
       }
     },
@@ -82,10 +82,10 @@ window.I18N = {
       eyebrow:"Nasıl Çalışır",title:"Parçadan sonuca dört adımda",
       sub:"Telesentrik optik ve sub-piksel görüntü işleme ile operatör hatası olmadan, saniyeler içinde ölçüm.",
       steps:[
-        {t:"Parça Yerleştirme",d:"Parça döner tablaya veya konveyöre yerleştirilir."},
-        {t:"Alan Tarama",d:"20×20 mm alan tek çekimde CMOS sensörle taranır."},
-        {t:"Görüntü İşleme",d:"Z-Measure yazılımı sub-piksel hassasiyetle ölçer."},
-        {t:"Sonuç & Entegrasyon",d:"PLC / robot / CNC'ye wear offset veya OK/NOK sinyali gönderilir."}
+        {t:"Parça Yerleştirme",d:"Parça ölçüm alanına (konveyör veya döner tabla opsiyonuna) yerleştirilir."},
+        {t:"Alan Tarama",d:"Ölçüm alanı tek çekimde yüksek çözünürlüklü CMOS sensörle taranır."},
+        {t:"Görüntü İşleme",d:"Z-Measure yazılımı sub-piksel hassasiyetle boyutsal değerleri çıkarır."},
+        {t:"Sonuç & Entegrasyon",d:"PLC / robot / CNC'ye aşınma telafisi (wear offset) veya OK/NOK sinyali gönderilir."}
       ]
     },
     auto:{
@@ -115,16 +115,16 @@ window.I18N = {
     cmp:{
       eyebrow:"Rakip Karşılaştırma",title:"Neden SKANOPT öne çıkıyor?",
       sub:"Pazar lideri ve yerli/ithal alternatiflerle teknik ve ticari karşılaştırma.",
-      note:"360° döner tablaya sahip tek pahalı alternatif ViciVision (30.000 €+) iken, SKANOPT bu özelliği rekabetçi fiyatla sunar.",
+      note:"Telesentrik optik ölçüm sistemlerinde yerli tasarım, hızlı teknik destek ve yüksek esneklikle rekabetçi çözümler sunuyoruz.",
       feature:"Özellik",
       cols:["Keyence TM-X5000","OPT SmartFlash","Janpos","AZE Otomasyon","SKANOPT"],
       rows:[
-        {label:"Döner Tabla",cells:["❌","❌","❌","◐","✓ 360°"]},
+        {label:"Döner Tabla (Opsiyon)",cells:["❌","❌","❌","◐","✓ Entegre edilebilir"]},
         {label:"Alan Tarama",cells:["Lineer tarama","✓ Alan","Lineer tarama","Video","✓ Tek çekim"]},
         {label:"PLC Esnekliği",cells:["Sadece Mitsubishi","Kısmi","Kısmi","Proje bazlı","Her PLC / robot"]},
         {label:"Kamera (MP)",cells:["Maks. 5 MP","Yüksek","—","Yüksek","5–25 MP"]},
         {label:"Kullanıcı Kalibrasyon",cells:["❌","❌","❌","✓","✓ Yazılım dahil"]},
-        {label:"Teslim Süresi",cells:["4–12 hafta","3–8 hafta","2–6 hafta","8–16 hafta","~4 hafta"]},
+        {label:"Teslim Süresi",cells:["4–12 hafta","3–8 hafta","2–6 hafta","8–16 hafta","Sipariş Bazlı (Hızlı)"]},
         {label:"Yerli Destek",cells:["Bayi","❌","❌","✓","✓ Üretici"]},
         {label:"Fiyat",cells:["$8–25 bin+","$3–10 bin","$1,5–6 bin","€6–30 bin+","Rekabetçi"]}
       ]
@@ -134,7 +134,7 @@ window.I18N = {
       sub:"Otomotiv yan sanayiden implant ve beyaz eşyaya, kalite kontrolün kritik olduğu sektörlere yönelik.",
       appsHead:"Örnek ölçülen parçalar",
       sectors:[
-        {icon:"car",t:"Otomotiv Yan Sanayi",d:"Şaft, piston, valf ve dişli ölçümünde 360° kontrol."},
+        {icon:"car",t:"Otomotiv Yan Sanayi",d:"Şaft, piston, valf ve dişli ölçümünde 360° kontrol opsiyonu."},
         {icon:"appliance",t:"Beyaz Eşya",d:"Yüksek hacimli üretimde hızlı boyutsal kalite kontrol."},
         {icon:"implant",t:"İmplant & Medikal",d:"Yüksek hassasiyet gerektiren tıbbi parça ve iğneler."},
         {icon:"chip",t:"Elektronik & Yarı İletken",d:"Konnektör pinleri, çip ve hassas elektronik parçalar."},
@@ -157,7 +157,7 @@ window.I18N = {
     },
     contact:{
       eyebrow:"İletişim",title:"Demo veya teklif için bize ulaşın",
-      sub:"Uygulamanızı paylaşın, doğru konfigürasyonu birlikte belirleyelim. Türkiye'ye ~4 haftada teslim.",
+      sub:"Uygulamanızı paylaşın, doğru konfigürasyonu birlikte belirleyelim. Türkiye genelinde doğrudan teknik destek.",
       name:"Ad Soyad",company:"Firma",email:"E-posta",phone:"Telefon",message:"Mesajınız / uygulamanız",
       submit:"Talebi Gönder",sending:"Gönderiliyor…",
       ok:"Teşekkürler! Talebiniz alındı, en kısa sürede dönüş yapacağız.",
@@ -167,7 +167,7 @@ window.I18N = {
       ctaTitle:"Hızlı yanıt mı istiyorsunuz?",ctaText:"WhatsApp üzerinden ulaşın, uygulamanıza en uygun modeli birlikte belirleyelim.",ctaBtn:"WhatsApp'tan Yaz"
     },
     footer:{
-      about:"Yerli üretim telesentrik 2D optik ölçüm sistemleri. Döner tablalı, alan tarayan ve PLC entegreli — hassas kalite kontrol için.",
+      about:"Yerli üretim modüler telesentrik 2D optik ölçüm modülleri. Alan tarayan, PLC entegreli ve yüksek hassasiyetli kalite kontrol çözümleri.",
       quick:"Hızlı Linkler",contactH:"İletişim",rights:"Tüm hakları saklıdır.",disclaimer:"Optik ölçüm sistemleri · Türkiye"
     }
   },
@@ -175,47 +175,47 @@ window.I18N = {
   /* ===================== ENGLISH ===================== */
   en:{
     meta:{
-      title:"SKANOPT · Optical Measurement Systems | Rotary-table Telecentric 2D Metrology",
-      desc:"SKANOPT locally manufactured telecentric 2D optical measurement systems: 360° rotary table, single-shot area scan, brand-independent PLC/robot integration, user calibration and ~4-week delivery."
+      title:"SKANOPT · Telecentric Optical Measurement Sensors | 2D Dimensional Inspection",
+      desc:"SKANOPT modular telecentric 2D optical measurement sensors: high-resolution single-shot area scanning, brand-independent PLC and robot integration, user-defined calibration and short lead times."
     },
     nav:{why:"Why SKANOPT",series:"Series",how:"How It Works",automation:"Automation",software:"Software",compare:"Comparison",sectors:"Industries",contact:"Contact"},
     cta:{demo:"Request a Demo",quote:"Get a Quote",series:"Explore Series"},
     hero:{
-      badge:"Locally Made · Telecentric 2D Metrology",
-      t1:"Precise, local",t2:"optical measurement",t3:"solutions",
-      sub:"Rotary-table, area-scanning, PLC-integrated optical dimensional measurement systems. Market-leader-class technology, made locally, delivered fast with manufacturer support.",
-      stat1:"Accuracy up to (VRE)",stat2:"Rotary table",stat3:"Delivery to Türkiye",week:"weeks",
-      trust1:"Brand-independent PLC / robot",trust2:"User calibration",trust3:"Manufacturer support",
+      badge:"Locally Made · Telecentric 2D Metrology Sensor",
+      t1:"Modular, precise",t2:"optical measurement",t3:"solutions",
+      sub:"Modular telecentric 2D optical measurement sensors for high-precision dimensional inspection. Easy integration into production lines or robot cells with integrated lighting and camera units.",
+      stat1:"High Accuracy (VRE)",stat2:"Measurement Speed",stat3:"Max. Resolution",secUnit:"s",resolUnit:"MP",
+      trust1:"Brand-independent PLC / robot integration",trust2:"User-defined calibration interface",trust3:"Manufacturer technical support",
       f1s:"Single shot",f1b:"20 × 20 mm field",f2s:"Measurement time"
     },
     why:{
       eyebrow:"Why SKANOPT",title:"Advantages competitors don't offer",
-      sub:"We combine market-leader technology with a rotary table, flexible integration and local manufacturing.",
+      sub:"We offer high-precision telecentric technology combined with flexible integration, user calibration, and domestic manufacturing advantages.",
       cards:[
-        {icon:"rotary",t:"360° Rotary Table",d:"Not available on Keyence, OPT or Janpos. Measure shafts and pins from every angle in a single setup."},
-        {icon:"scan",t:"Area Scan — Single Shot",d:"Competitors scan line by line; SKANOPT captures a 20×20 mm field in one shot."},
-        {icon:"plc",t:"Brand-Independent Integration",d:"Works directly with Siemens, Mitsubishi, Fanuc, Omron; Stäubli and uFactory robots."},
-        {icon:"calib",t:"User Calibration",d:"Customers calibrate any time from the software interface — not fixed."},
-        {icon:"camera",t:"5–25 MP Camera Options",d:"Resolution to fit your needs. The market leader maxes out at 5 MP; you can go up to 25 MP."},
-        {icon:"truck",t:"~4-Week Local Delivery",d:"Imported rivals take 4–16 weeks. Local production, currency advantage and local support."}
+        {icon:"rotary",t:"Modular & Flexible Design",d:"Flexible mounting options for inline measurements directly on conveyors, robot cells, or offline workshop inspection."},
+        {icon:"scan",t:"Dual-Telecentric Optics",d:"Distortion-free, wide depth of field, and high-resolution single-shot area scanning for error-free metrology."},
+        {icon:"plc",t:"PLC & Robot Integration",d:"Direct communication with popular PLC brands (Siemens, Mitsubishi, Fanuc, Omron) and robot arms via Ethernet/IO."},
+        {icon:"calib",t:"User-Friendly Calibration",d:"Practical calibration infrastructure that customers can perform anytime via the software interface."},
+        {icon:"camera",t:"Industrial Camera Options",d:"High-resolution CMOS sensor configurations ranging from 5 MP to 25 MP tailored to your requirements."},
+        {icon:"truck",t:"Short Lead Times",d:"Flexible production planning based on order, fast delivery, and direct technical support from the manufacturer."}
       ]
     },
     series:{
       eyebrow:"Product Series",title:"The right model for every part and line",
-      sub:"Five product families, from a compact rotary-table unit to large parts and full automation. All models ship IO-ready.",
+      sub:"Five product families, from compact sensor modules to large-part measurement and full automation. All models ship IO-ready.",
       headers:{model:"Model",fovh:"Horizontal FOV (mm)",fovv:"Vertical FOV (mm)",acc:"Accuracy (µm)"},
       note:"Field of view (FOV) and accuracy values depend on the model. Contact us for a configuration tailored to your application.",
       order:["V","VR","VRE","W","H"],
       items:{
-        V:{name:"V Series",tag:"Compact · Area camera",desc:"Compact body, area camera and measurement in 0.4 seconds. Ideal for workshop and line-side quality control.",
-           feats:["Measurement result in 0.4 s","Automation-ready, ships IO-ready","Factory-calibrated; user calibration","Automatic reporting + CNC wear offset"]},
-        VR:{name:"VR Series",tag:"Rotary table · Form measurement",desc:"All V-series capabilities plus a 360° rotary table for roundness, concentricity and ovality.",
-           feats:["Roundness, concentricity, ovality","Shaft/pin measurement with 360° rotary table","Automation-ready, IO-ready","Automatic reporting + CNC wear offset"]},
-        VRE:{name:"VRE Series",tag:"Ultra-precise · Long parts",desc:"Ultra-high accuracy and long-part measurement. Vertical measuring length of 100–600 mm.",
-           feats:["Accuracy down to 0.001 µm","Vertical measuring length 100–600 mm","All VR-series features","Long-part and high-precision applications"]},
-        W:{name:"W Series",tag:"Large parts · Line camera",desc:"For large and long parts. Uses a line camera in the telecentric system to boost accuracy.",
+        V:{name:"V Series",tag:"Compact · Area Camera",desc:"Compact body design, area camera, and 0.4-second measurement speed. Ideal for workshop and line-side quality control.",
+           feats:["Measurement result in 0.4 s","Automation-ready, ships IO-ready","Factory-calibrated system","Automatic reporting and data integration"]},
+        VR:{name:"VR Series",tag:"Optional Rotary Stage Integration",desc:"V-series sensor module combined with an optional 360° rotary stage for measuring roundness, concentricity, and ovality of shafts and cylindrical parts.",
+           feats:["Roundness, concentricity, and ovality measurements", "Shaft/pin metrology with 360° rotary stage integration", "Automation-ready, IO-ready interface", "CNC wear offset and automatic reporting"]},
+        VRE:{name:"VRE Series",tag:"Ultra-Precise · Long Parts",desc:"Ultra-high accuracy and vertical measuring length of 100–600 mm.",
+           feats:["Accuracy down to 0.001 µm","Vertical measuring length 100–600 mm","VR series integration options","Long-part and high-precision applications"]},
+        W:{name:"W Series",tag:"Large Parts · Line Camera",desc:"For large and long parts. Uses a line camera in the telecentric system to boost accuracy.",
            feats:["Large and long-part measurement","Higher accuracy with line camera","Vertical 300–1500 mm","Even higher accuracy with WE models"]},
-        H:{name:"H Series",tag:"Automation · 10 models",desc:"A wide range focused on full automation. Measurement in 0.4 seconds, 10 model options.",
+        H:{name:"H Series",tag:"Line Automation",desc:"A wide range focused on full automation. Measurement in 0.4 seconds, 10 model options.",
            feats:["Measurement in 0.4 s","Wide measuring range, 10 models","Automation-ready, IO-ready","Factory + user calibration"]}
       }
     },
@@ -223,9 +223,9 @@ window.I18N = {
       eyebrow:"How It Works",title:"From part to result in four steps",
       sub:"Telecentric optics and sub-pixel image processing deliver measurement in seconds, without operator error.",
       steps:[
-        {t:"Part Placement",d:"The part is placed on the rotary table or conveyor."},
-        {t:"Area Scan",d:"A 20×20 mm field is captured in one shot by the CMOS sensor."},
-        {t:"Image Processing",d:"Z-Measure software measures with sub-pixel accuracy."},
+        {t:"Part Placement",d:"The part is placed in the measurement area (conveyor or optional rotary stage)."},
+        {t:"Area Scan",d:"A high-resolution area scan is captured in one shot by the CMOS sensor."},
+        {t:"Image Processing",d:"Z-Measure software calculates dimensional values with sub-pixel accuracy."},
         {t:"Result & Integration",d:"A wear offset or OK/NOK signal is sent to the PLC / robot / CNC."}
       ]
     },
@@ -256,16 +256,16 @@ window.I18N = {
     cmp:{
       eyebrow:"Competitive Comparison",title:"Why SKANOPT stands out",
       sub:"Technical and commercial comparison with the market leader and local/imported alternatives.",
-      note:"The only expensive alternative with a 360° rotary table is ViciVision (€30,000+); SKANOPT offers this feature at a competitive price.",
+      note:"We offer competitive solutions in telecentric optical measurement systems with domestic design, fast technical support, and high flexibility.",
       feature:"Feature",
       cols:["Keyence TM-X5000","OPT SmartFlash","Janpos","AZE Otomasyon","SKANOPT"],
       rows:[
-        {label:"Rotary Table",cells:["❌","❌","❌","◐","✓ 360°"]},
+        {label:"Rotary Stage (Option)",cells:["❌","❌","❌","◐","✓ Integrable"]},
         {label:"Area Scan",cells:["Line scan","✓ Area","Line scan","Video","✓ Single shot"]},
         {label:"PLC Flexibility",cells:["Mitsubishi only","Partial","Partial","Project-based","Any PLC / robot"]},
         {label:"Camera (MP)",cells:["Max 5 MP","High","—","High","5–25 MP"]},
         {label:"User Calibration",cells:["❌","❌","❌","✓","✓ Software incl."]},
-        {label:"Delivery Time",cells:["4–12 weeks","3–8 weeks","2–6 weeks","8–16 weeks","~4 weeks"]},
+        {label:"Delivery Time",cells:["4–12 weeks","3–8 weeks","2–6 weeks","8–16 weeks","Order-Based (Fast)"]},
         {label:"Local Support",cells:["Dealer","❌","❌","✓","✓ Manufacturer"]},
         {label:"Price",cells:["$8–25k+","$3–10k","$1.5–6k","€6–30k+","Competitive"]}
       ]
@@ -275,7 +275,7 @@ window.I18N = {
       sub:"From automotive suppliers to implants and home appliances — built for industries where quality control is critical.",
       appsHead:"Example measured parts",
       sectors:[
-        {icon:"car",t:"Automotive Suppliers",d:"360° control for shaft, piston, valve and gear measurement."},
+        {icon:"car",t:"Automotive Suppliers",d:"Shaft, piston, valve and gear measurement with optional 360° control."},
         {icon:"appliance",t:"Home Appliances",d:"Fast dimensional quality control in high-volume production."},
         {icon:"implant",t:"Implants & Medical",d:"Medical parts and needles that demand high precision."},
         {icon:"chip",t:"Electronics & Semiconductor",d:"Connector pins, chips and precise electronic parts."},
@@ -298,7 +298,7 @@ window.I18N = {
     },
     contact:{
       eyebrow:"Contact",title:"Reach us for a demo or quote",
-      sub:"Share your application and let's define the right configuration together. Delivery to Türkiye in ~4 weeks.",
+      sub:"Share your application and let's define the right configuration together. Direct manufacturer technical support.",
       name:"Full Name",company:"Company",email:"E-mail",phone:"Phone",message:"Your message / application",
       submit:"Send Request",sending:"Sending…",
       ok:"Thank you! Your request has been received; we'll get back to you shortly.",
@@ -308,7 +308,7 @@ window.I18N = {
       ctaTitle:"Need a quick reply?",ctaText:"Reach us on WhatsApp and we'll pick the best model for your application together.",ctaBtn:"Message on WhatsApp"
     },
     footer:{
-      about:"Locally manufactured telecentric 2D optical measurement systems. Rotary-table, area-scanning and PLC-integrated — for precise quality control.",
+      about:"Locally manufactured modular telecentric 2D optical measurement sensors. Single-shot area scanning, PLC-integrated, high-precision quality control solutions.",
       quick:"Quick Links",contactH:"Contact",rights:"All rights reserved.",disclaimer:"Optical measurement systems · Türkiye"
     }
   }
