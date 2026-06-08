@@ -216,10 +216,11 @@ h1,h2,h3,h4{font-family:var(--f-head);font-weight:700;line-height:1.12;letter-sp
 .panel.active{display:block;animation:fadeUp .5s var(--ease)}
 .panel__grid{display:grid;grid-template-columns:1.1fr 0.9fr;gap:48px;align-items:center}
 .panel__info,.panel__media{min-width:0}
-.panel__media{display:grid;place-items:center;padding:0;align-self:center}
-.panel__media img{width:100%;max-height:460px;object-fit:contain;display:block;
-  transition:transform .55s var(--ease)}
-.panel__media:hover img{transform:translateY(-6px) scale(1.02)}
+.panel__media{display:grid;place-items:center;padding:0;align-self:center;background:radial-gradient(circle at center, rgba(210,215,220,0.4) 0%, transparent 65%)}
+.panel__media img{width:100%;max-height:600px;object-fit:contain;display:block;
+  filter:drop-shadow(0 20px 40px rgba(0,0,0,0.08));
+  transition:transform .55s var(--ease), filter .55s var(--ease)}
+.panel__media:hover img{transform:translateY(-8px) scale(1.04); filter:drop-shadow(0 30px 50px rgba(0,0,0,0.12))}
 .panel__info h3{font-size:1.55rem;margin-bottom:6px}
 .panel__tag{color:var(--brand);font-family:var(--f-head);font-weight:600;font-size:.9rem;margin-bottom:14px}
 .panel__feats{margin:16px 0 22px;display:grid;gap:11px}
