@@ -9,6 +9,11 @@ scratch/
 .tempmediaStorage/
 .system_generated/
 
+# Internal planning docs (contain old brand references)
+PLAN.md
+PLAN.txt
+DEVAM-PROMPT.md
+
 # OS files
 Thumbs.db
 .DS_Store

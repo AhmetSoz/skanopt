@@ -169,7 +169,8 @@ window.I18N = {
     footer:{
       about:"Yerli üretim modüler telesentrik 2D optik ölçüm modülleri. Alan tarayan, PLC entegreli ve yüksek hassasiyetli kalite kontrol çözümleri.",
       quick:"Hızlı Linkler",contactH:"İletişim",rights:"Tüm hakları saklıdır.",disclaimer:"Optik ölçüm sistemleri · Türkiye"
-    }
+    },
+    a11y:{skip:"İçeriğe atla"}
   },
 
   /* ===================== ENGLISH ===================== */
@@ -310,6 +311,7 @@ window.I18N = {
     footer:{
       about:"Locally manufactured modular telecentric 2D optical measurement sensors. Single-shot area scanning, PLC-integrated, high-precision quality control solutions.",
       quick:"Quick Links",contactH:"Contact",rights:"All rights reserved.",disclaimer:"Optical measurement systems · Türkiye"
-    }
+    },
+    a11y:{skip:"Skip to content"}
   }
 };

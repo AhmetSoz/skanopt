@@ -116,6 +116,8 @@
       const it=d.series.items[key];
       const tab=el("button","tab"+(key===activeSeries?" active":""),it.name);
       tab.setAttribute("role","tab"); tab.dataset.series=key;
+      tab.id="tab-"+key; tab.setAttribute("aria-selected",key===activeSeries?"true":"false");
+      tab.setAttribute("aria-controls","panel-"+key);
       tab.addEventListener("click",()=>{activeSeries=key;switchSeries(key);});
       tabsHost.appendChild(tab);
 
@@ -125,12 +127,14 @@
       const imgMap = { V: "product-v", VR: "product-vr", VRE: "product-vre", W: "product-w", H: "product-h" };
       const imgName = imgMap[key] || "product-v";
       const panel=el("div","panel"+(key===activeSeries?" active":"")); panel.dataset.series=key;
+      panel.setAttribute("role","tabpanel"); panel.id="panel-"+key;
+      panel.setAttribute("aria-labelledby","tab-"+key);
       panel.innerHTML = `
         <div class="panel__grid">
           <div class="panel__media">
             <picture>
               <source srcset="assets/img/${imgName}.webp" type="image/webp">
-              <img src="assets/img/${imgName}.png" alt="${it.name}" loading="lazy">
+              <img src="assets/img/${imgName}.png" alt="${it.name}" loading="lazy" width="800" height="600">
             </picture>
           </div>
           <div class="panel__info">
@@ -154,7 +158,7 @@
     });
   }
   function switchSeries(key){
-    $$("#seriesTabs .tab").forEach(t=>t.classList.toggle("active",t.dataset.series===key));
+    $$("#seriesTabs .tab").forEach(t=>{t.classList.toggle("active",t.dataset.series===key);t.setAttribute("aria-selected",t.dataset.series===key?"true":"false");});
     $$("#seriesPanels .panel").forEach(p=>p.classList.toggle("active",p.dataset.series===key));
   }
 

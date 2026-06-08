@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Sitemap: https://www.skanopt.com/sitemap.xml
+
+# SKANOPT - Telecentric Optical Measurement Systems
