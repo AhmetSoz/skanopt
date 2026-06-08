@@ -12,11 +12,11 @@ window.SITE = {
   web:          "www.skanopt.com",          // TODO: gerçek alan adı
   webUrl:       "https://www.skanopt.com",   // TODO
   email:        "info@skanopt.com",          // TODO: gerçek e-posta
-  phoneDisplay: "+90 5XX XXX XX XX",         // TODO: gerçek telefon (görünen)
-  phoneE164:    "",                          // TODO: ör. "+905XXXXXXXXX" (tel: linki için; boşsa telefon linki pasif)
-
+  phoneDisplay: "+90 543 667 70 19",         // Gerçek telefon (görünen)
+  phoneE164:    "+905436677019",             // tel: linki için
+  
   // --- WhatsApp (DOLDURULACAK) ---
-  whatsappNumber: "",                        // TODO: ör. "905XXXXXXXXX" (ülke kodu + numara, boşluksuz). Boşsa WhatsApp butonu gizlenir.
+  whatsappNumber: "905436677019",            // WhatsApp linki için
   whatsappText:   "Merhaba, SKANOPT optik ölçüm sistemi hakkında bilgi almak istiyorum.",
 
   // --- Form gönderim servisi (opsiyonel) ---
