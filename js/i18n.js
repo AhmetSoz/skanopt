@@ -53,7 +53,7 @@ window.I18N = {
       cards:[
         {icon:"rotary",t:"Modüler & Esnek Yapı",d:"Atölye ortamında, hat kenarında veya doğrudan konveyör/robot hatlarında inline ölçüm için esnek montaj imkanı."},
         {icon:"scan",t:"Çift Telesentrik Optik (Dual-Telecentric)",d:"Bozulmasız, derin odak alanı ve yüksek çözünürlüklü tek çekim alan tarama teknolojisiyle hatasız ölçüm."},
-        {icon:"plc",t:"PLC ve Robot Entegrasyonu",d:"Siemens, Mitsubishi, Fanuc, Omron gibi popüler PLC'ler ve robot kollarıyla Ethernet/IO üzerinden doğrudan haberleşme."},
+        {icon:"plc",t:"PLC ve Robot Entegrasyonu",d:"Siemens, Mitsubishi, Fanuc, Omron gibi popüler PLC'ler ve robot kollarıyla Ethernet I/O üzerinden doğrudan haberleşme."},
         {icon:"calib",t:"Kullanıcı Dostu Kalibrasyon",d:"Müşterinin yazılım arayüzünden dilediği zaman yapabileceği pratik kalibrasyon altyapısı."},
         {icon:"camera",t:"Endüstriyel Kamera Çözünürlüğü",d:"İhtiyaca uygun 5 MP ile 25 MP aralığında yüksek çözünürlüklü CMOS sensör yapılandırmaları."},
         {icon:"truck",t:"Kısa Teslimat Süreleri",d:"Sipariş üzerine esnek üretim planlaması, hızlı yerli teslimat ve doğrudan üreticiden Türkçe teknik destek."}
@@ -61,21 +61,21 @@ window.I18N = {
     },
     series:{
       eyebrow:"Ürün Serileri",title:"Her parça ve hat için doğru model",
-      sub:"Kompakt sensör modüllerinden büyük parça ölçüm ve tam otomasyon sistemlerine kadar beş ürün ailesi. Tüm modeller IO hazır gelir.",
+      sub:"Kompakt sensör modüllerinden büyük parça ölçüm ve tam otomasyon sistemlerine kadar beş ürün ailesi. Tüm modeller I/O hazır gelir.",
       headers:{model:"Model",fovh:"Yatay FOV (mm)",fovv:"Dikey FOV (mm)",acc:"Hassasiyet (µm)"},
       note:"Görüş alanı (FOV) ve hassasiyet değerleri modele göredir. Uygulamanıza özel konfigürasyon için bize ulaşın.",
       order:["V","VR","VRE","W","H"],
       items:{
         V:{name:"V Serisi",tag:"Kompakt · Alan Kamerası",desc:"Kompakt gövde tasarımı, alan kamerası ve 0.4 saniyede ölçüm. Atölye ve hat kenarı kalite kontrol için ideal.",
-           feats:["0.4 saniyede ölçüm sonucu","Otomasyona uygun, IO hazır gelir","Fabrika çıkışlı sistem kalibrasyonu","Otomatik raporlama ve veri entegrasyonu"]},
+           feats:["0.4 saniyede ölçüm sonucu","Otomasyona uygun, I/O hazır gelir","Fabrika çıkışlı sistem kalibrasyonu","Otomatik raporlama ve veri entegrasyonu"]},
         VR:{name:"VR Serisi",tag:"Opsiyonel Döner Tabla Entegrasyonu",desc:"V serisi sensör modülüne entegre 360° döner tabla opsiyonu ile mil, şaft ve dairesel parçalarda dairesellik, eşmerkezlilik ve salgı ölçümü.",
-           feats:["Dairesellik, eşmerkezlilik ve ovallik ölçümü","360° döner tabla entegrasyonu ile şaft/mil ölçümü","Otomasyona uygun, IO hazır arayüz","CNC wear offset ve otomatik raporlama"]},
+           feats:["Dairesellik, eşmerkezlilik ve ovallik ölçümü","360° döner tabla entegrasyonu ile şaft/mil ölçümü","Otomasyona uygun, I/O hazır arayüz","CNC wear offset ve otomatik raporlama"]},
         VRE:{name:"VRE Serisi",tag:"Ultra Hassas · Uzun Parça",desc:"Ultra yüksek hassasiyet ve dikeyde 100–600 mm uzun parça ölçüm desteği.",
            feats:["0.001 µm çözünürlüğe varan hassasiyet","Dikeyde 100–600 mm ölçüm boyu","VR serisi entegrasyon opsiyonları","Uzun parça ve yüksek hassasiyet uygulamaları"]},
         W:{name:"W Serisi",tag:"Büyük Parça · Çizgisel Kamera",desc:"Büyük ve uzun parçalar için çizgisel (lineer) kamera teknolojisine sahip telecentric sistem.",
            feats:["Büyük ve uzun parça ölçümü","Çizgisel kamera ile artırılmış hassasiyet","Dikeyde 300–1500 mm","WE modelleri ile daha yüksek hassasiyet"]},
         H:{name:"H Serisi",tag:"Hat Boyu Otomasyon",desc:"Tam otomasyon odaklı, 0.4 saniyede ölçüm yapabilen geniş modül yelpazesi.",
-           feats:["0.4 saniyede ölçüm","Geniş ölçüm aralığı, 10 model","Otomasyona uygun, IO hazır","Sistem + kullanıcı kalibrasyonu"]}
+           feats:["0.4 saniyede ölçüm","Geniş ölçüm aralığı, 10 model","Otomasyona uygun, I/O hazır","Sistem + kullanıcı kalibrasyonu"]}
       }
     },
     how:{
@@ -110,7 +110,7 @@ window.I18N = {
         {icon:"calib",t:"Kalibrasyon",d:"Sistem kalibrasyonlu gelir; kullanıcı istediği zaman kalibre eder."},
         {icon:"report",t:"Raporlama & SPC",d:"Otomatik raporlama ve SPC veri kaydı, kolay dışa aktarma."}
       ],
-      badges:["Windows 10 / 11","IO Hazır","Türkçe + İngilizce"]
+      badges:["Windows 10 / 11","I/O Hazır","Türkçe + İngilizce"]
     },
     cmp:{
       eyebrow:"Rakip Karşılaştırma",title:"Neden SKANOPT öne çıkıyor?",
@@ -195,7 +195,7 @@ window.I18N = {
       cards:[
         {icon:"rotary",t:"Modular & Flexible Design",d:"Flexible mounting options for inline measurements directly on conveyors, robot cells, or offline workshop inspection."},
         {icon:"scan",t:"Dual-Telecentric Optics",d:"Distortion-free, wide depth of field, and high-resolution single-shot area scanning for error-free metrology."},
-        {icon:"plc",t:"PLC & Robot Integration",d:"Direct communication with popular PLC brands (Siemens, Mitsubishi, Fanuc, Omron) and robot arms via Ethernet/IO."},
+        {icon:"plc",t:"PLC & Robot Integration",d:"Direct communication with popular PLC brands (Siemens, Mitsubishi, Fanuc, Omron) and robot arms via Ethernet I/O."},
         {icon:"calib",t:"User-Friendly Calibration",d:"Practical calibration infrastructure that customers can perform anytime via the software interface."},
         {icon:"camera",t:"Industrial Camera Options",d:"High-resolution CMOS sensor configurations ranging from 5 MP to 25 MP tailored to your requirements."},
         {icon:"truck",t:"Short Lead Times",d:"Flexible production planning based on order, fast delivery, and direct technical support from the manufacturer."}
@@ -203,21 +203,21 @@ window.I18N = {
     },
     series:{
       eyebrow:"Product Series",title:"The right model for every part and line",
-      sub:"Five product families, from compact sensor modules to large-part measurement and full automation. All models ship IO-ready.",
+      sub:"Five product families, from compact sensor modules to large-part measurement and full automation. All models ship I/O-ready.",
       headers:{model:"Model",fovh:"Horizontal FOV (mm)",fovv:"Vertical FOV (mm)",acc:"Accuracy (µm)"},
       note:"Field of view (FOV) and accuracy values depend on the model. Contact us for a configuration tailored to your application.",
       order:["V","VR","VRE","W","H"],
       items:{
         V:{name:"V Series",tag:"Compact · Area Camera",desc:"Compact body design, area camera, and 0.4-second measurement speed. Ideal for workshop and line-side quality control.",
-           feats:["Measurement result in 0.4 s","Automation-ready, ships IO-ready","Factory-calibrated system","Automatic reporting and data integration"]},
+           feats:["Measurement result in 0.4 s","Automation-ready, ships I/O-ready","Factory-calibrated system","Automatic reporting and data integration"]},
         VR:{name:"VR Series",tag:"Optional Rotary Stage Integration",desc:"V-series sensor module combined with an optional 360° rotary stage for measuring roundness, concentricity, and ovality of shafts and cylindrical parts.",
-           feats:["Roundness, concentricity, and ovality measurements", "Shaft/pin metrology with 360° rotary stage integration", "Automation-ready, IO-ready interface", "CNC wear offset and automatic reporting"]},
+           feats:["Roundness, concentricity, and ovality measurements", "Shaft/pin metrology with 360° rotary stage integration", "Automation-ready, I/O-ready interface", "CNC wear offset and automatic reporting"]},
         VRE:{name:"VRE Series",tag:"Ultra-Precise · Long Parts",desc:"Ultra-high accuracy and vertical measuring length of 100–600 mm.",
            feats:["Accuracy down to 0.001 µm","Vertical measuring length 100–600 mm","VR series integration options","Long-part and high-precision applications"]},
         W:{name:"W Series",tag:"Large Parts · Line Camera",desc:"For large and long parts. Uses a line camera in the telecentric system to boost accuracy.",
            feats:["Large and long-part measurement","Higher accuracy with line camera","Vertical 300–1500 mm","Even higher accuracy with WE models"]},
         H:{name:"H Series",tag:"Line Automation",desc:"A wide range focused on full automation. Measurement in 0.4 seconds, 10 model options.",
-           feats:["Measurement in 0.4 s","Wide measuring range, 10 models","Automation-ready, IO-ready","Factory + user calibration"]}
+           feats:["Measurement in 0.4 s","Wide measuring range, 10 models","Automation-ready, I/O-ready","Factory + user calibration"]}
       }
     },
     how:{
@@ -252,7 +252,7 @@ window.I18N = {
         {icon:"calib",t:"Calibration",d:"Ships factory-calibrated; the user can calibrate any time."},
         {icon:"report",t:"Reporting & SPC",d:"Automatic reporting and SPC data logging with easy export."}
       ],
-      badges:["Windows 10 / 11","IO Ready","Turkish + English"]
+      badges:["Windows 10 / 11","I/O Ready","Turkish + English"]
     },
     cmp:{
       eyebrow:"Competitive Comparison",title:"Why SKANOPT stands out",
