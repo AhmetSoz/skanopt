@@ -53,16 +53,7 @@
 <header class="header" id="header">
   <div class="header__inner">
     <a href="#top" class="brand" aria-label="SKANOPT">
-      <svg class="brand__mark" viewBox="0 0 40 40" aria-hidden="true">
-        <circle cx="20" cy="20" r="11" fill="none" stroke="#f26a1b" stroke-width="2.6"/>
-        <circle cx="20" cy="20" r="5"  fill="none" stroke="#f26a1b" stroke-width="2.6"/>
-        <g stroke="#f26a1b" stroke-width="2.6" stroke-linecap="round">
-          <line x1="20" y1="3" x2="20" y2="7.5"/><line x1="20" y1="32.5" x2="20" y2="37"/>
-          <line x1="3" y1="20" x2="7.5" y2="20"/><line x1="32.5" y1="20" x2="37" y2="20"/>
-        </g>
-        <circle cx="20" cy="20" r="2.4" fill="#1d2531"/>
-      </svg>
-      <span><b class="b-skan">SKAN</b><b class="b-opt">OPT</b></span>
+      <img src="assets/img/logo.png?v=3" alt="SKANOPT Logo" class="brand__img">
     </a>
 
     <nav class="nav" aria-label="Ana menü">
@@ -112,12 +103,8 @@
   <div class="container hero__grid">
     <div class="hero__content">
       <span class="eyebrow" data-i18n="hero.badge">Yerli Üretim · Telesentrik 2D Ölçüm</span>
-      <h1 class="hero__title">
-        <span data-i18n="hero.t1">Optik ölçümde</span>
-        <span class="text-brand" data-i18n="hero.t2">hassas, modüler</span>
-        <span data-i18n="hero.t3">çözüm</span>
-      </h1>
-      <p class="hero__sub" data-i18n="hero.sub">Yüksek hassasiyetli boyutsal kontrol için modüler telesentrik 2D optik ölçüm sensörleri. Entegre aydınlatma ve kamera ünitesiyle üretim hattına veya robot hücresine kolay entegrasyon.</p>
+      <h1 class="hero__title"><span data-i18n="hero.t1"></span><span class="text-brand" data-i18n="hero.t2"></span><span data-i18n="hero.t3"></span></h1>
+      <div class="hero__sub-chips" id="heroSubChips"></div>
 
       <div class="hero__cta">
         <a href="#iletisim" class="btn btn-accent btn-lg" data-i18n="cta.demo">Demo Talep Et</a>
@@ -154,7 +141,7 @@
   <div class="container">
     <div class="section__head center" data-reveal>
       <span class="eyebrow" data-i18n="why.eyebrow">Neden SKANOPT</span>
-      <h2 class="section__title" data-i18n="why.title">Rakiplerin sunmadığı avantajlar</h2>
+      <h2 class="section__title section__title--brand-logo" id="whyTitleContainer"></h2>
       <p class="section__sub" data-i18n="why.sub">Pazar lideri sistemlerin teknolojisini; döner tabla, esnek entegrasyon ve yerli üretim avantajlarıyla birleştiriyoruz.</p>
     </div>
     <div class="grid grid-3" id="whyGrid" data-reveal></div>
@@ -320,7 +307,9 @@
   <div class="container">
     <div class="footer__grid">
       <div>
-        <div class="brand"><b class="b-skan">SKAN</b><b class="b-opt">OPT</b></div>
+        <div class="brand">
+          <img src="assets/img/logo-light.png?v=3" alt="SKANOPT Logo" class="brand__img">
+        </div>
         <p class="footer__about" data-i18n="footer.about">Yerli üretim telesentrik 2D optik ölçüm sistemleri. Döner tablalı, alan tarayan ve PLC entegreli — hassas kalite kontrol için.</p>
       </div>
       <div>

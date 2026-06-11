@@ -44,6 +44,42 @@
 
   /* ---------------- dinamik render ---------------- */
   function renderDynamic(d){
+    // Hero Alt Maddeleri (Pill/Badge)
+    const subHost = $("#heroSubChips");
+    if(subHost && d.hero.sub) {
+      subHost.innerHTML = "";
+      d.hero.sub.split("\n").forEach((line, i) => {
+        const text = line.replace(/^-\s*/, "").trim();
+        if(!text) return;
+        const pill = el("div", "hero-pill");
+        pill.dataset.reveal = "";
+        pill.style.transitionDelay = (i * 60) + "ms";
+        pill.innerHTML = icon("check") + "<span>" + text + "</span>";
+        subHost.appendChild(pill);
+      });
+    }
+
+    // Neden başlığına görsel logo gömülmesi
+    const whyTitleHost = $("#whyTitleContainer");
+    if(whyTitleHost && d.why.title) {
+      // "SKANOPT Bunlarda Fark Yaratır" -> "SKANOPT" yerine logo.png koy, kalanı metin olarak ekle
+      const titleText = d.why.title;
+      if(titleText.includes("SKANOPT")) {
+        const parts = titleText.split("SKANOPT");
+        whyTitleHost.innerHTML = "";
+        if(parts[0]) whyTitleHost.appendChild(document.createTextNode(parts[0]));
+        
+        const logoImg = el("img", "inline-brand-logo");
+        logoImg.src = "assets/img/logo.png?v=3";
+        logoImg.alt = "SKANOPT";
+        whyTitleHost.appendChild(logoImg);
+        
+        if(parts[1]) whyTitleHost.appendChild(document.createTextNode(parts[1]));
+      } else {
+        whyTitleHost.textContent = titleText;
+      }
+    }
+
     // Neden — kartlar
     grid("#whyGrid", d.why.cards, (c,i)=>card("card", c.icon, c.t, c.d, i));
     // Seriler — sekmeler + paneller
