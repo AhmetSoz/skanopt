@@ -45,7 +45,8 @@ window.I18N = {
       sub:"- Yüksek Hassasiyetli Boyutsal Kontrol\n- Telesentrik Optik Ölçüm\n- Entegre Aydınlatma ve Yüksek Çözünürlüklü Kamera\n- Üretim hattına ve Robot hücresine kolay entegrasyon.",
       stat1:"Yüksek Hassasiyet (VRE)",stat2:"Ölçüm Süresi",stat3:"Maks. Çözünürlük",secUnit:"sn",resolUnit:"MP",
       trust1:"Marka Bağımsız PLC ve Robot Entegrasyonu",trust2:"Kullanıcı Kalibrasyonu Kolaylığı",trust3:"Sürekli Online Üretici Desteği",
-      f1s:"Tek çekim",f1b:"20 × 20 mm alan",f2s:"Ölçüm süresi"
+      f1s:"Tek çekim",f1b:"20 × 20 mm alan",f2s:"Ölçüm süresi",
+      videoLabel1:"Ölçüm Cihazı",videoLabel2:"Matkap Ölçümü"
     },
     why:{
       eyebrow:"Neden SKANOPT",title:"SKANOPT Bunlarda Fark Yaratır",
@@ -187,7 +188,8 @@ window.I18N = {
       sub:"- High-Precision Dimensional Control\n- Telecentric Optical Measurement\n- Integrated Lighting and High-Resolution Camera\n- Easy integration into production lines and robot cells.",
       stat1:"High Accuracy (VRE)",stat2:"Measurement Speed",stat3:"Max. Resolution",secUnit:"s",resolUnit:"MP",
       trust1:"Brand-Independent PLC and Robot Integration",trust2:"User Calibration Simplicity",trust3:"Continuous Online Manufacturer Support",
-      f1s:"Single shot",f1b:"20 × 20 mm field",f2s:"Measurement time"
+      f1s:"Single shot",f1b:"20 × 20 mm field",f2s:"Measurement time",
+      videoLabel1:"Measurement System",videoLabel2:"Drill Inspection"
     },
     why:{
       eyebrow:"Why SKANOPT",title:"Where SKANOPT Stands Apart",

@@ -126,11 +126,34 @@
 
     <div class="hero__media">
       <span class="glow" aria-hidden="true"></span>
-      <div class="frame">
-        <video id="heroVideo" poster="assets/img/automation-poster.jpg?v=3" muted loop autoplay playsinline preload="metadata">
-          <source src="assets/video/automation.mp4?v=3" type="video/mp4">
-          <source src="assets/video/automation.webm?v=3" type="video/webm">
-        </video>
+      <div class="video-stack">
+        <!-- Birinci Kart: Ölçüm Cihazı Gövdesi (Varsayılan olarak aktif/önde) -->
+        <div class="video-card card-primary active" id="heroCard1">
+          <div class="video-card__frame">
+            <video muted loop autoplay playsinline preload="metadata" poster="assets/img/product-poster.jpg?v=1">
+              <source src="assets/video/product.mp4?v=1" type="video/mp4">
+              <source src="assets/video/product.webm?v=1" type="video/webm">
+            </video>
+          </div>
+          <div class="video-card__label">
+            <span class="label-dot"></span>
+            <span data-i18n="hero.videoLabel1">Ölçüm Cihazı</span>
+          </div>
+        </div>
+        
+        <!-- İkinci Kart: Uygulama Matkap Ölçümü (Arka planda/ikincil) -->
+        <div class="video-card card-secondary" id="heroCard2">
+          <div class="video-card__frame">
+            <video muted loop autoplay playsinline preload="metadata" poster="assets/img/automation-poster.jpg?v=3">
+              <source src="assets/video/automation.mp4?v=3" type="video/mp4">
+              <source src="assets/video/automation.webm?v=3" type="video/webm">
+            </video>
+          </div>
+          <div class="video-card__label">
+            <span class="label-dot"></span>
+            <span data-i18n="hero.videoLabel2">Matkap Ölçümü</span>
+          </div>
+        </div>
       </div>
     </div>
   </div>

@@ -597,3 +597,152 @@ tbody td:first-child{font-family:var(--f-head);font-weight:600;color:var(--ink)}
   vertical-align: middle;
   transform: translateY(-13.5%); /* Logo harflerini yanındaki kalın başlık metniyle tam taban çizgisine (baseline) hizalar */
 }
+
+/* ============================================================
+   3D LAYERED VIDEO STACK DESIGN
+   ============================================================ */
+.video-stack {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/10;
+  margin-top: 20px;
+}
+
+.video-card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 90%; /* Leave space for the stacked layer on the right */
+  height: 90%; /* Leave space for the stacked layer on the top/bottom */
+  border-radius: 24px;
+  cursor: pointer;
+  z-index: 1;
+  transition: transform 0.65s var(--ease-spring), opacity 0.5s var(--ease), filter 0.5s var(--ease), box-shadow 0.5s var(--ease);
+  user-select: none;
+}
+
+/* Active / Primary Card (Foreground) */
+.video-card.active {
+  z-index: 5;
+  opacity: 1;
+  filter: none;
+  transform: translate(0, 5%) scale(1);
+}
+
+.video-card.active .video-card__frame {
+  box-shadow: 0 30px 60px rgba(15, 18, 22, 0.28), 0 0 0 2px var(--brand-100);
+}
+
+/* Secondary Card (Background) */
+.video-card:not(.active) {
+  z-index: 2;
+  opacity: 0.55;
+  filter: blur(1.5px) brightness(0.75);
+  transform: translate(11%, -5%) scale(0.9);
+}
+
+.video-card:not(.active) .video-card__frame {
+  box-shadow: 0 15px 35px rgba(15, 18, 22, 0.15);
+}
+
+/* Interactive Hover States */
+.video-stack:hover .video-card:not(.active) {
+  opacity: 0.8;
+  filter: blur(0.5px) brightness(0.9);
+  transform: translate(13%, -7%) scale(0.92);
+}
+
+.video-stack:hover .video-card.active {
+  transform: translate(-2%, 7%) scale(1.02);
+}
+
+.video-card__frame {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 24px;
+  overflow: hidden;
+  background: #0f1216;
+  transition: box-shadow 0.4s var(--ease);
+}
+
+.video-card__frame video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Label styling */
+.video-card__label {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  background: rgba(15, 18, 22, 0.82);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-size: 0.84rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  z-index: 10;
+  transition: opacity 0.3s var(--ease), transform 0.3s var(--ease);
+  pointer-events: none;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+}
+
+.video-card:not(.active) .video-card__label {
+  opacity: 0.6;
+  transform: scale(0.9);
+}
+
+.video-card__label .label-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #94a3b8; /* Slate dot when inactive */
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.video-card.active .video-card__label .label-dot {
+  background: #10b981; /* Green active dot */
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.25);
+  animation: pulse-dot 2s infinite;
+}
+
+@keyframes pulse-dot {
+  0% { transform: scale(0.95); opacity: 0.5; }
+  50% { transform: scale(1.1); opacity: 1; }
+  100% { transform: scale(0.95); opacity: 0.5; }
+}
+
+/* Responsive adjustment for small screens */
+@media (max-width: 560px) {
+  .video-stack {
+    margin-top: 10px;
+  }
+  .video-card {
+    width: 92%;
+    height: 92%;
+  }
+  .video-card:not(.active) {
+    transform: translate(8%, -4%) scale(0.92);
+  }
+  .video-stack:hover .video-card:not(.active) {
+    transform: translate(9%, -5%) scale(0.93);
+  }
+  .video-stack:hover .video-card.active {
+    transform: translate(-1%, 3%) scale(1.01);
+  }
+  .video-card__label {
+    left: 14px;
+    bottom: 14px;
+    padding: 6px 12px;
+    font-size: 0.78rem;
+  }
+}

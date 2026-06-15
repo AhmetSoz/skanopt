@@ -359,11 +359,41 @@
     });
   }
 
+  function setupVideoStack() {
+    const cards = $$(".video-card");
+    if (cards.length < 2) return;
+    cards.forEach(card => {
+      card.setAttribute("role", "button");
+      card.setAttribute("tabindex", "0");
+      
+      const labelEl = card.querySelector("[data-i18n]");
+      if (labelEl) {
+        card.setAttribute("aria-label", labelEl.textContent || "Video");
+      }
+      
+      const toggle = () => {
+        if (card.classList.contains("active")) return;
+        cards.forEach(c => {
+          c.classList.toggle("active", c === card);
+        });
+      };
+      
+      card.addEventListener("click", toggle);
+      card.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          toggle();
+        }
+      });
+    });
+  }
+
   /* ---------------- init ---------------- */
   document.addEventListener("DOMContentLoaded",()=>{
     $("#year").textContent=new Date().getFullYear();
     setLang(lang);     // metin + dinamik render + reveal
     setupHeader(); setupNav(); setupLang(); setupForm();
+    setupVideoStack();
     setupReveal();
   });
 })();
