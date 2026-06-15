@@ -169,6 +169,7 @@
         <div class="panel__grid">
           <div class="panel__media">
             <picture>
+              <source srcset="assets/img/${imgName}.webp" type="image/webp">
               <img src="assets/img/${imgName}.png" alt="${it.name}" loading="lazy" width="800" height="600">
             </picture>
           </div>
