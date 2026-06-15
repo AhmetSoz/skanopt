@@ -366,11 +366,6 @@
       card.setAttribute("role", "button");
       card.setAttribute("tabindex", "0");
       
-      const labelEl = card.querySelector("[data-i18n]");
-      if (labelEl) {
-        card.setAttribute("aria-label", labelEl.textContent || "Video");
-      }
-      
       const toggle = () => {
         if (card.classList.contains("active")) return;
         cards.forEach(c => {
