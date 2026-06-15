@@ -40,7 +40,7 @@ window.I18N = {
     nav:{why:"Neden SKANOPT",series:"Seriler",how:"Nasıl Çalışır",automation:"Otomasyon",software:"Yazılım",compare:"Karşılaştırma",sectors:"Sektörler",contact:"İletişim"},
     cta:{demo:"Demo Talep Et",quote:"Teklif Al",series:"Serileri İncele"},
     hero:{
-      badge:"Yerli Üretim",
+      badge:"Hassas Mühendislik",
       t1:"Optik Ölçüm\n",t2:"Hassas ve Modüler",t3:"",
       sub:"- Yüksek Hassasiyetli Boyutsal Kontrol\n- Telesentrik Optik Ölçüm\n- Entegre Aydınlatma ve Yüksek Çözünürlüklü Kamera\n- Üretim hattına ve Robot hücresine kolay entegrasyon.",
       stat1:"Yüksek Hassasiyet (VRE)",stat2:"Ölçüm Süresi",stat3:"Maks. Çözünürlük",secUnit:"sn",resolUnit:"MP",
@@ -50,14 +50,14 @@ window.I18N = {
     },
     why:{
       eyebrow:"Neden SKANOPT",title:"SKANOPT Bunlarda Fark Yaratır",
-      sub:"Yüksek hassasiyetli telesentrik teknolojisini;\nesnek entegrasyon, kullanıcı kalibrasyonu ve\nyerli üretim avantajlarıyla sunuyoruz.",
+      sub:"Yüksek hassasiyetli telesentrik teknolojisini;\nesnek entegrasyon, kullanıcı kalibrasyonu ve\nözgün mühendislik avantajlarıyla sunuyoruz.",
       cards:[
         {icon:"rotary",t:"Modüler ve Esnek Yapı",d:"Atölye ortamında, hat kenarında veya\ndoğrudan konveyör ve robot hatlarında inline ölçüm için\nesnek montaj imkanı."},
         {icon:"scan",t:"Çift Telesentrik Optik (Dual-Telecentric)",d:"Bozulmasız, derin odak alanı ve yüksek çözünürlüklü tek çekim alan tarama teknolojisiyle hatasız ölçüm."},
         {icon:"plc",t:"PLC ve Robot Entegrasyonu",d:"Siemens, Mitsubishi, Fanuc, Omron gibi popüler PLC'ler ve robot kollarıyla Ethernet I/O üzerinden doğrudan haberleşme."},
         {icon:"calib",t:"Kullanıcı Dostu Kalibrasyon",d:"Müşterinin yazılım arayüzünden dilediği zaman yapabileceği pratik kalibrasyon altyapısı."},
         {icon:"camera",t:"Endüstriyel Kamera Çözünürlüğü",d:"İhtiyaca uygun 5 MP ile 25 MP aralığında yüksek çözünürlüklü CMOS sensör yapılandırmaları."},
-        {icon:"truck",t:"Kısa Teslimat Süreleri",d:"Sipariş üzerine esnek üretim planlaması, hızlı yerli teslimat ve doğrudan üreticiden Türkçe teknik destek."}
+        {icon:"truck",t:"Kısa Teslimat Süreleri",d:"Sipariş üzerine esnek üretim planlaması, hızlı teslimat ve doğrudan üreticiden uzman teknik destek."}
       ]
     },
     series:{
@@ -102,7 +102,7 @@ window.I18N = {
     },
     sw:{
       eyebrow:"Z-Measure Yazılımı",title:"Ölçümden raporlamaya tek arayüz",
-      sub:"Onlarca ölçüm tipi, sub-piksel hassasiyet, otomatik raporlama ve SPC. Türkçe ve İngilizce arayüz.",
+      sub:"Onlarca ölçüm tipi, sub-piksel hassasiyet, otomatik raporlama ve SPC. Çoklu dil destekli arayüz.",
       measHead:"Desteklenen Ölçüm Tipleri",
       measurements:["Döner Çap","Çap","Boy","Açı","Pah","Radyus","Vida (Adım + Çap)","Dairesellik","Diklik","Paralellik","Simetriklik","Salgı"],
       cards:[
@@ -111,12 +111,12 @@ window.I18N = {
         {icon:"calib",t:"Kalibrasyon",d:"Sistem kalibrasyonlu gelir; kullanıcı istediği zaman kalibre eder."},
         {icon:"report",t:"Raporlama & SPC",d:"Otomatik raporlama ve SPC veri kaydı, kolay dışa aktarma."}
       ],
-      badges:["Windows 10 / 11","I/O Hazır","Türkçe + İngilizce"]
+      badges:["Windows 10 / 11","I/O Hazır","Çoklu Dil / Multilingual"]
     },
     cmp:{
       eyebrow:"Rakip Karşılaştırma",title:"Neden SKANOPT öne çıkıyor?",
-      sub:"Pazar lideri ve yerli/ithal alternatiflerle teknik ve ticari karşılaştırma.",
-      note:"Telesentrik optik ölçüm sistemlerinde yerli tasarım, hızlı teknik destek ve yüksek esneklikle rekabetçi çözümler sunuyoruz.",
+      sub:"Pazar lideri ve küresel alternatiflerle teknik ve ticari karşılaştırma.",
+      note:"Telesentrik optik ölçüm sistemlerinde özgün tasarım, doğrudan teknik destek ve yüksek esneklikle rekabetçi çözümler sunuyoruz.",
       feature:"Özellik",
       cols:["Rakip A ★","Rakip B ★","Rakip C ★","Rakip D ★","SKANOPT"],
       rows:[
@@ -126,7 +126,7 @@ window.I18N = {
         {label:"Kamera (MP)",cells:["Maks. 5 MP","Yüksek","—","Yüksek","5–25 MP"]},
         {label:"Kullanıcı Kalibrasyon",cells:["❌","❌","❌","✓","✓ Yazılım dahil"]},
         {label:"Teslim Süresi",cells:["4–12 hafta","3–8 hafta","2–6 hafta","8–16 hafta","Sipariş Bazlı (Hızlı)"]},
-        {label:"Yerli Destek",cells:["Bayi","❌","❌","✓","✓ Üretici"]},
+        {label:"Doğrudan Destek",cells:["Bayi","❌","❌","✓","✓ Üretici"]},
         {label:"Fiyat",cells:["$8–25 bin+","$3–10 bin","$1,5–6 bin","€6–30 bin+","Rekabetçi"]}
       ]
     },
@@ -148,17 +148,17 @@ window.I18N = {
     },
     ref:{
       eyebrow:"Global Pazarlar",title:"Türkiye'den dünyaya",
-      sub:"Yerli pazarda aktif satış, AB'ye ihracat ve ABD ortaklığı ile büyüyen bir ağ.",
+      sub:"Küresel pazarda aktif satış, AB'ye ihracat ve ABD ortaklığı ile büyüyen bir ağ.",
       note:"CE sertifikasyon süreci devam etmektedir. Distribütör ve referans bilgileri talep üzerine paylaşılır.",
       items:[
-        {flag:"🇹🇷",country:"Türkiye",role:"Birincil Pazar",desc:"Otomotiv, CNC ve plastik sektörlerinde aktif satış ve distribütör ağı."},
+        {flag:"🇹🇷",country:"Türkiye",role:"Aktif Satış",desc:"Otomotiv, CNC ve plastik sektörlerinde geniş müşteri ağı."},
         {flag:"🇪🇺",country:"Avrupa Birliği",role:"AB'ye İhracat",desc:"Avrupa pazarına ihracat; CE sürecinin tamamlanmasıyla büyüyen talep."},
         {flag:"🇺🇸",country:"ABD",role:"Resmi Ortaklık",desc:"Robot konumlandırma pazarı için ABD'de distribütör ortaklığı."}
       ]
     },
     contact:{
       eyebrow:"İletişim",title:"Demo veya teklif için bize ulaşın",
-      sub:"Uygulamanızı paylaşın, doğru konfigürasyonu birlikte belirleyelim. Türkiye genelinde doğrudan teknik destek.",
+      sub:"Uygulamanızı paylaşın, doğru konfigürasyonu birlikte belirleyelim. Hızlı ve kesintisiz teknik destek.",
       name:"Ad Soyad",company:"Firma",email:"E-posta",phone:"Telefon",message:"Mesajınız / uygulamanız",
       submit:"Talebi Gönder",sending:"Gönderiliyor…",
       ok:"Teşekkürler! Talebiniz alındı, en kısa sürede dönüş yapacağız.",
@@ -168,8 +168,8 @@ window.I18N = {
       ctaTitle:"Hızlı yanıt mı istiyorsunuz?",ctaText:"WhatsApp üzerinden ulaşın, uygulamanıza en uygun modeli birlikte belirleyelim.",ctaBtn:"WhatsApp'tan Yaz"
     },
     footer:{
-      about:"Yerli üretim modüler telesentrik 2D optik ölçüm modülleri. Alan tarayan, PLC entegreli ve yüksek hassasiyetli kalite kontrol çözümleri.",
-      quick:"Hızlı Linkler",contactH:"İletişim",rights:"Tüm hakları saklıdır.",disclaimer:"Optik ölçüm sistemleri · Türkiye"
+      about:"Yüksek hassasiyetli modüler telesentrik 2D optik ölçüm modülleri. Alan tarayan, PLC entegreli ve gelişmiş kalite kontrol çözümleri.",
+      quick:"Hızlı Linkler",contactH:"İletişim",rights:"Tüm hakları saklıdır.",disclaimer:"Modüler Optik Ölçüm Sistemleri"
     },
     a11y:{skip:"İçeriğe atla"}
   },
@@ -183,7 +183,7 @@ window.I18N = {
     nav:{why:"Why SKANOPT",series:"Series",how:"How It Works",automation:"Automation",software:"Software",compare:"Comparison",sectors:"Industries",contact:"Contact"},
     cta:{demo:"Request a Demo",quote:"Get a Quote",series:"Explore Series"},
     hero:{
-      badge:"Locally Made",
+      badge:"Precision Engineering",
       t1:"Optical Measurement\n",t2:"Precise and Modular",t3:"",
       sub:"- High-Precision Dimensional Control\n- Telecentric Optical Measurement\n- Integrated Lighting and High-Resolution Camera\n- Easy integration into production lines and robot cells.",
       stat1:"High Accuracy (VRE)",stat2:"Measurement Speed",stat3:"Max. Resolution",secUnit:"s",resolUnit:"MP",
@@ -193,7 +193,7 @@ window.I18N = {
     },
     why:{
       eyebrow:"Why SKANOPT",title:"Where SKANOPT Stands Apart",
-      sub:"We offer high-precision telecentric technology\ncombined with flexible integration, user calibration, and\ndomestic manufacturing advantages.",
+      sub:"We offer high-precision telecentric technology\ncombined with flexible integration, user calibration, and\noriginal engineering advantages.",
       cards:[
         {icon:"rotary",t:"Modular and Flexible Design",d:"Flexible mounting options for inline measurements\ndirectly on conveyor and robot lines, or offline\nworkshop inspection."},
         {icon:"scan",t:"Dual-Telecentric Optics",d:"Distortion-free, wide depth of field, and high-resolution single-shot area scanning for error-free metrology."},
@@ -245,7 +245,7 @@ window.I18N = {
     },
     sw:{
       eyebrow:"Z-Measure Software",title:"One interface from measurement to reporting",
-      sub:"Dozens of measurement types, sub-pixel accuracy, automatic reporting and SPC. Turkish and English interface.",
+      sub:"Dozens of measurement types, sub-pixel accuracy, automatic reporting and SPC. Multilingual interface support.",
       measHead:"Supported Measurement Types",
       measurements:["Rotary diameter","Diameter","Length","Angle","Chamfer","Radius","Thread (pitch + dia.)","Roundness","Perpendicularity","Parallelism","Symmetry","Runout"],
       cards:[
@@ -254,12 +254,12 @@ window.I18N = {
         {icon:"calib",t:"Calibration",d:"Ships factory-calibrated; the user can calibrate any time."},
         {icon:"report",t:"Reporting & SPC",d:"Automatic reporting and SPC data logging with easy export."}
       ],
-      badges:["Windows 10 / 11","I/O Ready","Turkish + English"]
+      badges:["Windows 10 / 11","I/O Ready","Multilingual Support"]
     },
     cmp:{
       eyebrow:"Competitive Comparison",title:"Why SKANOPT stands out",
-      sub:"Technical and commercial comparison with the market leader and local/imported alternatives.",
-      note:"We offer competitive solutions in telecentric optical measurement systems with domestic design, fast online technical support, and high flexibility.",
+      sub:"Technical and commercial comparison with the market leader and global alternatives.",
+      note:"We offer competitive solutions in telecentric optical measurement systems with original design, direct manufacturer support, and high flexibility.",
       feature:"Feature",
       cols:["Competitor A ★","Competitor B ★","Competitor C ★","Competitor D ★","SKANOPT"],
       rows:[
@@ -269,7 +269,7 @@ window.I18N = {
         {label:"Camera (MP)",cells:["Max 5 MP","High","—","High","5–25 MP"]},
         {label:"User Calibration",cells:["❌","❌","❌","✓","✓ Software incl."]},
         {label:"Delivery Time",cells:["4–12 weeks","3–8 weeks","2–6 weeks","8–16 weeks","Order-Based (Fast)"]},
-        {label:"Local Support",cells:["Dealer","❌","❌","✓","✓ Manufacturer"]},
+        {label:"Direct Support",cells:["Dealer","❌","❌","✓","✓ Manufacturer"]},
         {label:"Price",cells:["$8–25k+","$3–10k","$1.5–6k","€6–30k+","Competitive"]}
       ]
     },
@@ -291,17 +291,17 @@ window.I18N = {
     },
     ref:{
       eyebrow:"Global Markets",title:"From Türkiye to the world",
-      sub:"Active sales at home, exports to the EU, and a US partnership — a growing network.",
+      sub:"Global sales presence, exports to the EU, and a US partnership — a growing network.",
       note:"CE certification is in progress. Distributor and reference details are shared on request.",
       items:[
-        {flag:"🇹🇷",country:"Türkiye",role:"Primary Market",desc:"Active sales and a distributor network in automotive, CNC and plastics."},
+        {flag:"🇹🇷",country:"Türkiye",role:"Active Sales",desc:"Active sales and distributor network in automotive, CNC, and plastics."},
         {flag:"🇪🇺",country:"European Union",role:"EU Export",desc:"Exports to the European market, growing with the completion of CE."},
         {flag:"🇺🇸",country:"USA",role:"Official Partnership",desc:"Distributor partnership in the US for the robot-positioning market."}
       ]
     },
     contact:{
       eyebrow:"Contact",title:"Reach us for a demo or quote",
-      sub:"Share your application and let's define the right configuration together. Direct manufacturer technical support.",
+      sub:"Share your application and let's define the right configuration together. Fast and seamless manufacturer technical support.",
       name:"Full Name",company:"Company",email:"E-mail",phone:"Phone",message:"Your message / application",
       submit:"Send Request",sending:"Sending…",
       ok:"Thank you! Your request has been received; we'll get back to you shortly.",
@@ -311,8 +311,8 @@ window.I18N = {
       ctaTitle:"Need a quick reply?",ctaText:"Reach us on WhatsApp and we'll pick the best model for your application together.",ctaBtn:"Message on WhatsApp"
     },
     footer:{
-      about:"Locally manufactured modular telecentric 2D optical measurement sensors. Single-shot area scanning, PLC-integrated, high-precision quality control solutions.",
-      quick:"Quick Links",contactH:"Contact",rights:"All rights reserved.",disclaimer:"Optical measurement systems · Türkiye"
+      about:"High-precision modular telecentric 2D optical measurement sensors. Single-shot area scanning, PLC-integrated, advanced quality control solutions.",
+      quick:"Quick Links",contactH:"Contact",rights:"All rights reserved.",disclaimer:"Modular Optical Measurement Systems"
     },
     a11y:{skip:"Skip to content"}
   }
