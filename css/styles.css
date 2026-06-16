@@ -271,7 +271,7 @@ tbody td:first-child{font-family:var(--f-head);font-weight:600;color:var(--ink)}
 
 /* ---------- otomasyon ---------- */
 .auto__grid{display:grid;grid-template-columns:1fr 1.1fr;gap:clamp(28px,5vw,56px);align-items:center}
-.auto__points{display:grid;gap:18px;margin-top:8px}
+.auto__points{display:grid;gap:18px;margin-top:32px}
 .point{display:flex;gap:15px}
 .point__ic{width:48px;height:48px;border-radius:13px;flex:none;display:grid;place-items:center;background:var(--brand-050);color:var(--brand);border:1px solid var(--brand-100);transition:.3s var(--ease)}
 .point:hover .point__ic{background:var(--brand);color:#fff}
@@ -295,7 +295,8 @@ tbody td:first-child{font-family:var(--f-head);font-weight:600;color:var(--ink)}
 .chip:hover{border-color:var(--brand);color:var(--brand);transform:translateY(-3px);box-shadow:var(--shadow-sm)}
 .chip svg{width:15px;height:15px;color:var(--brand)}
 .badges{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
-.badge{display:inline-flex;align-items:center;gap:8px;font-family:var(--f-head);font-weight:600;font-size:.82rem;color:var(--brand-700);background:var(--brand-050);border:1px solid var(--brand-100);border-radius:10px;padding:8px 14px}
+.badge{display:inline-flex;align-items:center;gap:8px;font-family:var(--f-head);font-weight:600;font-size:.82rem;color:var(--brand-700);background:var(--brand-050);border:1px solid var(--brand-100);border-radius:10px;padding:8px 14px;white-space:nowrap}
+.badge svg{width:14px;height:14px;color:var(--brand);flex-shrink:0}
 
 /* ---------- karşılaştırma ---------- */
 .compare-wrap{width:100%;max-width:100%;overflow-x:auto;border:1px solid var(--line);border-radius:var(--radius);background:#fff;-webkit-overflow-scrolling:touch}

@@ -44,7 +44,7 @@ window.I18N = {
       t1:"Optik Ölçüm\n",t2:"Hassas ve Modüler",t3:"",
       sub:"- Yüksek Hassasiyetli Boyutsal Kontrol\n- Telesentrik Optik Ölçüm\n- Entegre Aydınlatma ve Yüksek Çözünürlüklü Kamera\n- Üretim hattına ve Robot hücresine kolay entegrasyon.",
       stat1:"Yüksek Hassasiyet (VRE)",stat2:"Ölçüm Süresi",stat3:"Maks. Çözünürlük",secUnit:"sn",resolUnit:"MP",
-      trust1:"Marka Bağımsız PLC ve Robot Entegrasyonu",trust2:"Kullanıcı Kalibrasyonu Kolaylığı",trust3:"Sürekli Online Üretici Desteği",
+      trust1:"Marka Bağımsız PLC ve Robot Entegrasyonu",trust2:"Kullanıcı Kalibrasyonu",trust3:"Sürekli Online Üretici Desteği",
       f1s:"Tek çekim",f1b:"20 × 20 mm alan",f2s:"Ölçüm süresi",
       videoLabel1:"Ölçüm Cihazı",videoLabel2:"Matkap Ölçümü"
     },
@@ -52,11 +52,11 @@ window.I18N = {
       eyebrow:"Neden SKANOPT",title:"SKANOPT Bunlarda Fark Yaratır",
       sub:"Yüksek hassasiyetli telesentrik teknolojisini;\nesnek entegrasyon, kullanıcı kalibrasyonu ve\nözgün mühendislik avantajlarıyla sunuyoruz.",
       cards:[
-        {icon:"rotary",t:"Modüler ve Esnek Yapı",d:"Atölye ortamında, hat kenarında veya\ndoğrudan konveyör ve robot hatlarında inline ölçüm için\nesnek montaj imkanı."},
+        {icon:"rotary",t:"Modüler ve Esnek Yapı",d:"Atölye ortamında, hat kenarında veya\ndoğrudan konveyör ve robot hatlarında\ninline ölçüm için\nesnek montaj imkanı."},
         {icon:"scan",t:"Çift Telesentrik Optik (Dual-Telecentric)",d:"Bozulmasız, derin odak alanı ve yüksek çözünürlüklü tek çekim alan tarama teknolojisiyle hatasız ölçüm."},
-        {icon:"plc",t:"PLC ve Robot Entegrasyonu",d:"Siemens, Mitsubishi, Fanuc, Omron gibi popüler PLC'ler ve robot kollarıyla Ethernet I/O üzerinden doğrudan haberleşme."},
-        {icon:"calib",t:"Kullanıcı Dostu Kalibrasyon",d:"Müşterinin yazılım arayüzünden dilediği zaman yapabileceği pratik kalibrasyon altyapısı."},
-        {icon:"camera",t:"Endüstriyel Kamera Çözünürlüğü",d:"İhtiyaca uygun 5 MP ile 25 MP aralığında yüksek çözünürlüklü CMOS sensör yapılandırmaları."},
+        {icon:"plc",t:"PLC ve Robot Entegrasyonu",d:"Siemens, Mitsubishi, Fanuc, Omron gibi\npopüler PLC'ler ve robot kollarıyla\nEthernet I/O üzerinden doğrudan haberleşme."},
+        {icon:"calib",t:"Kullanıcı Dostu Kalibrasyon",d:"Yazılım arayüzünden yapılabilen pratik kalibrasyon altyapısı."},
+        {icon:"camera",t:"Endüstriyel Kamera Çözünürlüğü",d:"İhtiyaca uygun 5 MP ile 25 MP aralığında\nyüksek çözünürlüklü CMOS sensör yapılandırmaları."},
         {icon:"truck",t:"Kısa Teslimat Süreleri",d:"Sipariş üzerine esnek üretim planlaması, hızlı teslimat ve doğrudan üreticiden uzman teknik destek."}
       ]
     },
@@ -83,14 +83,14 @@ window.I18N = {
       eyebrow:"Nasıl Çalışır",title:"Parçadan Sonuca Dört Adım",
       sub:"Telesentrik optik ve sub-piksel görüntü işleme ile operatör hatası olmadan, saniyeler içinde ölçüm.",
       steps:[
-        {t:"Parça Yerleştirme",d:"Parça ölçüm alanına (konveyör veya döner tabla opsiyonuna) yerleştirilir."},
-        {t:"Alan Tarama",d:"Ölçüm alanı tek çekimde yüksek çözünürlüklü CMOS sensörle taranır."},
-        {t:"Görüntü İşleme",d:"Z-Measure yazılımı sub-piksel hassasiyetle boyutsal değerleri çıkarır."},
-        {t:"Entegrasyon & Raporlama",d:"PLC / robot / CNC'ye aşınma telafisi (wear offset) veya OK/NOK sinyali gönderilir."}
+        {t:"Parça Yerleştirme",d:"Parça ölçüm alanına (konveyör veya\ndöner tabla opsiyonuna) yerleştirilir."},
+        {t:"Alan Tarama",d:"Ölçüm alanı tek çekimde\nyüksek çözünürlüklü CMOS sensörle taranır."},
+        {t:"Görüntü İşleme",d:"Z-Measure yazılımı sub-piksel hassasiyetle\nboyutsal değerleri çıkarır."},
+        {t:"Entegrasyon & Raporlama",d:"PLC / robot / CNC'ye aşınma telafisi\n(wear offset) veya OK/NOK sinyali gönderilir."}
       ]
     },
     auto:{
-      eyebrow:"Robot & Otomasyon",title:"Hattınıza sorunsuz entegre",
+      eyebrow:"Robot & Otomasyon",title:"Hattınıza Sorunsuz Entegre",
       sub:"Marka bağımsız PLC, robot ve konveyör uyumu.\nÖlçüm sonucunu doğrudan tezgâha gönderin.\nOperatör müdahalesini sıfıra indirin.",
       videoTag:"Canlı inline ölçüm",videoTag2:"Robot hücresi — canlı",
       points:[
@@ -102,32 +102,32 @@ window.I18N = {
     },
     sw:{
       eyebrow:"Z-Measure Yazılımı",title:"Ölçümden raporlamaya tek arayüz",
-      sub:"Onlarca ölçüm tipi, sub-piksel hassasiyet, otomatik raporlama ve SPC. Çoklu dil destekli arayüz.",
+      sub:"Onlarca ölçüm tipi, sub-piksel hassasiyet, otomatik raporlama ve SPC.\nÇoklu dil destekli arayüz.",
       measHead:"Desteklenen Ölçüm Tipleri",
       measurements:["Döner Çap","Çap","Boy","Açı","Pah","Radyus","Vida (Adım + Çap)","Dairesellik","Diklik","Paralellik","Simetriklik","Salgı"],
       cards:[
-        {icon:"link",t:"Bağlantılar",d:"Robot haberleşmesi, ERP/SCADA entegrasyonu ve barkodla program seçimi."},
-        {icon:"cnc",t:"CNC Offset",d:"Tezgâha wear offset atama arayüzü — operatör müdahalesi sıfır."},
-        {icon:"calib",t:"Kalibrasyon",d:"Sistem kalibrasyonlu gelir; kullanıcı istediği zaman kalibre eder."},
-        {icon:"report",t:"Raporlama & SPC",d:"Otomatik raporlama ve SPC veri kaydı, kolay dışa aktarma."}
+        {icon:"link",t:"Bağlantılar",d:"Robot haberleşmesi, ERP/SCADA entegrasyonu ve barkodla\nprogram seçimi."},
+        {icon:"cnc",t:"CNC Offset",d:"Tezgâha wear offset atama arayüzü —\noperatör müdahalesi sıfır."},
+        {icon:"calib",t:"Kalibrasyon",d:"Sistem kalibrasyonlu gelir;\nkullanıcı istediği zaman kalibre eder."},
+        {icon:"report",t:"Raporlama & SPC",d:"Otomatik raporlama ve SPC\nveri kaydı, kolay dışa aktarma."}
       ],
       badges:["Windows 10 / 11","I/O Hazır","Çoklu Dil / Multilingual"]
     },
     cmp:{
-      eyebrow:"Rakip Karşılaştırma",title:"Neden SKANOPT öne çıkıyor?",
-      sub:"Pazar lideri ve küresel alternatiflerle teknik ve ticari karşılaştırma.",
+      eyebrow:"Öne Çıkan Özellikler",title:"Neden SKANOPT öne çıkıyor?",
+      sub:"Pazar standartları ile teknik ve ticari karşılaştırma.",
       note:"Telesentrik optik ölçüm sistemlerinde özgün tasarım, doğrudan teknik destek ve yüksek esneklikle rekabetçi çözümler sunuyoruz.",
-      feature:"Özellik",
-      cols:["Rakip A ★","Rakip B ★","Rakip C ★","Rakip D ★","SKANOPT"],
+      feature:"Özellikler",
+      cols:["Standart Sistemler","SKANOPT"],
       rows:[
-        {label:"Döner Tabla (Opsiyon)",cells:["❌","❌","❌","◐","✓ Entegre edilebilir"]},
-        {label:"Alan Tarama",cells:["Lineer tarama","✓ Alan","Lineer tarama","Video","✓ Tek çekim"]},
-        {label:"PLC Esnekliği",cells:["Sadece Mitsubishi","Kısmi","Kısmi","Proje bazlı","Her PLC / robot"]},
-        {label:"Kamera (MP)",cells:["Maks. 5 MP","Yüksek","—","Yüksek","5–25 MP"]},
-        {label:"Kullanıcı Kalibrasyon",cells:["❌","❌","❌","✓","✓ Yazılım dahil"]},
-        {label:"Teslim Süresi",cells:["4–12 hafta","3–8 hafta","2–6 hafta","8–16 hafta","Sipariş Bazlı (Hızlı)"]},
-        {label:"Doğrudan Destek",cells:["Bayi","❌","❌","✓","✓ Üretici"]},
-        {label:"Fiyat",cells:["$8–25 bin+","$3–10 bin","$1,5–6 bin","€6–30 bin+","Rekabetçi"]}
+        {label:"Döner Tabla (Opsiyon)",cells:["❌ Genellikle yok / sınırlı","✓ Entegre edilebilir (360° Ölçüm)"]},
+        {label:"Alan Tarama",cells:["Genellikle çizgisel tarama","✓ Tek çekimde hızlı alan tarama"]},
+        {label:"PLC Esnekliği",cells:["Sınırlı veya tek marka bağımlı","✓ Marka bağımsız (Tüm PLC & Robotlar)"]},
+        {label:"Kamera (MP)",cells:["Maksimum 5 MP","✓ 5 MP - 25 MP seçenekleri"]},
+        {label:"Kullanıcı Kalibrasyon",cells:["❌ Genellikle yok (servis bağımlı)","✓ Yazılım dahil (Pratik kalibrasyon)"]},
+        {label:"Teslim Süresi",cells:["4 ile 16 hafta arası","✓ Sipariş bazlı hızlı teslimat"]},
+        {label:"Doğrudan Destek",cells:["Distribütör veya bayi üzerinden","✓ Doğrudan üreticiden hızlı destek"]},
+        {label:"Fiyat",cells:["Yüksek yatırım maliyeti","✓ Rekabetçi ve modüler fiyatlar"]}
       ]
     },
     sec:{
@@ -136,9 +136,9 @@ window.I18N = {
       appsHead:"Örnek ölçülen parçalar",
       sectors:[
         {icon:"car",t:"Otomotiv Yan Sanayi",d:"Şaft, piston, valf ve dişli ölçümünde 360° kontrol opsiyonu."},
-        {icon:"appliance",t:"Beyaz Eşya",d:"Yüksek hacimli üretimde hızlı boyutsal kalite kontrol."},
-        {icon:"implant",t:"İmplant & Medikal",d:"Yüksek hassasiyet gerektiren tıbbi parça ve iğneler."},
-        {icon:"chip",t:"Elektronik & Yarı İletken",d:"Konnektör pinleri, çip ve hassas elektronik parçalar."},
+        {icon:"appliance",t:"Beyaz Eşya",d:"Yüksek hacimli üretimde hızlı\nboyutsal kalite kontrol."},
+        {icon:"implant",t:"İmplant & Medikal",d:"Yüksek hassasiyet gerektiren\ntıbbi parça ve iğneler."},
+        {icon:"chip",t:"Elektronik & Yarı İletken",d:"Konnektör pinleri, çip ve\nhassas elektronik parçalar."},
         {icon:"cnc",t:"CNC & Metal İşleme",d:"0.4 sn ölçüm + CNC wear offset ile üretim kaybı sıfır."},
         {icon:"mold",t:"Plastik & Kalıp",d:"Enjeksiyon parçaları için ideal telesentrik ölçüm."},
         {icon:"aero",t:"Havacılık & Savunma",d:"Kritik toleranslı parçalarda yüksek tekrarlanabilirlik."},
@@ -168,7 +168,7 @@ window.I18N = {
       ctaTitle:"Hızlı yanıt mı istiyorsunuz?",ctaText:"WhatsApp üzerinden ulaşın, uygulamanıza en uygun modeli birlikte belirleyelim.",ctaBtn:"WhatsApp'tan Yaz"
     },
     footer:{
-      about:"Yüksek hassasiyetli modüler telesentrik 2D optik ölçüm modülleri. Alan tarayan, PLC entegreli ve gelişmiş kalite kontrol çözümleri.",
+      about:"Yüksek hassasiyetli modüler telesentrik\noptik ölçüm modülleri. Alan tarayan, PLC entegreli ve\ngelişmiş kalite kontrol çözümleri.",
       quick:"Hızlı Linkler",contactH:"İletişim",rights:"Tüm hakları saklıdır.",disclaimer:"Modüler Optik Ölçüm Sistemleri"
     },
     a11y:{skip:"İçeriğe atla"}
@@ -187,7 +187,7 @@ window.I18N = {
       t1:"Optical Measurement\n",t2:"Precise and Modular",t3:"",
       sub:"- High-Precision Dimensional Control\n- Telecentric Optical Measurement\n- Integrated Lighting and High-Resolution Camera\n- Easy integration into production lines and robot cells.",
       stat1:"High Accuracy (VRE)",stat2:"Measurement Speed",stat3:"Max. Resolution",secUnit:"s",resolUnit:"MP",
-      trust1:"Brand-Independent PLC and Robot Integration",trust2:"User Calibration Simplicity",trust3:"Continuous Online Manufacturer Support",
+      trust1:"Brand-Independent PLC and Robot Integration",trust2:"User Calibration",trust3:"Continuous Online Manufacturer Support",
       f1s:"Single shot",f1b:"20 × 20 mm field",f2s:"Measurement time",
       videoLabel1:"Measurement System",videoLabel2:"Drill Inspection"
     },
@@ -198,7 +198,7 @@ window.I18N = {
         {icon:"rotary",t:"Modular and Flexible Design",d:"Flexible mounting options for inline measurements\ndirectly on conveyor and robot lines, or offline\nworkshop inspection."},
         {icon:"scan",t:"Dual-Telecentric Optics",d:"Distortion-free, wide depth of field, and high-resolution single-shot area scanning for error-free metrology."},
         {icon:"plc",t:"PLC & Robot Integration",d:"Direct communication with popular PLC brands (Siemens, Mitsubishi, Fanuc, Omron) and robot arms via Ethernet I/O."},
-        {icon:"calib",t:"User-Friendly Calibration",d:"Practical calibration infrastructure that customers can perform anytime via the software interface."},
+        {icon:"calib",t:"User-Friendly Calibration",d:"Practical calibration infrastructure accessible directly via the software interface."},
         {icon:"camera",t:"Industrial Camera Options",d:"High-resolution CMOS sensor configurations ranging from 5 MP to 25 MP tailored to your requirements."},
         {icon:"truck",t:"Short Lead Times",d:"Flexible production planning based on order, fast delivery, and direct technical support from the manufacturer."}
       ]
@@ -233,7 +233,7 @@ window.I18N = {
       ]
     },
     auto:{
-      eyebrow:"Robot & Automation",title:"Seamless integration into your line",
+      eyebrow:"Robot & Automation",title:"Seamless Integration Into Your Line",
       sub:"Brand-independent PLC, robot and conveyor compatibility.\nSend measurement results directly to the machine.\nReduce operator intervention to zero.",
       videoTag:"Live inline measurement",videoTag2:"Robot cell — live",
       points:[
@@ -245,7 +245,7 @@ window.I18N = {
     },
     sw:{
       eyebrow:"Z-Measure Software",title:"One interface from measurement to reporting",
-      sub:"Dozens of measurement types, sub-pixel accuracy, automatic reporting and SPC. Multilingual interface support.",
+      sub:"Dozens of measurement types, sub-pixel accuracy, automatic reporting and SPC.\nMultilingual interface support.",
       measHead:"Supported Measurement Types",
       measurements:["Rotary diameter","Diameter","Length","Angle","Chamfer","Radius","Thread (pitch + dia.)","Roundness","Perpendicularity","Parallelism","Symmetry","Runout"],
       cards:[
@@ -257,20 +257,20 @@ window.I18N = {
       badges:["Windows 10 / 11","I/O Ready","Multilingual Support"]
     },
     cmp:{
-      eyebrow:"Competitive Comparison",title:"Why SKANOPT stands out",
-      sub:"Technical and commercial comparison with the market leader and global alternatives.",
+      eyebrow:"Key Highlights",title:"Why SKANOPT stands out",
+      sub:"Technical and commercial comparison of features with market standards.",
       note:"We offer competitive solutions in telecentric optical measurement systems with original design, direct manufacturer support, and high flexibility.",
-      feature:"Feature",
-      cols:["Competitor A ★","Competitor B ★","Competitor C ★","Competitor D ★","SKANOPT"],
+      feature:"Features",
+      cols:["Standard Systems","SKANOPT"],
       rows:[
-        {label:"Rotary Stage (Option)",cells:["❌","❌","❌","◐","✓ Integrable"]},
-        {label:"Area Scan",cells:["Line scan","✓ Area","Line scan","Video","✓ Single shot"]},
-        {label:"PLC Flexibility",cells:["Mitsubishi only","Partial","Partial","Project-based","Any PLC / robot"]},
-        {label:"Camera (MP)",cells:["Max 5 MP","High","—","High","5–25 MP"]},
-        {label:"User Calibration",cells:["❌","❌","❌","✓","✓ Software incl."]},
-        {label:"Delivery Time",cells:["4–12 weeks","3–8 weeks","2–6 weeks","8–16 weeks","Order-Based (Fast)"]},
-        {label:"Direct Support",cells:["Dealer","❌","❌","✓","✓ Manufacturer"]},
-        {label:"Price",cells:["$8–25k+","$3–10k","$1.5–6k","€6–30k+","Competitive"]}
+        {label:"Rotary Stage (Option)",cells:["❌ Generally unavailable","✓ Integrable (360° Measurement)"]},
+        {label:"Area Scan",cells:["Line scan or video-based","✓ Fast single-shot area scan"]},
+        {label:"PLC Flexibility",cells:["Brand-dependent or limited","✓ Brand-independent (Any PLC & Robot)"]},
+        {label:"Camera (MP)",cells:["Maximum 5 MP","✓ 5 MP to 25 MP CMOS options"]},
+        {label:"User Calibration",cells:["❌ Service-dependent","✓ Easy software-integrated calibration"]},
+        {label:"Delivery Time",cells:["4 to 16 weeks","✓ Fast order-based delivery"]},
+        {label:"Direct Support",cells:["Dealer or agency dependent","✓ Direct online manufacturer support"]},
+        {label:"Price",cells:["High initial investment","✓ Competitive and modular pricing"]}
       ]
     },
     sec:{
@@ -279,9 +279,9 @@ window.I18N = {
       appsHead:"Example measured parts",
       sectors:[
         {icon:"car",t:"Automotive Suppliers",d:"Shaft, piston, valf and gear measurement with optional 360° control."},
-        {icon:"appliance",t:"Home Appliances",d:"Fast dimensional quality control in high-volume production."},
-        {icon:"implant",t:"Implants & Medical",d:"Medical parts and needles that demand high precision."},
-        {icon:"chip",t:"Electronics & Semiconductor",d:"Connector pins, chips and precise electronic parts."},
+        {icon:"appliance",t:"Home Appliances",d:"Fast dimensional quality control\nin high-volume production."},
+        {icon:"implant",t:"Implants & Medical",d:"Medical parts and needles\nthat demand high precision."},
+        {icon:"chip",t:"Electronics & Semiconductor",d:"Connector pins, chips and\nprecise electronic parts."},
         {icon:"cnc",t:"CNC & Metalworking",d:"0.4 s measurement + CNC wear offset means zero production loss."},
         {icon:"mold",t:"Plastics & Molding",d:"Ideal telecentric measurement for injection-molded parts."},
         {icon:"aero",t:"Aerospace & Defense",d:"High repeatability on parts with critical tolerances."},
@@ -311,7 +311,7 @@ window.I18N = {
       ctaTitle:"Need a quick reply?",ctaText:"Reach us on WhatsApp and we'll pick the best model for your application together.",ctaBtn:"Message on WhatsApp"
     },
     footer:{
-      about:"High-precision modular telecentric 2D optical measurement sensors. Single-shot area scanning, PLC-integrated, advanced quality control solutions.",
+      about:"High-precision modular telecentric\noptical measurement sensors. Single-shot area scanning, PLC-integrated, advanced quality control solutions.",
       quick:"Quick Links",contactH:"Contact",rights:"All rights reserved.",disclaimer:"Modular Optical Measurement Systems"
     },
     a11y:{skip:"Skip to content"}
