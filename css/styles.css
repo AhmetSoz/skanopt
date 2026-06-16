@@ -566,10 +566,10 @@ tbody td:first-child{font-family:var(--f-head);font-weight:600;color:var(--ink)}
   width: auto;
   display: block;
   transition: transform 0.3s var(--ease), height 0.3s var(--ease);
-  transform: translateY(-9.5%); /* Logo görselinin üstündeki ve altındaki asimetrik boşluğu telafi ederek harfleri tam dikey merkeze alır */
+  transform: translateY(-7.5%); /* Logo görselinin üstündeki ve altındaki asimetrik boşluğu telafi ederek harfleri tam dikey merkeze alır */
 }
 .brand:hover .brand__img {
-  transform: translateY(-9.5%) scale(1.03);
+  transform: translateY(-7.5%) scale(1.03);
 }
 .header.scrolled .brand__img {
   height: 46px; /* Scrolled header (64px) ile uyumlu olacak şekilde boyutu dengeler */
@@ -577,10 +577,10 @@ tbody td:first-child{font-family:var(--f-head);font-weight:600;color:var(--ink)}
 .footer .brand__img {
   height: 62px; /* Footer alanında logonun daha asil ve okunabilir görünmesi için yükseltildi */
   margin-bottom: 16px;
-  transform: translateY(-9.5%);
+  transform: translateY(-7.5%);
 }
 .footer .brand:hover .brand__img {
-  transform: translateY(-9.5%) scale(1.03);
+  transform: translateY(-7.5%) scale(1.03);
 }
 
 /* Başlık içi inline logo görseli */

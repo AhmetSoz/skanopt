@@ -42,22 +42,22 @@ window.I18N = {
     hero:{
       badge:"Hassas Mühendislik",
       t1:"Optik Ölçüm\n",t2:"Hassas ve Modüler",t3:"",
-      sub:"- Yüksek Hassasiyetli Boyutsal Kontrol\n- Telesentrik Optik Ölçüm\n- Entegre Aydınlatma ve Yüksek Çözünürlüklü Kamera\n- Üretim hattına ve Robot hücresine kolay entegrasyon.",
+      sub:"- Yüksek Hassasiyetli Boyutsal Kontrol\n- Telesentrik Optik Ölçüm\n- Entegre Aydınlatma ve Yüksek Çözünürlüklü Kamera\n- Üretim hattına ve Robot hücresine kolay entegrasyon",
       stat1:"Yüksek Hassasiyet (VRE)",stat2:"Ölçüm Süresi",stat3:"Maks. Çözünürlük",secUnit:"sn",resolUnit:"MP",
       trust1:"Marka Bağımsız PLC ve Robot Entegrasyonu",trust2:"Kullanıcı Kalibrasyonu",trust3:"Sürekli Online Üretici Desteği",
       f1s:"Tek çekim",f1b:"20 × 20 mm alan",f2s:"Ölçüm süresi",
       videoLabel1:"Ölçüm Cihazı",videoLabel2:"Matkap Ölçümü"
     },
     why:{
-      eyebrow:"Neden SKANOPT",title:"SKANOPT Bunlarda Fark Yaratır",
+      eyebrow:"Neden SKANOPT",title:"SKANOPT Hangi Alanlarda Fark Yaratır?",
       sub:"Yüksek hassasiyetli telesentrik teknolojisini;\nesnek entegrasyon, kullanıcı kalibrasyonu ve\nözgün mühendislik avantajlarıyla sunuyoruz.",
       cards:[
-        {icon:"rotary",t:"Modüler ve Esnek Yapı",d:"Atölye ortamında, hat kenarında veya\ndoğrudan konveyör ve robot hatlarında\ninline ölçüm için\nesnek montaj imkanı."},
-        {icon:"scan",t:"Çift Telesentrik Optik (Dual-Telecentric)",d:"Bozulmasız, derin odak alanı ve yüksek çözünürlüklü tek çekim alan tarama teknolojisiyle hatasız ölçüm."},
-        {icon:"plc",t:"PLC ve Robot Entegrasyonu",d:"Siemens, Mitsubishi, Fanuc, Omron gibi\npopüler PLC'ler ve robot kollarıyla\nEthernet I/O üzerinden doğrudan haberleşme."},
-        {icon:"calib",t:"Kullanıcı Dostu Kalibrasyon",d:"Yazılım arayüzünden yapılabilen pratik kalibrasyon altyapısı."},
-        {icon:"camera",t:"Endüstriyel Kamera Çözünürlüğü",d:"İhtiyaca uygun 5 MP ile 25 MP aralığında\nyüksek çözünürlüklü CMOS sensör yapılandırmaları."},
-        {icon:"truck",t:"Kısa Teslimat Süreleri",d:"Sipariş üzerine esnek üretim planlaması, hızlı teslimat ve doğrudan üreticiden uzman teknik destek."}
+        {icon:"rotary",t:"Modüler ve Esnek Yapı",d:"Atölye ortamında, hat kenarında veya\ndoğrudan konveyör ve robot hatlarında\ninline ölçüm için\nesnek montaj imkanı"},
+        {icon:"scan",t:"Çift Telesentrik Optik (Dual-Telecentric)",d:"Bozulmasız, derin odak alanı ve yüksek çözünürlüklü tek çekim alan tarama teknolojisiyle hatasız ölçüm"},
+        {icon:"plc",t:"PLC ve Robot Entegrasyonu",d:"Siemens, Mitsubishi, Fanuc, Omron gibi\npopüler PLC'ler ve robot kollarıyla\nEthernet I/O üzerinden doğrudan haberleşme"},
+        {icon:"calib",t:"Kullanıcı Dostu Kalibrasyon",d:"Yazılım arayüzünden yapılabilen pratik kalibrasyon altyapısı"},
+        {icon:"camera",t:"Endüstriyel Kamera Çözünürlüğü",d:"İhtiyaca uygun 5 MP ile 25 MP aralığında\nyüksek çözünürlüklü CMOS sensör yapılandırmaları"},
+        {icon:"truck",t:"Kısa Teslim Süreleri",d:"Sipariş üzerine esnek üretim planlaması, hızlı teslimat ve doğrudan üreticiden uzman teknik destek"}
       ]
     },
     series:{
@@ -70,10 +70,10 @@ window.I18N = {
         V:{name:"V Serisi",tag:"Kompakt · Alan Kamerası",desc:"Kompakt gövde tasarımı, alan kamerası ve 0.4 saniyede ölçüm. Atölye ve hat kenarı kalite kontrol için ideal.",
            feats:["0.4 saniyede ölçüm sonucu","Otomasyona uygun, I/O hazır gelir","Fabrika çıkışlı sistem kalibrasyonu","Otomatik raporlama ve veri entegrasyonu"]},
         VR:{name:"VR Serisi",tag:"Opsiyonel Döner Tabla Entegrasyonu",desc:"V serisi sensör modülüne entegre 360° döner tabla opsiyonu ile mil, şaft ve dairesel parçalarda dairesellik, eşmerkezlilik ve salgı ölçümü.",
-           feats:["Dairesellik, eşmerkezlilik ve ovallik ölçümü","360° döner tabla entegrasyonu ile şaft/mil ölçümü","Otomasyona uygun, I/O hazır arayüz","CNC wear offset ve otomatik raporlama"]},
+           feats:["Dairesellik, eşmerkezlilik ve ovallik ölçümü","360° döner tabla entegrasyonu ile şaft/mil ölçümü","Otomasyona uygun, I/O hazır arayüz","CNC aşınma telafisi (wear offset) ve otomatik raporlama"]},
         VRE:{name:"VRE Serisi",tag:"Ultra Hassas · Uzun Parça",desc:"Ultra yüksek hassasiyet ve dikeyde 100–600 mm uzun parça ölçüm desteği.",
            feats:["0.001 µm çözünürlüğe varan hassasiyet","Dikeyde 100–600 mm ölçüm boyu","VR serisi entegrasyon opsiyonları","Uzun parça ve yüksek hassasiyet uygulamaları"]},
-        W:{name:"W Serisi",tag:"Büyük Parça · Çizgisel Kamera",desc:"Büyük ve uzun parçalar için çizgisel (lineer) kamera teknolojisine sahip telecentric sistem.",
+        W:{name:"W Serisi",tag:"Büyük Parça · Çizgisel Kamera",desc:"Büyük ve uzun parçalar için çizgisel (lineer) kamera teknolojisine sahip telesentrik sistem.",
            feats:["Büyük ve uzun parça ölçümü","Çizgisel kamera ile artırılmış hassasiyet","Dikeyde 300–1500 mm","WE modelleri ile daha yüksek hassasiyet"]},
         H:{name:"H Serisi",tag:"Hat Boyu Otomasyon",desc:"Tam otomasyon odaklı, 0.4 saniyede ölçüm yapabilen geniş modül yelpazesi.",
            feats:["0.4 saniyede ölçüm","Geniş ölçüm aralığı, 10 model","Otomasyona uygun, I/O hazır","Sistem + kullanıcı kalibrasyonu"]}
@@ -91,13 +91,13 @@ window.I18N = {
     },
     auto:{
       eyebrow:"Robot & Otomasyon",title:"Hattınıza Sorunsuz Entegre",
-      sub:"Marka bağımsız PLC, robot ve konveyör uyumu.\nÖlçüm sonucunu doğrudan tezgâha gönderin.\nOperatör müdahalesini sıfıra indirin.",
+      sub:"Marka bağımsız PLC, robot ve konveyör uyumluluğu.\nÖlçüm sonuçlarını doğrudan tezgâha ileterek\noperatör müdahalesini sıfıra indirir.",
       videoTag:"Canlı inline ölçüm",videoTag2:"Robot hücresi — canlı",
       points:[
         {icon:"robot",t:"Robot & Konveyör",d:"Stäubli konveyör ve uFactory robot kolu entegrasyonu — Z-Measure'da hazır arayüz."},
         {icon:"plc",t:"Her PLC Markası",d:"Siemens, Mitsubishi, Fanuc, Omron — sahadan sorunsuz entegrasyon."},
         {icon:"cnc",t:"CNC Wear Offset",d:"Ölçüm sonucunu doğrudan tezgâha aşınma telafisi olarak gönderir."},
-        {icon:"sync",t:"Senkron Tetikleme",d:"'Şimdi ölç' komutunu konveyör bandı veya robot ile senkronize edin."}
+        {icon:"sync",t:"Senkron Tetikleme",d:"'Şimdi ölç' komutunu konveyör bandı veya robot ile senkronize eder."}
       ]
     },
     sw:{
@@ -108,7 +108,7 @@ window.I18N = {
       cards:[
         {icon:"link",t:"Bağlantılar",d:"Robot haberleşmesi, ERP/SCADA entegrasyonu ve barkodla\nprogram seçimi."},
         {icon:"cnc",t:"CNC Offset",d:"Tezgâha wear offset atama arayüzü —\noperatör müdahalesi sıfır."},
-        {icon:"calib",t:"Kalibrasyon",d:"Sistem kalibrasyonlu gelir;\nkullanıcı istediği zaman kalibre eder."},
+        {icon:"calib",t:"Kalibrasyon",d:"Sistem fabrikada kalibre edilmiş olarak teslim edilir;\nkullanıcı dilediği zaman yeniden kalibre edebilir."},
         {icon:"report",t:"Raporlama & SPC",d:"Otomatik raporlama ve SPC\nveri kaydı, kolay dışa aktarma."}
       ],
       badges:["Windows 10 / 11","I/O Hazır","Çoklu Dil / Multilingual"]
@@ -185,7 +185,7 @@ window.I18N = {
     hero:{
       badge:"Precision Engineering",
       t1:"Optical Measurement\n",t2:"Precise and Modular",t3:"",
-      sub:"- High-Precision Dimensional Control\n- Telecentric Optical Measurement\n- Integrated Lighting and High-Resolution Camera\n- Easy integration into production lines and robot cells.",
+      sub:"- High-Precision Dimensional Control\n- Telecentric Optical Measurement\n- Integrated Lighting and High-Resolution Camera\n- Easy integration into production lines and robot cells",
       stat1:"High Accuracy (VRE)",stat2:"Measurement Speed",stat3:"Max. Resolution",secUnit:"s",resolUnit:"MP",
       trust1:"Brand-Independent PLC and Robot Integration",trust2:"User Calibration",trust3:"Continuous Online Manufacturer Support",
       f1s:"Single shot",f1b:"20 × 20 mm field",f2s:"Measurement time",
@@ -234,13 +234,13 @@ window.I18N = {
     },
     auto:{
       eyebrow:"Robot & Automation",title:"Seamless Integration Into Your Line",
-      sub:"Brand-independent PLC, robot and conveyor compatibility.\nSend measurement results directly to the machine.\nReduce operator intervention to zero.",
+      sub:"Brand-independent PLC, robot and conveyor compatibility.\nSends measurement results directly to the machine\nto reduce operator intervention to zero.",
       videoTag:"Live inline measurement",videoTag2:"Robot cell — live",
       points:[
         {icon:"robot",t:"Robot & Conveyor",d:"Stäubli conveyor and uFactory robot-arm integration — ready interface in Z-Measure."},
         {icon:"plc",t:"Any PLC Brand",d:"Siemens, Mitsubishi, Fanuc, Omron — smooth on-site integration."},
         {icon:"cnc",t:"CNC Wear Offset",d:"Sends the measurement result to the machine directly as a wear offset."},
-        {icon:"sync",t:"Synchronized Trigger",d:"Synchronize the 'measure now' command with the conveyor or robot."}
+        {icon:"sync",t:"Synchronized Trigger",d:"Synchronizes the 'measure now' command with the conveyor or robot."}
       ]
     },
     sw:{
@@ -251,7 +251,7 @@ window.I18N = {
       cards:[
         {icon:"link",t:"Connectivity",d:"Robot communication, ERP/SCADA integration and barcode-based program selection."},
         {icon:"cnc",t:"CNC Offset",d:"Interface to assign wear offset to the machine — zero operator intervention."},
-        {icon:"calib",t:"Calibration",d:"Ships factory-calibrated; the user can calibrate any time."},
+        {icon:"calib",t:"Calibration",d:"Ships factory-calibrated; the user can calibrate at any time."},
         {icon:"report",t:"Reporting & SPC",d:"Automatic reporting and SPC data logging with easy export."}
       ],
       badges:["Windows 10 / 11","I/O Ready","Multilingual Support"]
