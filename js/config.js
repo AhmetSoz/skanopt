@@ -1,26 +1,27 @@
 /* ============================================================
-   SKANOPT · Site Yapılandırması
+   SKANOPT · Site Configuration
    --------------------------------------------------------------
-   >>> İLETİŞİM BİLGİLERİNİ BURADAN DOLDURUN (şu an PLACEHOLDER) <<<
-   Marka SKANOPT olduğu için bilgiler placeholder bırakıldı.
-   Doğru değerlerle değiştirip kaydetmeniz yeterli — tüm site otomatik güncellenir.
+   >>> FILL IN YOUR CONTACT DETAILS BELOW (currently PLACEHOLDER) <<<
+   Since the brand is SKANOPT, details are left as placeholders.
+   Replace with the correct values and save — the entire site
+   will update automatically.
    ============================================================ */
 window.SITE = {
   brand: "SKANOPT",
 
-  // --- İletişim (DOLDURULACAK) ---
-  web:          "www.skanopt.com",          // TODO: gerçek alan adı
+  // --- Contact (TO BE FILLED) ---
+  web:          "www.skanopt.com",          // TODO: actual domain
   webUrl:       "https://www.skanopt.com",   // TODO
-  email:        "info@skanopt.com",          // TODO: gerçek e-posta
-  phoneDisplay: "+90 212 619 76 12",         // Gerçek telefon (görünen)
-  phoneE164:    "+902126197612",             // tel: linki için
+  email:        "info@skanopt.com",          // TODO: actual email
+  phoneDisplay: "+90 212 619 76 12",         // Displayed phone number
+  phoneE164:    "+902126197612",             // For tel: links
   
-  // --- WhatsApp (DOLDURULACAK) ---
-  whatsappNumber: "902126197612",            // WhatsApp linki için
-  whatsappText:   "Merhaba, SKANOPT optik ölçüm sistemi hakkında bilgi almak istiyorum.",
+  // --- WhatsApp (TO BE FILLED) ---
+  whatsappNumber: "902126197612",            // For WhatsApp link
+  whatsappText:   "Hello, I would like to learn more about the SKANOPT optical measurement system.",
 
-  // --- Form gönderim servisi (opsiyonel) ---
-  // Boş bırakılırsa form, kullanıcının e-posta uygulamasını açar (mailto yedeği).
-  // Formspree örn: "https://formspree.io/f/xxxxxxxx"
+  // --- Form submission service (optional) ---
+  // If left empty, the form opens the user's email client (mailto fallback).
+  // Formspree example: "https://formspree.io/f/xxxxxxxx"
   formEndpoint: ""
 };

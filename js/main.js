@@ -38,8 +38,8 @@
   };
   const icon = k => I[k] || I.target;
 
-  let lang = (localStorage.getItem("skanopt_lang")) || (navigator.language||"tr").slice(0,2);
-  if(lang!=="en") lang="tr";
+  let lang = (localStorage.getItem("skanopt_lang")) || (navigator.language||"en").slice(0,2);
+  if(lang!=="tr") lang="en";
   let activeSeries = "V";
 
   /* ---------------- dinamik render ---------------- */
