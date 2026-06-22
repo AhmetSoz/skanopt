@@ -40,7 +40,7 @@
 
   const urlParams = new URLSearchParams(window.location.search);
   const urlLang = urlParams.get("lang");
-  let lang = urlLang || localStorage.getItem("skanopt_lang") || "en";
+  let lang = urlLang || "en";
   if(lang!=="tr") lang="en";
   let activeSeries = "V";
 
