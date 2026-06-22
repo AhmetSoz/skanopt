@@ -38,7 +38,9 @@
   };
   const icon = k => I[k] || I.target;
 
-  let lang = (localStorage.getItem("skanopt_lang")) || (navigator.language||"en").slice(0,2);
+  const urlParams = new URLSearchParams(window.location.search);
+  const urlLang = urlParams.get("lang");
+  let lang = urlLang || localStorage.getItem("skanopt_lang") || "en";
   if(lang!=="tr") lang="en";
   let activeSeries = "V";
 

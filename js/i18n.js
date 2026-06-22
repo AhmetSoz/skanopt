@@ -38,7 +38,7 @@ window.I18N = {
       desc:"SKANOPT modüler telesentrik 2D optik ölçüm modülleri: yüksek çözünürlüklü tek çekim alan tarama, marka bağımsız PLC ve robot entegrasyonu, kullanıcı dostu kalibrasyon ve sipariş bazlı kısa teslim süreleri."
     },
     nav:{why:"Neden SKANOPT",series:"Seriler",how:"Nasıl Çalışır",automation:"Otomasyon",software:"Yazılım",compare:"Karşılaştırma",sectors:"Sektörler",contact:"İletişim"},
-    cta:{demo:"Demo Talep Et",quote:"Teklif Al",series:"Serileri İncele"},
+    cta:{demo:"İletişime Geç",quote:"Teklif Al",series:"Serileri İncele"},
     hero:{
       badge:"Hassas Mühendislik",
       t1:"Optik Ölçüm\n",t2:"Hassas ve Modüler",t3:"",
@@ -181,7 +181,7 @@ window.I18N = {
       desc:"SKANOPT modular telecentric 2D optical measurement sensors: high-resolution single-shot area scanning, brand-independent PLC and robot integration, user-defined calibration and short lead times."
     },
     nav:{why:"Why SKANOPT",series:"Series",how:"How It Works",automation:"Automation",software:"Software",compare:"Comparison",sectors:"Industries",contact:"Contact"},
-    cta:{demo:"Request a Demo",quote:"Get a Quote",series:"Explore Series"},
+    cta:{demo:"Contact Us",quote:"Get a Quote",series:"Explore Series"},
     hero:{
       badge:"Precision Engineering",
       t1:"Optical Measurement\n",t2:"Precise and Modular",t3:"",
