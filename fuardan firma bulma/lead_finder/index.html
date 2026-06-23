@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SKANOPT | B2B Fuar Firma Portalı</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Login Overlay -->
+    <div id="login-overlay" class="login-overlay" style="display: none;">
+        <div class="login-card">
+            <div class="logo-circle">SO</div>
+            <h2>SKANOPT B2B Giriş</h2>
+            <p>Lütfen devam etmek için yetkili erişim şifresini girin.</p>
+            <div class="form-group" style="margin-top: 20px; text-align: left;">
+                <label for="login-password" style="font-size: 0.8rem; font-weight:600; margin-bottom: 6px; display:block;">Giriş Şifresi</label>
+                <input type="password" id="login-password" style="width:100%; padding:10px; border:1px solid #E2E8F0; border-radius:10px; font-size:0.9rem;" placeholder="Şifre girin...">
+                <span id="login-error" class="login-error"></span>
+            </div>
+            <button id="btn-login" class="btn btn-primary" style="width: 100%; margin-top: 10px;">Giriş Yap</button>
+        </div>
+    </div>
+
+    <div class="app-container">
+        <!-- Sidebar Filters -->
+        <aside class="sidebar">
+            <div class="brand">
+                <div class="logo-circle">SO</div>
+                <div class="brand-text">
+                    <h1>SKANOPT</h1>
+                    <span>B2B CRM PORTALI</span>
+                </div>
+            </div>
+            
+            <div class="filter-section">
+                <h2>Arama & Filtreleme</h2>
+                
+                <div class="input-group">
+                    <label for="search-input">Firma / Web Sitesi Ara</label>
+                    <input type="text" id="search-input" placeholder="Firma adı veya web adresi yazın...">
+                </div>
+
+                <div class="input-group">
+                    <label for="country-filter">Ülke Seçin</label>
+                    <select id="country-filter">
+                        <option value="all">Tümü (Tüm Ülkeler)</option>
+                        <!-- Dynamically populated via JS -->
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label for="priority-filter">Öncelik Derecesi</label>
+                    <select id="priority-filter">
+                        <option value="all">Tümü (Tüm Öncelikler)</option>
+                        <option value="Yüksek Öncelik">Yüksek Öncelik (⭐⭐⭐)</option>
+                        <option value="Orta Öncelik">Orta Öncelik (⭐⭐)</option>
+                        <option value="Düşük Öncelik">Düşük Öncelik (⭐)</option>
+                        <option value="Sistem Entegratörü">Sistem Entegratörü (🤖 Partner)</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label for="sector-filter">Sektör Seçin</label>
+                    <select id="sector-filter">
+                        <option value="all">Tümü (Tüm Sektörler)</option>
+                        <option value="Otomasyon & Robot Entegratör">Otomasyon & Robot Entegratör</option>
+                        <option value="Hassas Talaşlı İmalat / Metal">Hassas Talaşlı İmalat / Metal</option>
+                        <option value="Plastik Enjeksiyon & Kalıp">Plastik Enjeksiyon & Kalıp</option>
+                        <option value="Medikal Cihaz & Dental İmplant">Medikal Cihaz & Dental İmplant</option>
+                        <option value="Makine / Endüstriyel Parça">Makine / Endüstriyel Parça</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="action-section">
+                <h2>Veri İşlemleri</h2>
+                <button id="btn-save-disk" class="btn btn-secondary">
+                    <i>💾</i> Değişiklikleri Kaydet (JSON)
+                </button>
+                <button id="btn-export-excel" class="btn btn-primary">
+                    <i>💚</i> Seçilenleri Excel'e Aktar
+                </button>
+                <div class="excel-path-note">
+                    <strong>Hedef Excel:</strong> Robotsepeti_Tum_Fuar_Listesi_BirlestikOtomatik_Kurtarıldı.xlsx
+                </div>
+            </div>
+            
+            <div class="footer-note">
+                SKANOPT B2B Prospecting Tool v1.2
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <!-- Top Stats Banner -->
+            <header class="top-bar">
+                <div class="page-title">
+                    <h2>Hannover Messe 2025 Katılımcı Analizi</h2>
+                    <p>Fuar veri tabanından filtrelenen potansiyel SKANOPT B2B müşterileri</p>
+                </div>
+                <div class="stats-container">
+                    <div class="stat-card">
+                        <span class="stat-num" id="stat-total">0</span>
+                        <span class="stat-lbl">Toplam Aday</span>
+                    </div>
+                    <div class="stat-card highlight">
+                        <span class="stat-num" id="stat-high-priority">0</span>
+                        <span class="stat-lbl">Yüksek Öncelikli</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-num" id="stat-selected">0</span>
+                        <span class="stat-lbl">Seçilen / Onaylanan</span>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Active Filters Info & Table Control -->
+            <div class="table-controls">
+                <div class="selection-info">
+                    <input type="checkbox" id="select-all-leads">
+                    <label for="select-all-leads">Tümünü Seç / Seçimi Kaldır</label>
+                </div>
+                <div class="action-buttons">
+                    <button id="btn-add-lead" class="btn btn-add"><i>➕</i> Yeni Firma Ekle</button>
+                </div>
+            </div>
+
+            <!-- Leads List Table Grid -->
+            <div class="table-container">
+                <table class="leads-table">
+                    <thead>
+                        <tr>
+                            <th width="40px">Seç</th>
+                            <th width="230px">Firma İsmi</th>
+                            <th width="120px">Ülke / Şehir</th>
+                            <th width="160px">Sektör</th>
+                            <th width="200px">Satış Önceliği & Gerekçesi</th>
+                            <th width="140px">Web Sitesi</th>
+                            <th width="180px">İletişim Bilgileri</th>
+                            <th>Üretim Detayı & Satış Notu</th>
+                            <th width="90px">İşlemler</th>
+                        </tr>
+                    </thead>
+                    <tbody id="leads-tbody">
+                        <!-- Loaded dynamically via JavaScript -->
+                        <tr>
+                            <td colspan="9" class="loading-cell">Firma listesi yükleniyor...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+
+    <!-- Edit Modal Dialog -->
+    <div id="edit-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modal-title">Firma Bilgilerini Düzenle</h3>
+                <span class="close-modal">&times;</span>
+            </div>
+            <div class="modal-body">
+                <form id="edit-form">
+                    <input type="hidden" id="edit-index">
+                    
+                    <div class="form-group">
+                        <label for="edit-name">Firma İsmi</label>
+                        <input type="text" id="edit-name" required>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="edit-country">Ülke</label>
+                            <input type="text" id="edit-country" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="edit-city">Şehir</label>
+                            <input type="text" id="edit-city">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="edit-priority">Satış Önceliği</label>
+                            <select id="edit-priority">
+                                <option value="Yüksek Öncelik">Yüksek Öncelik (⭐⭐⭐)</option>
+                                <option value="Orta Öncelik">Orta Öncelik (⭐⭐)</option>
+                                <option value="Düşük Öncelik">Düşük Öncelik (⭐)</option>
+                                <option value="Sistem Entegratörü">Sistem Entegratörü (🤖 Partner)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="edit-priority-reason">Öncelik Gerekçesi (Satış Yakınlığı Nedeni)</label>
+                        <input type="text" id="edit-priority-reason" placeholder="Örn: Ürettiği cıvatalar telesentrik ölçüm için en ideal ürün grubudur...">
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="edit-sector">Sektör</label>
+                            <select id="edit-sector">
+                                <option value="Otomasyon & Robot Entegratör">Otomasyon & Robot Entegratör</option>
+                                <option value="Hassas Talaşlı İmalat / Metal">Hassas Talaşlı İmalat / Metal</option>
+                                <option value="Plastik Enjeksiyon & Kalıp">Plastik Enjeksiyon & Kalıp</option>
+                                <option value="Medikal Cihaz & Dental İmplant">Medikal Cihaz & Dental İmplant</option>
+                                <option value="Makine / Endüstriyel Parça">Makine / Endüstriyel Parça</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="edit-website">Web Sitesi</label>
+                        <input type="text" id="edit-website">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="edit-contact">İletişim Bilgileri</label>
+                        <input type="text" id="edit-contact" placeholder="E-posta, telefon vb.">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="edit-note">Üretim Detayı & Satış Notu</label>
+                        <textarea id="edit-note" rows="4" required placeholder="Firma tam ne iş yapıyor ve ne üretiyor? Detaylı açıklayın..."></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary close-modal-btn">İptal</button>
+                <button type="button" id="btn-modal-save" class="btn btn-primary">Kaydet</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notification Toast -->
+    <div id="toast" class="toast">
+        <span id="toast-message">İşlem başarıyla gerçekleştirildi.</span>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
