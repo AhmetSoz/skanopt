@@ -268,6 +268,7 @@ function renderTable() {
                 <span class="cell-city">${lead.city}</span>
             </td>
             <td class="cell-sector">${lead.sektor}</td>
+            <td class="cell-fair" style="font-weight: 500; color: #4A5568;">${lead.fuar || ''}</td>
             <td>
                 ${priorityBadge}
                 <span class="priority-reason">${lead.oncelik_gerekcesi || ''}</span>
@@ -341,6 +342,7 @@ function openEditModal(index) {
         document.getElementById('edit-priority').value = lead.oncelik || "Yüksek Öncelik";
         document.getElementById('edit-priority-reason').value = lead.oncelik_gerekcesi || "";
         document.getElementById('edit-sector').value = lead.sektor;
+        document.getElementById('edit-fair').value = lead.fuar || "";
         document.getElementById('edit-website').value = lead.web_sitesi_linki;
         document.getElementById('edit-contact').value = lead.iletisim_bilgileri;
         document.getElementById('edit-note').value = lead.not;
@@ -351,6 +353,7 @@ function openEditModal(index) {
         document.getElementById('edit-country').value = "Türkiye";
         document.getElementById('edit-priority').value = "Yüksek Öncelik";
         document.getElementById('edit-sector').value = "Hassas Talaşlı İmalat / Metal";
+        document.getElementById('edit-fair').value = "Hannover Messe 2025";
     }
     
     editModal.style.display = 'flex';
@@ -372,6 +375,7 @@ function saveModalForm() {
     const website = document.getElementById('edit-website').value.trim();
     const contact = document.getElementById('edit-contact').value.trim();
     const note = document.getElementById('edit-note').value.trim();
+    const fair = document.getElementById('edit-fair').value.trim() || "Hannover Messe 2025";
     const indexVal = editIndexInput.value;
 
     if (!name || !country || !note) {
@@ -394,7 +398,7 @@ function saveModalForm() {
         sektor: sector,
         oncelik: priority,
         oncelik_gerekcesi: reason || getDefaultReason(priority, sector),
-        fuar: "Hannover Messe 2025",
+        fuar: fair,
         web_sitesi_linki: website,
         iletisim_bilgileri: contact || ("Website: " + website + (existingBooth ? " | Fuar Standı: " + existingBooth : "")),
         not: note,
