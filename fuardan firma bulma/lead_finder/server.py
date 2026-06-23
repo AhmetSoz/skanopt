@@ -34,6 +34,13 @@ class LeadFinderHandler(SimpleHTTPRequestHandler):
                 with open(JSON_PATH, 'w', encoding='utf-8') as f:
                     json.dump(leads, f, ensure_ascii=False, indent=4)
                 
+                # Save to leads.js fallback as well
+                js_path = JSON_PATH.replace('.json', '.js')
+                with open(js_path, 'w', encoding='utf-8') as f:
+                    f.write("window.LEADS_DATA = ")
+                    json.dump(leads, f, ensure_ascii=False, indent=4)
+                    f.write(";")
+                
                 self.send_response(200)
                 self.send_header('Content-Type', 'application/json')
                 self.end_headers()

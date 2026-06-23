@@ -76,11 +76,19 @@ function checkAuth() {
 // Load leads from leads.json
 async function loadLeads() {
     try {
-        const response = await fetch('leads.json');
-        if (!response.ok) {
-            throw new Error("leads.json dosyası yüklenemedi.");
+        if (window.location.protocol === 'file:') {
+            if (window.LEADS_DATA && window.LEADS_DATA.length > 0) {
+                allLeads = window.LEADS_DATA;
+            } else {
+                throw new Error("Local leads.js data not found.");
+            }
+        } else {
+            const response = await fetch('leads.json?t=' + Date.now());
+            if (!response.ok) {
+                throw new Error("leads.json dosyası yüklenemedi.");
+            }
+            allLeads = await response.json();
         }
-        allLeads = await response.json();
         
         // Populate country filter dropdown dynamically
         populateCountryFilter();
