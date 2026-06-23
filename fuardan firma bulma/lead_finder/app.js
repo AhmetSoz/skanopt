@@ -2,6 +2,11 @@ let allLeads = [];
 let filteredLeads = [];
 let selectedLeads = new Set(); // store lead names
 
+// Dynamic API Base URL detection (uses Python backend port 8500 when running locally)
+const API_BASE = (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' || window.location.protocol === 'file:')
+    ? 'http://localhost:8500'
+    : '';
+
 // DOM Elements
 const tbody = document.getElementById('leads-tbody');
 const searchInput = document.getElementById('search-input');
@@ -453,7 +458,7 @@ async function saveLeadsToDisk() {
     btnSaveDisk.disabled = true;
     btnSaveDisk.innerHTML = "Saving...";
     try {
-        const response = await fetch('/api/save', {
+        const response = await fetch(API_BASE + '/api/save', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -489,7 +494,7 @@ async function exportSelectedToExcel() {
     const leadsToExport = allLeads.filter(l => selectedLeads.has(l.firma_ismi));
 
     try {
-        const response = await fetch('/api/export_excel', {
+        const response = await fetch(API_BASE + '/api/export_excel', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
