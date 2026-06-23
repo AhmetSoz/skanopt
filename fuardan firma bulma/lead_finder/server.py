@@ -185,14 +185,15 @@ class LeadFinderHandler(SimpleHTTPRequestHandler):
                 self.end_headers()
                 response = {"status": "success", "message": f"Excel başarıyla güncellendi! '{sheet_name}' sayfası eklendi/güncellendi."}
                 self.wfile.write(json.dumps(response).encode('utf-8'))
-            except PermissionError:
+            except OSError as e:
                 self.send_response(500)
                 self.send_header('Content-Type', 'application/json')
                 self.end_headers()
-                response = {
-                    "status": "error",
-                    "message": "Hata: Excel dosyası şu anda başka bir programda (örneğin Microsoft Excel) açık. Lütfen dosyayı kapatıp tekrar deneyin!"
-                }
+                if e.errno == 13 or "permission denied" in str(e).lower() or "denied" in str(e).lower():
+                    msg = "Hata: Excel dosyası şu anda başka bir programda (örneğin Microsoft Excel) açık. Lütfen dosyayı kapatıp tekrar deneyin!"
+                else:
+                    msg = f"Excel işletim sistemi hatası: {str(e)}"
+                response = {"status": "error", "message": msg}
                 self.wfile.write(json.dumps(response).encode('utf-8'))
             except Exception as e:
                 self.send_response(500)

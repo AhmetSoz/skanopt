@@ -81,7 +81,11 @@ function checkAuth() {
 // Load leads from leads.json
 async function loadLeads() {
     try {
-        if (window.location.protocol === 'file:') {
+        const localData = localStorage.getItem('skanopt_leads');
+        if (localData) {
+            allLeads = JSON.parse(localData);
+            console.log("Loaded leads from browser localStorage.");
+        } else if (window.location.protocol === 'file:') {
             if (window.LEADS_DATA && window.LEADS_DATA.length > 0) {
                 allLeads = window.LEADS_DATA;
             } else {
@@ -457,6 +461,10 @@ function getDefaultReason(priority, sector) {
 async function saveLeadsToDisk() {
     btnSaveDisk.disabled = true;
     btnSaveDisk.innerHTML = "Saving...";
+    
+    // Save to localStorage as a client-side backup (essential for static Vercel deployments)
+    localStorage.setItem('skanopt_leads', JSON.stringify(allLeads));
+    
     try {
         const response = await fetch(API_BASE + '/api/save', {
             method: 'POST',
@@ -465,16 +473,26 @@ async function saveLeadsToDisk() {
             },
             body: JSON.stringify(allLeads)
         });
+        
+        if (!response.ok) {
+            throw new Error("HTTP error " + response.status);
+        }
+        
+        const contentType = response.headers.get('content-type');
+        if (!contentType || !contentType.includes('application/json')) {
+            throw new Error("Not a JSON response");
+        }
+        
         const data = await response.json();
         
-        if (response.ok && data.status === 'success') {
+        if (data.status === 'success') {
             showToast(data.message, "success");
         } else {
             throw new Error(data.message || "Kaydetme başarısız.");
         }
     } catch (error) {
-        console.error(error);
-        showToast("Hata: Disk kaydetme işlemi başarısız oldu! " + error.message, "error");
+        console.warn("Backend save failed, saved to browser localStorage only:", error);
+        showToast("Değişiklikler tarayıcı hafızasına (localStorage) kaydedildi! (Vercel/Static mod)", "success");
     } finally {
         btnSaveDisk.disabled = false;
         btnSaveDisk.innerHTML = "💾 Değişiklikleri Kaydet (JSON)";
@@ -493,6 +511,7 @@ async function exportSelectedToExcel() {
 
     const leadsToExport = allLeads.filter(l => selectedLeads.has(l.firma_ismi));
 
+    // Try calling the local server backend first
     try {
         const response = await fetch(API_BASE + '/api/export_excel', {
             method: 'POST',
@@ -501,16 +520,66 @@ async function exportSelectedToExcel() {
             },
             body: JSON.stringify({ leads: leadsToExport })
         });
+        
+        if (!response.ok) {
+            throw new Error("HTTP error " + response.status);
+        }
+        
+        const contentType = response.headers.get('content-type');
+        if (!contentType || !contentType.includes('application/json')) {
+            throw new Error("Not a JSON response");
+        }
+        
         const data = await response.json();
         
-        if (response.ok && data.status === 'success') {
+        if (data.status === 'success') {
             showToast(data.message, "success");
+            btnExportExcel.disabled = false;
+            btnExportExcel.innerHTML = "💚 Seçilenleri Excel'e Aktar";
+            return;
         } else {
             throw new Error(data.message || "Excel yazma hatası.");
         }
     } catch (error) {
-        console.error(error);
-        showToast("Excel aktarma hatası: " + error.message, "error");
+        console.warn("Backend API export failed, falling back to client-side CSV download:", error);
+        
+        // Client-side CSV fallback (perfect for Vercel/static deployment and file locks)
+        try {
+            const BOM = "\uFEFF"; // UTF-8 BOM so Excel opens it with correct characters (Turkish & Chinese)
+            let csvContent = BOM;
+            
+            // Header row
+            const headers = ["Firma İsmi", "Ülke", "Sektör", "Fuar", "Web Sitesi", "İletişim Bilgileri", "Not"];
+            csvContent += headers.map(h => '"' + h.replace(/"/g, '""') + '"').join(";") + "\r\n";
+            
+            // Data rows
+            leadsToExport.forEach(lead => {
+                const row = [
+                    lead.firma_ismi || '',
+                    lead.ulke || '',
+                    lead.sektor || '',
+                    lead.fuar || '',
+                    lead.web_sitesi_linki || '',
+                    lead.iletisim_bilgileri || '',
+                    lead.not || ''
+                ];
+                csvContent += row.map(val => '"' + String(val).replace(/"/g, '""').replace(/\r?\n/g, ' ') + '"').join(";") + "\r\n";
+            });
+            
+            const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+            const url = URL.createObjectURL(blob);
+            const link = document.createElement("a");
+            link.setAttribute("href", url);
+            link.setAttribute("download", "Robotsepeti_Fuar_Hedef_Firmalar.csv");
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            
+            showToast("Veriler Robotsepeti_Fuar_Hedef_Firmalar.csv olarak indirildi! (Tarayıcı modu)", "success");
+        } catch (csvError) {
+            console.error(csvError);
+            showToast("Aktarma hatası: " + error.message, "error");
+        }
     } finally {
         btnExportExcel.disabled = false;
         btnExportExcel.innerHTML = "💚 Seçilenleri Excel'e Aktar";
