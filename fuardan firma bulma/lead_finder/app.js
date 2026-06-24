@@ -81,13 +81,12 @@ function checkAuth() {
 // Load leads from leads.json
 async function loadLeads() {
     try {
-        const localData = localStorage.getItem('skanopt_leads');
-        if (localData) {
-            allLeads = JSON.parse(localData);
-            console.log("Loaded leads from browser localStorage.");
-        } else if (window.location.protocol === 'file:') {
+        let fileLeads = [];
+        
+        // 1. First load from the actual source (file or preloaded script)
+        if (window.location.protocol === 'file:') {
             if (window.LEADS_DATA && window.LEADS_DATA.length > 0) {
-                allLeads = window.LEADS_DATA;
+                fileLeads = window.LEADS_DATA;
             } else {
                 throw new Error("Local leads.js data not found.");
             }
@@ -96,7 +95,25 @@ async function loadLeads() {
             if (!response.ok) {
                 throw new Error("leads.json dosyası yüklenemedi.");
             }
-            allLeads = await response.json();
+            fileLeads = await response.json();
+        }
+        
+        // 2. Compare with localStorage cache to prevent stale views
+        const localData = localStorage.getItem('skanopt_leads');
+        if (localData) {
+            const localLeads = JSON.parse(localData);
+            // If file database is newer/larger, force upgrade local storage
+            if (localLeads.length >= fileLeads.length) {
+                allLeads = localLeads;
+                console.log("Loaded leads from browser localStorage.");
+            } else {
+                allLeads = fileLeads;
+                localStorage.setItem('skanopt_leads', JSON.stringify(fileLeads));
+                console.log("LocalStorage cache was stale. Upgraded to latest database with " + fileLeads.length + " leads.");
+            }
+        } else {
+            allLeads = fileLeads;
+            console.log("Loaded leads from database (no cache).");
         }
         
         // Populate country filter dropdown dynamically
