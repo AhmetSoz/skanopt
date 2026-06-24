@@ -13,6 +13,7 @@ const searchInput = document.getElementById('search-input');
 const countryFilter = document.getElementById('country-filter');
 const priorityFilter = document.getElementById('priority-filter');
 const sectorFilter = document.getElementById('sector-filter');
+const fairFilter = document.getElementById('fair-filter');
 const selectAllCheckbox = document.getElementById('select-all-leads');
 
 // Stats Elements
@@ -116,9 +117,10 @@ async function loadLeads() {
             console.log("Loaded leads from database (no cache).");
         }
         
-        // Populate country and sector filters dynamically
+        // Populate country, sector and fair filters dynamically
         populateCountryFilter();
         populateSectorFilter();
+        populateFairFilter();
         
         // Select all leads by default for easy initial export
         selectedLeads = new Set(allLeads.map(l => l.firma_ismi));
@@ -197,6 +199,24 @@ function populateSectorFilter() {
     }
 }
 
+// Dynamically read unique fairs and counts, then build select options
+function populateFairFilter() {
+    const fairCounts = {};
+    allLeads.forEach(lead => {
+        const fair = lead.fuar || 'Bilinmeyen';
+        fairCounts[fair] = (fairCounts[fair] || 0) + 1;
+    });
+
+    const sortedFairs = Object.keys(fairCounts).sort((a, b) => fairCounts[b] - fairCounts[a]);
+
+    let optionsHtml = `<option value="all">Tümü (Tüm Fuarlar) (${allLeads.length})</option>`;
+    sortedFairs.forEach(fair => {
+        optionsHtml += `<option value="${fair}">${fair} (${fairCounts[fair]} Firma)</option>`;
+    });
+
+    fairFilter.innerHTML = optionsHtml;
+}
+
 // Setup all event listeners
 function setupEventListeners() {
     // Live filter inputs
@@ -204,6 +224,7 @@ function setupEventListeners() {
     countryFilter.addEventListener('change', applyFilters);
     priorityFilter.addEventListener('change', applyFilters);
     sectorFilter.addEventListener('change', applyFilters);
+    fairFilter.addEventListener('change', applyFilters);
     
     // Select all checkbox
     selectAllCheckbox.addEventListener('change', (e) => {
@@ -245,6 +266,7 @@ function applyFilters() {
     const selectedCountry = countryFilter.value;
     const selectedPriority = priorityFilter.value;
     const selectedSector = sectorFilter.value;
+    const selectedFair = fairFilter.value;
 
     filteredLeads = allLeads.filter(lead => {
         // 1. Search Query (Name or Website)
@@ -261,7 +283,10 @@ function applyFilters() {
         // 4. Sector Filter
         const matchSector = selectedSector === 'all' || lead.sektor === selectedSector;
 
-        return matchSearch && matchCountry && matchPriority && matchSector;
+        // 5. Fair Filter
+        const matchFair = selectedFair === 'all' || lead.fuar === selectedFair;
+
+        return matchSearch && matchCountry && matchPriority && matchSector && matchFair;
     });
 
     // Sort: High priority first, then medium, then integrator, then low
@@ -503,8 +528,10 @@ function saveModalForm() {
 
     closeEditModal();
     
-    // Repopulate country filter since a new country could have been added/modified
+    // Repopulate filters since items could have been added/modified
     populateCountryFilter();
+    populateSectorFilter();
+    populateFairFilter();
     applyFilters();
 }
 

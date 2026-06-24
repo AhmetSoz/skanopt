@@ -7,7 +7,7 @@ from openpyxl.styles import Font, PatternFill, Alignment, Border, Side
 from openpyxl.utils import get_column_letter
 
 PORT = 8500
-EXCEL_PATH = r"C:\Users\GilboTeknik\Desktop\SKANOPT OÖC\fuardan firma bulma\Robotsepeti_Tum_Fuar_Listesi_BirlestikOtomatik_Kurtarıldı.xlsx"
+EXCEL_PATH = r"C:\Users\GilboTeknik\Desktop\SKANOPT OÖC\fuardan firma bulma\Robotsepeti_Tum_Fuar_Listesi_BirlestikOtomatik.xlsx"
 JSON_PATH = "leads.json"
 
 class LeadFinderHandler(SimpleHTTPRequestHandler):
