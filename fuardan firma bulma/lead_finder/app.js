@@ -116,8 +116,9 @@ async function loadLeads() {
             console.log("Loaded leads from database (no cache).");
         }
         
-        // Populate country filter dropdown dynamically
+        // Populate country and sector filters dynamically
         populateCountryFilter();
+        populateSectorFilter();
         
         // Select all leads by default for easy initial export
         selectedLeads = new Set(allLeads.map(l => l.firma_ismi));
@@ -149,6 +150,51 @@ function populateCountryFilter() {
     });
 
     countryFilter.innerHTML = optionsHtml;
+}
+
+// Dynamically read unique sectors and counts, then build main filter options and modal form options
+function populateSectorFilter() {
+    const sectorCounts = {};
+    allLeads.forEach(lead => {
+        const sector = lead.sektor || 'Bilinmeyen';
+        sectorCounts[sector] = (sectorCounts[sector] || 0) + 1;
+    });
+
+    // Sort sectors by count (descending)
+    const sortedSectors = Object.keys(sectorCounts).sort((a, b) => sectorCounts[b] - sectorCounts[a]);
+
+    // Build options for main filter dropdown
+    let filterOptionsHtml = `<option value="all">Tümü (Tüm Sektörler)</option>`;
+    sortedSectors.forEach(sector => {
+        filterOptionsHtml += `<option value="${sector}">${sector} (${sectorCounts[sector]} Firma)</option>`;
+    });
+    sectorFilter.innerHTML = filterOptionsHtml;
+
+    // Build options for edit modal form select dropdown
+    const editSectorSelect = document.getElementById('edit-sector');
+    if (editSectorSelect) {
+        let editOptionsHtml = '';
+        sortedSectors.forEach(sector => {
+            if (sector !== 'Bilinmeyen') {
+                editOptionsHtml += `<option value="${sector}">${sector}</option>`;
+            }
+        });
+        
+        // Ensure default core target sectors are always present as fallback options
+        const defaultSectors = [
+            "Hassas Talaşlı İmalat / Metal",
+            "Makine / Endüstriyel Parça",
+            "Plastik Enjeksiyon & Kalıp",
+            "Medikal Cihaz & Dental İmplant",
+            "Otomasyon & Robot Entegratör"
+        ];
+        defaultSectors.forEach(ds => {
+            if (!sortedSectors.includes(ds)) {
+                editOptionsHtml += `<option value="${ds}">${ds}</option>`;
+            }
+        });
+        editSectorSelect.innerHTML = editOptionsHtml;
+    }
 }
 
 // Setup all event listeners
