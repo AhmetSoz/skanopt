@@ -177,7 +177,7 @@ a.eyebrow:hover{
 .hero::after{content:"";position:absolute;inset:0;z-index:-1;opacity:.55;
   background-image:radial-gradient(rgba(var(--brand-rgb),.16) 1.3px,transparent 1.3px);background-size:26px 26px;
   -webkit-mask-image:radial-gradient(72% 60% at 72% 32%,#000,transparent 76%);mask-image:radial-gradient(72% 60% at 72% 32%,#000,transparent 76%)}
-.hero__grid{display:grid;grid-template-columns:1fr 1.4fr;gap:clamp(20px,3.5vw,56px);align-items:center}
+.hero__grid{display:grid;grid-template-columns:1.15fr 1.4fr;gap:clamp(20px,3.5vw,56px);align-items:center}
 .hero__title{font-size:clamp(2.2rem,5vw,3.8rem);margin:20px 0 18px}
 .hero__sub{font-size:clamp(1.02rem,1.6vw,1.2rem);color:var(--ink-soft);max-width:50ch}
 .hero__cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px}
@@ -449,6 +449,11 @@ tbody td:first-child{font-family:var(--f-head);font-weight:600;color:var(--ink)}
    ============================================================ */
 .hero__title, .hero__title span, .section__title, .section__sub, .card p, .panel__info p {
   white-space: pre-line;
+}
+@media (min-width: 1081px) {
+  .hero__title span.text-brand {
+    white-space: nowrap;
+  }
 }
 
 /* Dolgu ve Açıklıkların Daraltılması (yazılar arası boşlukları azaltmak için) */
