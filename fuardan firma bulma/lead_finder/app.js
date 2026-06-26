@@ -15,6 +15,8 @@ const priorityFilter = document.getElementById('priority-filter');
 const sectorFilter = document.getElementById('sector-filter');
 const fairFilter = document.getElementById('fair-filter');
 const selectAllCheckbox = document.getElementById('select-all-leads');
+const typeFilter = document.getElementById('type-filter');
+const sortSelect = document.getElementById('sort-select');
 
 // Stats Elements
 const statTotal = document.getElementById('stat-total');
@@ -129,7 +131,7 @@ async function loadLeads() {
         showToast("Veritabanı başarıyla yüklendi! Toplam " + allLeads.length + " firma.", "success");
     } catch (error) {
         console.error("Yükleme hatası:", error);
-        tbody.innerHTML = `<tr><td colspan="9" class="empty-cell">Hata: Veritabanı yüklenemedi. server.py sunucusunun çalıştığından ve leads.json dosyasının mevcut olduğundan emin olun.</td></tr>`;
+        tbody.innerHTML = `<tr><td colspan="10" class="empty-cell">Hata: Veritabanı yüklenemedi. server.py sunucusunun çalıştığından ve leads.json dosyasının mevcut olduğundan emin olun.</td></tr>`;
         showToast("Veri yüklenirken hata oluştu!", "error");
     }
 }
@@ -223,6 +225,8 @@ function setupEventListeners() {
     searchInput.addEventListener('input', applyFilters);
     countryFilter.addEventListener('change', applyFilters);
     priorityFilter.addEventListener('change', applyFilters);
+    typeFilter.addEventListener('change', applyFilters);
+    sortSelect.addEventListener('change', applyFilters);
     sectorFilter.addEventListener('change', applyFilters);
     fairFilter.addEventListener('change', applyFilters);
     
@@ -265,8 +269,10 @@ function applyFilters() {
     const query = searchInput.value.toLowerCase().trim();
     const selectedCountry = countryFilter.value;
     const selectedPriority = priorityFilter.value;
+    const selectedType = typeFilter.value;
     const selectedSector = sectorFilter.value;
     const selectedFair = fairFilter.value;
+    const sortBy = sortSelect.value;
 
     filteredLeads = allLeads.filter(lead => {
         // 1. Search Query (Name or Website)
@@ -286,21 +292,47 @@ function applyFilters() {
         // 5. Fair Filter
         const matchFair = selectedFair === 'all' || lead.fuar === selectedFair;
 
-        return matchSearch && matchCountry && matchPriority && matchSector && matchFair;
+        // 6. Firm Type Filter
+        let matchType = true;
+        if (selectedType === 'manufacturer') {
+            matchType = lead.is_manufacturer === true;
+        } else if (selectedType === 'trader') {
+            matchType = lead.is_manufacturer === false;
+        }
+
+        return matchSearch && matchCountry && matchPriority && matchSector && matchFair && matchType;
     });
 
-    // Sort: High priority first, then medium, then integrator, then low
-    const priorityWeight = {
-        "Yüksek Öncelik": 4,
-        "Orta Öncelik": 3,
-        "Sistem Entegratörü": 2,
-        "Düşük Öncelik": 1
-    };
-    filteredLeads.sort((a, b) => {
-        const wA = priorityWeight[a.oncelik] || 0;
-        const wB = priorityWeight[b.oncelik] || 0;
-        return wB - wA; // descending
-    });
+    // Apply sorting selection
+    if (sortBy === 'name-asc') {
+        filteredLeads.sort((a, b) => a.firma_ismi.localeCompare(b.firma_ismi, 'tr'));
+    } else if (sortBy === 'name-desc') {
+        filteredLeads.sort((a, b) => b.firma_ismi.localeCompare(a.firma_ismi, 'tr'));
+    } else if (sortBy === 'country') {
+        filteredLeads.sort((a, b) => (a.ulke || '').localeCompare(b.ulke || '', 'tr'));
+    } else if (sortBy === 'country-desc') {
+        filteredLeads.sort((a, b) => (b.ulke || '').localeCompare(a.ulke || '', 'tr'));
+    } else if (sortBy === 'sector-asc') {
+        filteredLeads.sort((a, b) => (a.sektor || '').localeCompare(b.sektor || '', 'tr'));
+    } else if (sortBy === 'sector-desc') {
+        filteredLeads.sort((a, b) => (b.sektor || '').localeCompare(a.sektor || '', 'tr'));
+    } else {
+        // Default sort: Sales priority descending, fallback to alphabetical
+        const priorityWeight = {
+            "Yüksek Öncelik": 4,
+            "Orta Öncelik": 3,
+            "Sistem Entegratörü": 2,
+            "Düşük Öncelik": 1
+        };
+        filteredLeads.sort((a, b) => {
+            const wA = priorityWeight[a.oncelik] || 0;
+            const wB = priorityWeight[b.oncelik] || 0;
+            if (wA !== wB) {
+                return wB - wA; // priority desc
+            }
+            return a.firma_ismi.localeCompare(b.firma_ismi, 'tr');
+        });
+    }
 
     // Update select all checkbox state
     const allFilteredSelected = filteredLeads.length > 0 && filteredLeads.every(lead => selectedLeads.has(lead.firma_ismi));
@@ -320,7 +352,7 @@ function updateStats() {
 // Render data table rows
 function renderTable() {
     if (filteredLeads.length === 0) {
-        tbody.innerHTML = `<tr><td colspan="9" class="empty-cell">Aradığınız kriterlere uygun firma bulunamadı.</td></tr>`;
+        tbody.innerHTML = `<tr><td colspan="10" class="empty-cell">Aradığınız kriterlere uygun firma bulunamadı.</td></tr>`;
         return;
     }
 
@@ -346,20 +378,28 @@ function renderTable() {
         let priorityBadge = '';
         const priority = lead.oncelik || 'Düşük Öncelik';
         if (priority === 'Yüksek Öncelik') {
-            priorityBadge = `<span class="badge-priority badge-high">⭐ Yüksek</span>`;
+            priorityBadge = `<span class="badge-priority badge-high">⭐⭐⭐ Yüksek</span>`;
         } else if (priority === 'Orta Öncelik') {
-            priorityBadge = `<span class="badge-priority badge-medium">⭐ Orta</span>`;
+            priorityBadge = `<span class="badge-priority badge-medium">⭐⭐ Orta</span>`;
         } else if (priority === 'Sistem Entegratörü') {
             priorityBadge = `<span class="badge-priority badge-integrator">🤖 Entegratör</span>`;
         } else {
             priorityBadge = `<span class="badge-priority badge-low">⭐ Düşük</span>`;
         }
 
+        // Firm Type Badge
+        const displayType = lead.firma_tipi || (lead.is_manufacturer ? "Üretici" : "Tedarikçi/Distribütör") || "Üretici";
+        const isManu = lead.is_manufacturer !== false; // default true if undefined
+        const typeBadge = `<span class="badge-firmatype ${isManu ? 'badge-manufacturer' : 'badge-trader'}">${isManu ? '🏭' : '🤝'} ${displayType}</span>`;
+
         tr.innerHTML = `
             <td>
                 <input type="checkbox" class="lead-checkbox" data-name="${lead.firma_ismi}" ${isChecked ? 'checked' : ''}>
             </td>
-            <td class="cell-bold">${lead.firma_ismi}</td>
+            <td class="cell-bold">
+                ${lead.firma_ismi}
+                <div style="margin-top: 4px;">${typeBadge}</div>
+            </td>
             <td>
                 <span class="cell-country">${lead.ulke}</span>
                 <span class="cell-city">${lead.city}</span>
@@ -438,6 +478,7 @@ function openEditModal(index) {
         document.getElementById('edit-city').value = lead.city;
         document.getElementById('edit-priority').value = lead.oncelik || "Yüksek Öncelik";
         document.getElementById('edit-priority-reason').value = lead.oncelik_gerekcesi || "";
+        document.getElementById('edit-type').value = lead.firma_tipi || (lead.is_manufacturer ? "Üretici" : "Tedarikçi/Distribütör") || "Üretici";
         document.getElementById('edit-sector').value = lead.sektor;
         document.getElementById('edit-fair').value = lead.fuar || "";
         document.getElementById('edit-website').value = lead.web_sitesi_linki;
@@ -449,6 +490,7 @@ function openEditModal(index) {
         editIndexInput.value = "new";
         document.getElementById('edit-country').value = "Türkiye";
         document.getElementById('edit-priority').value = "Yüksek Öncelik";
+        document.getElementById('edit-type').value = "Üretici";
         document.getElementById('edit-sector').value = "Hassas Talaşlı İmalat / Metal";
         document.getElementById('edit-fair').value = "Hannover Messe 2025";
     }
@@ -467,6 +509,8 @@ function saveModalForm() {
     const country = document.getElementById('edit-country').value.trim();
     const city = document.getElementById('edit-city').value.trim();
     const priority = document.getElementById('edit-priority').value;
+    const type = document.getElementById('edit-type').value;
+    const isManufacturer = type === "Üretici";
     const reason = document.getElementById('edit-priority-reason').value.trim();
     const sector = document.getElementById('edit-sector').value;
     const website = document.getElementById('edit-website').value.trim();
@@ -501,7 +545,9 @@ function saveModalForm() {
         not: note,
         city: city,
         booth: existingBooth,
-        presentation: existingPres
+        presentation: existingPres,
+        is_manufacturer: isManufacturer,
+        firma_tipi: type
     };
 
     if (indexVal === "new") {

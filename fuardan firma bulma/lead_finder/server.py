@@ -77,9 +77,9 @@ class LeadFinderHandler(SimpleHTTPRequestHandler):
                 ws = wb.create_sheet(title=sheet_name)
                 ws.views.sheetView[0].showGridLines = True
                 
-                # Columns: B to H
+                # Columns: B to I
                 # We start column index from 2 (B)
-                headers = ["firma ismi", "ülke", "sektör", "fuar", "web sitesi linki", "iletişim bilgileri", "not"]
+                headers = ["firma ismi", "firma tipi", "ülke", "sektör", "fuar", "web sitesi linki", "iletişim bilgileri", "not"]
                 
                 # Styling definitions
                 green_header_fill = PatternFill(start_color="165B33", end_color="165B33", fill_type="solid")
@@ -118,25 +118,29 @@ class LeadFinderHandler(SimpleHTTPRequestHandler):
                     
                     # Columns map:
                     # B: firma ismi
-                    # C: ülke
-                    # D: sektör
-                    # E: fuar
-                    # F: web sitesi linki
-                    # G: iletişim bilgileri
-                    # H: not
+                    # C: firma tipi
+                    # D: ülke
+                    # E: sektör
+                    # F: fuar
+                    # G: web sitesi linki
+                    # H: iletişim bilgileri
+                    # I: not
                     
                     # Col B
                     cell_name = ws.cell(row=row_idx, column=2, value=lead.get('firma_ismi', ''))
                     # Col C
-                    cell_country = ws.cell(row=row_idx, column=3, value=lead.get('ulke', ''))
+                    display_type = lead.get('firma_tipi', 'Üretici' if lead.get('is_manufacturer', True) else 'Tedarikçi/Distribütör')
+                    cell_type = ws.cell(row=row_idx, column=3, value=display_type)
                     # Col D
-                    cell_sector = ws.cell(row=row_idx, column=4, value=lead.get('sektor', ''))
+                    cell_country = ws.cell(row=row_idx, column=4, value=lead.get('ulke', ''))
                     # Col E
-                    cell_fair = ws.cell(row=row_idx, column=5, value=lead.get('fuar', ''))
+                    cell_sector = ws.cell(row=row_idx, column=5, value=lead.get('sektor', ''))
+                    # Col F
+                    cell_fair = ws.cell(row=row_idx, column=6, value=lead.get('fuar', ''))
                     
-                    # Col F: web sitesi linki as clickable hyperlink
+                    # Col G: web sitesi linki as clickable hyperlink
                     website = lead.get('web_sitesi_linki', '')
-                    cell_web = ws.cell(row=row_idx, column=6)
+                    cell_web = ws.cell(row=row_idx, column=7)
                     if website:
                         if not website.startswith('http'):
                             target_url = "http://" + website
@@ -148,34 +152,35 @@ class LeadFinderHandler(SimpleHTTPRequestHandler):
                         cell_web.value = ""
                         cell_web.font = data_font
                         
-                    # Col G
-                    cell_contact = ws.cell(row=row_idx, column=7, value=lead.get('iletisim_bilgileri', ''))
                     # Col H
-                    cell_note = ws.cell(row=row_idx, column=8, value=lead.get('not', ''))
+                    cell_contact = ws.cell(row=row_idx, column=8, value=lead.get('iletisim_bilgileri', ''))
+                    # Col I
+                    cell_note = ws.cell(row=row_idx, column=9, value=lead.get('not', ''))
                     
                     # Apply general styling to all cells in the row
-                    for col in range(2, 9):
+                    for col in range(2, 10):
                         c = ws.cell(row=row_idx, column=col)
                         c.fill = row_fill
-                        if col != 6: # Web link font already set
+                        if col != 7: # Web link font already set
                             c.font = data_font
                         c.border = border_all
-                        if col == 8: # Col H (not) wraps text
+                        if col == 9: # Col I (not) wraps text
                             c.alignment = not_align
                         else:
                             c.alignment = data_align
                             
                 # Auto-fit column widths
-                # For Col H (not), we set a fixed width of 60 since it contains long text
+                # For Col I (not), we set a fixed width of 65 since it contains long text
                 # Column A is kept empty/narrow
                 ws.column_dimensions['A'].width = 3
                 ws.column_dimensions['B'].width = 32 # firma ismi
-                ws.column_dimensions['C'].width = 12 # ülke
-                ws.column_dimensions['D'].width = 25 # sektör
-                ws.column_dimensions['E'].width = 20 # fuar
-                ws.column_dimensions['F'].width = 30 # web sitesi
-                ws.column_dimensions['G'].width = 45 # iletişim bilgileri
-                ws.column_dimensions['H'].width = 65 # not (wrap text active)
+                ws.column_dimensions['C'].width = 20 # firma tipi
+                ws.column_dimensions['D'].width = 12 # ülke
+                ws.column_dimensions['E'].width = 25 # sektör
+                ws.column_dimensions['F'].width = 20 # fuar
+                ws.column_dimensions['G'].width = 30 # web sitesi
+                ws.column_dimensions['H'].width = 45 # iletişim bilgileri
+                ws.column_dimensions['I'].width = 65 # not (wrap text active)
                 
                 # Save the workbook
                 wb.save(EXCEL_PATH)

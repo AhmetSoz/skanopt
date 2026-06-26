@@ -61,6 +61,26 @@
                         <option value="Düşük Öncelik">Düşük Öncelik (⭐)</option>
                         <option value="Sistem Entegratörü">Sistem Entegratörü (🤖 Partner)</option>
                     </select>
+                </div>                <div class="input-group">
+                    <label for="type-filter">Firma Tipi (Üretici / Aracı)</label>
+                    <select id="type-filter">
+                        <option value="all">Tümü (Tüm Tipler)</option>
+                        <option value="manufacturer">Üretici (🏭)</option>
+                        <option value="trader">Tedarikçi/Distribütör (🤝)</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label for="sort-select">Sıralama Kriteri</label>
+                    <select id="sort-select">
+                        <option value="priority">Satış Önceliği (Öncelikli -> Düşük)</option>
+                        <option value="name-asc">Firma İsmi (A -> Z)</option>
+                        <option value="name-desc">Firma İsmi (Z -> A)</option>
+                        <option value="country">Ülke Adı (A -> Z)</option>
+                        <option value="country-desc">Ülke Adı (Z -> A)</option>
+                        <option value="sector-asc">Sektör (A -> Z)</option>
+                        <option value="sector-desc">Sektör (Z -> A)</option>
+                    </select>
                 </div>
 
                 <div class="input-group">
@@ -151,7 +171,7 @@
                     <tbody id="leads-tbody">
                         <!-- Loaded dynamically via JavaScript -->
                         <tr>
-                            <td colspan="9" class="loading-cell">Firma listesi yükleniyor...</td>
+                            <td colspan="10" class="loading-cell">Firma listesi yükleniyor...</td>
                         </tr>
                     </tbody>
                 </table>
@@ -194,6 +214,13 @@
                                 <option value="Orta Öncelik">Orta Öncelik (⭐⭐)</option>
                                 <option value="Düşük Öncelik">Düşük Öncelik (⭐)</option>
                                 <option value="Sistem Entegratörü">Sistem Entegratörü (🤖 Partner)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="edit-type">Firma Tipi</label>
+                            <select id="edit-type">
+                                <option value="Üretici">Üretici (🏭)</option>
+                                <option value="Tedarikçi/Distribütör">Tedarikçi/Distribütör (🤝)</option>
                             </select>
                         </div>
                     </div>

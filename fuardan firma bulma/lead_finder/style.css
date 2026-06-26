@@ -708,6 +708,29 @@ body {
     font-weight: 600;
 }
 
+/* Firm Type Badges */
+.badge-firmatype {
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 3px 6px;
+    border-radius: var(--radius-sm);
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+.badge-manufacturer {
+    background-color: #E6FFFA;
+    color: #008080;
+    border: 1px solid #B2F5EA;
+}
+.badge-trader {
+    background-color: #F3E8FF;
+    color: #6B46C1;
+    border: 1px solid #E9D8FD;
+}
+
 /* ==========================================================================
    TOAST SYSTEM
    ========================================================================== */
