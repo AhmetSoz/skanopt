@@ -13,11 +13,11 @@ window.SITE = {
   web:          "www.skanopt.com",          // TODO: actual domain
   webUrl:       "https://www.skanopt.com",   // TODO
   email:        "info@skanopt.com",          // TODO: actual email
-  phoneDisplay: "+90 212 619 76 12",         // Displayed phone number
-  phoneE164:    "+902126197612",             // For tel: links
+  phoneDisplay: "",                          // Displayed phone number
+  phoneE164:    "",                          // For tel: links
   
   // --- WhatsApp (TO BE FILLED) ---
-  whatsappNumber: "902126197612",            // For WhatsApp link
+  whatsappNumber: "905323514368",            // For WhatsApp link
   whatsappText:   "Hello, I would like to learn more about the SKANOPT optical measurement system.",
 
   // --- Form submission service (optional) ---

@@ -353,7 +353,7 @@
         }else{
           // mailto yedeği
           const subj=encodeURIComponent("SKANOPT Demo/Teklif — "+(data.company||data.name||""));
-          const body=encodeURIComponent((c.name)+": "+(data.name||"")+"\n"+(c.company)+": "+(data.company||"")+"\n"+(c.email)+": "+(data.email||"")+"\n"+(c.phone)+": "+(data.phone||"")+"\n\n"+(data.message||""));
+          const body=encodeURIComponent((c.name)+": "+(data.name||"")+"\n"+(c.company)+": "+(data.company||"")+"\n"+(c.email)+": "+(data.email||"")+"\n\n"+(data.message||""));
           window.location.href="mailto:"+(SITE.email||"")+"?subject="+subj+"&body="+body;
           msg.textContent=c.ok; msg.className="form__msg ok";
         }
