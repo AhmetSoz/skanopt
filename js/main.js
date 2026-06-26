@@ -368,12 +368,14 @@
         }else{
           // mailto yedeği
           const subj=encodeURIComponent("SKANOPT Demo/Teklif — "+(data.company||data.name||""));
+          const marketingConsentVal = data.consent_marketing ? (lang === "tr" ? "Evet / Onaylandı" : "Yes / Approved") : (lang === "tr" ? "Hayır / Onaylanmadı" : "No / Disapproved");
           const body=encodeURIComponent(
             c.name + ": " + (data.name||"") + "\n" +
             c.company + ": " + (data.company||"") + "\n" +
             c.emailLabel.replace(" (required)","").replace(" (zorunlu)","") + ": " + (data.email||"") + "\n" +
             c.categoryLabel.replace(" (required)","").replace(" (zorunlu)","") + ": " + (data.category||"") + "\n" +
-            c.interestsLabel.replace(" (required)","").replace(" (zorunlu)","") + ": " + (data.interests||"") + "\n\n" +
+            c.interestsLabel.replace(" (required)","").replace(" (zorunlu)","") + ": " + (data.interests||"") + "\n" +
+            (lang === "tr" ? "Ticari İletişim İzni" : "Marketing Consent") + ": " + marketingConsentVal + "\n\n" +
             c.messageLabel + ":\n" + (data.message||"")
           );
           window.location.href="mailto:"+(SITE.email||"")+"?subject="+subj+"&body="+body;

@@ -351,6 +351,20 @@ Multilingual interface support.</p>
           <input id="f-email" name="email" type="email" required>
         </div>
 
+        <div class="field" style="margin-top:20px;margin-bottom:20px;">
+          <label class="chk-container" style="display:flex;align-items:flex-start;gap:10px;font-size:0.86rem;cursor:pointer;user-select:none;line-height:1.4;margin-bottom:12px;color:var(--ink-soft);">
+            <input type="checkbox" id="chk-kvkk" name="consent_kvkk" required style="width:16px;height:16px;margin-top:2px;accent-color:var(--brand);cursor:pointer;flex:none;">
+            <span>
+              <span data-i18n="contact.kvkkPre">I have read and agree to the </span>
+              <a href="privacy.html" target="_blank" style="color:var(--brand);font-weight:600;text-decoration:underline;" data-i18n="contact.kvkkLink">Privacy Policy and KVKK Clarification Text</a>.
+            </span>
+          </label>
+          <label class="chk-container" style="display:flex;align-items:flex-start;gap:10px;font-size:0.86rem;cursor:pointer;user-select:none;line-height:1.4;color:var(--ink-soft);">
+            <input type="checkbox" id="chk-marketing" name="consent_marketing" style="width:16px;height:16px;margin-top:2px;accent-color:var(--brand);cursor:pointer;flex:none;">
+            <span data-i18n="contact.marketingConsent">I agree to receive commercial electronic communications (emails, newsletters) about products and campaigns.</span>
+          </label>
+        </div>
+
         <button type="submit" class="btn btn-accent btn-lg btn-block" data-i18n="contact.submit">Send Request</button>
         <p class="form__note" style="margin-top:16px;line-height:1.5;text-align:center;">
           <span data-i18n="contact.privacyNote">We guarantee 100% privacy – your information will never be shared.</span>
