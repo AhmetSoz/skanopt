@@ -649,9 +649,9 @@ tbody td:first-child{font-family:var(--f-head);font-weight:600;color:var(--ink)}
 /* Secondary Card (Background) */
 .video-card:not(.active) {
   z-index: 2;
-  opacity: 0.55;
-  filter: blur(1.5px) brightness(0.75);
-  transform: translate(3.5%, -2%) scale(0.965); /* Tight overlap for much larger active area */
+  opacity: 0.65;
+  filter: blur(1px) brightness(0.72);
+  transform: translate(6%, -5%) scale(0.95); /* Shifted further up and right to make it visible */
 }
 
 .video-card:not(.active) .video-card__frame {
@@ -660,13 +660,13 @@ tbody td:first-child{font-family:var(--f-head);font-weight:600;color:var(--ink)}
 
 /* Interactive Hover States */
 .video-stack:hover .video-card:not(.active) {
-  opacity: 0.8;
-  filter: blur(0.5px) brightness(0.9);
-  transform: translate(4.5%, -2.5%) scale(0.975);
+  opacity: 0.85;
+  filter: blur(0.5px) brightness(0.85);
+  transform: translate(7.5%, -6%) scale(0.96);
 }
 
 .video-stack:hover .video-card.active {
-  transform: translate(-0.5%, 2.5%) scale(1.01);
+  transform: translate(-1%, 3%) scale(1.01);
 }
 
 .video-card__frame {
@@ -696,13 +696,13 @@ tbody td:first-child{font-family:var(--f-head);font-weight:600;color:var(--ink)}
     height: 95%;
   }
   .video-card:not(.active) {
-    transform: translate(4%, -2%) scale(0.95);
+    transform: translate(5%, -4%) scale(0.95);
   }
   .video-stack:hover .video-card:not(.active) {
-    transform: translate(5%, -3%) scale(0.96);
+    transform: translate(6%, -5%) scale(0.96);
   }
   .video-stack:hover .video-card.active {
-    transform: translate(-0.5%, 2%) scale(1.01);
+    transform: translate(-0.5%, 1.5%) scale(1.01);
   }
   .video-swap-btn {
     width: 38px;
