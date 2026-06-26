@@ -119,10 +119,11 @@ async function loadLeads() {
             console.log("Loaded leads from database (no cache).");
         }
         
-        // Populate country, sector and fair filters dynamically
+        // Populate country, sector, fair and type filters dynamically
         populateCountryFilter();
         populateSectorFilter();
         populateFairFilter();
+        populateTypeFilter();
         
         // Select all leads by default for easy initial export
         selectedLeads = new Set(allLeads.map(l => l.firma_ismi));
@@ -217,6 +218,27 @@ function populateFairFilter() {
     });
 
     fairFilter.innerHTML = optionsHtml;
+}
+
+// Dynamically populate type filter counts
+function populateTypeFilter() {
+    let manufacturersCount = 0;
+    let tradersCount = 0;
+    
+    allLeads.forEach(lead => {
+        if (lead.is_manufacturer === true) {
+            manufacturersCount++;
+        } else if (lead.is_manufacturer === false) {
+            tradersCount++;
+        }
+    });
+
+    let optionsHtml = `
+        <option value="all">Tümü (Tüm Tipler) (${allLeads.length})</option>
+        <option value="manufacturer">Üretici (🏭) (${manufacturersCount} Firma)</option>
+        <option value="trader">Tedarikçi/Distribütör (🤝) (${tradersCount} Firma)</option>
+    `;
+    typeFilter.innerHTML = optionsHtml;
 }
 
 // Setup all event listeners
@@ -578,6 +600,7 @@ function saveModalForm() {
     populateCountryFilter();
     populateSectorFilter();
     populateFairFilter();
+    populateTypeFilter();
     applyFilters();
 }
 
