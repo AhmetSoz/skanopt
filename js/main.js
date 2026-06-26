@@ -365,25 +365,67 @@
   function setupVideoStack() {
     const cards = $$(".video-card");
     if (cards.length < 2) return;
+    
+    let swapTimer = null;
+    
+    // Function to swap active card
+    const swap = () => {
+      const activeCard = cards.find(c => c.classList.contains("active"));
+      const nextCard = cards.find(c => !c.classList.contains("active"));
+      if (activeCard && nextCard) {
+        activeCard.classList.remove("active");
+        nextCard.classList.add("active");
+      }
+    };
+    
+    // Start or restart the auto-swap interval
+    const startTimer = () => {
+      if (swapTimer) clearInterval(swapTimer);
+      swapTimer = setInterval(() => {
+        swap();
+      }, 10000); // 10 seconds
+    };
+    
+    // User triggered swap (resets the timer)
+    const handleUserTriggeredSwap = (targetCard) => {
+      if (targetCard) {
+        if (targetCard.classList.contains("active")) return;
+        cards.forEach(c => {
+          c.classList.toggle("active", c === targetCard);
+        });
+      } else {
+        swap();
+      }
+      startTimer();
+    };
+    
     cards.forEach(card => {
       card.setAttribute("role", "button");
       card.setAttribute("tabindex", "0");
       
-      const toggle = () => {
-        if (card.classList.contains("active")) return;
-        cards.forEach(c => {
-          c.classList.toggle("active", c === card);
-        });
-      };
+      card.addEventListener("click", () => {
+        handleUserTriggeredSwap(card);
+      });
       
-      card.addEventListener("click", toggle);
       card.addEventListener("keydown", (e) => {
         if (e.key === "Enter" || e.key === " ") {
           e.preventDefault();
-          toggle();
+          handleUserTriggeredSwap(card);
         }
       });
     });
+    
+    // Setup swap button click handler
+    const swapBtn = $("#videoSwapBtn");
+    if (swapBtn) {
+      swapBtn.addEventListener("click", (e) => {
+        e.stopPropagation(); // prevent card click triggers
+        handleUserTriggeredSwap(null);
+      });
+    }
+    
+    // Start initial timer
+    startTimer();
   }
 
   /* ---------------- init ---------------- */
