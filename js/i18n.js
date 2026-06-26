@@ -34,8 +34,8 @@ window.I18N = {
   /* ===================== TÜRKÇE ===================== */
   tr:{
     meta:{
-      title:"SKANOPT · Telesentrik Optik Ölçüm Modülleri | 2D Boyutsal Muayene",
-      desc:"SKANOPT modüler telesentrik 2D optik ölçüm modülleri: yüksek çözünürlüklü tek çekim alan tarama, marka bağımsız PLC ve robot entegrasyonu, kullanıcı dostu kalibrasyon ve sipariş bazlı kısa teslim süreleri."
+      title:"SKANOPT · Telesentrik Optik Ölçüm Modülleri | 2D & 3D Boyutsal Muayene",
+      desc:"SKANOPT modüler telesentrik 2D & 3D optik ölçüm modülleri: yüksek çözünürlüklü tek çekim alan tarama, marka bağımsız PLC ve robot entegrasyonu, kullanıcı dostu kalibrasyon ve sipariş bazlı kısa teslim süreleri."
     },
     nav:{why:"Neden SKANOPT",series:"Seriler",how:"Nasıl Çalışır",automation:"Otomasyon",software:"Yazılım",compare:"Karşılaştırma",sectors:"Sektörler",contact:"İletişim"},
     cta:{demo:"İletişime Geç",quote:"Teklif Al",series:"Serileri İncele"},
@@ -198,8 +198,8 @@ window.I18N = {
   /* ===================== ENGLISH ===================== */
   en:{
     meta:{
-      title:"SKANOPT · Telecentric Optical Measurement Sensors | 2D Dimensional Inspection",
-      desc:"SKANOPT modular telecentric 2D optical measurement sensors: high-resolution single-shot area scanning, brand-independent PLC and robot integration, user-defined calibration and short lead times."
+      title:"SKANOPT · Telecentric Optical Measurement Sensors | 2D & 3D Dimensional Inspection",
+      desc:"SKANOPT modular telecentric 2D & 3D optical measurement sensors: high-resolution single-shot area scanning, brand-independent PLC and robot integration, user-defined calibration and short lead times."
     },
     nav:{why:"Why SKANOPT",series:"Series",how:"How It Works",automation:"Automation",software:"Software",compare:"Comparison",sectors:"Industries",contact:"Contact"},
     cta:{demo:"Contact Us",quote:"Get a Quote",series:"Explore Series"},
