@@ -9,7 +9,7 @@
 ---
 
 ## 0. Amaç & Bağlam
-SKANOPT, Türkiye'de üretilen **2D telesentrik (shadow-based) optik boyutsal ölçüm sistemidir**
+SKANOPT, Türkiye'de üretilen **2D & 3D telesentrik (shadow-based) optik boyutsal ölçüm sistemidir**
 (Keyence TM-X5000 muadili). Hedef: **hassas kalite kontrol, otomotiv yan sanayi, beyaz eşya,
 implant/medikal** sektörlerine satış için **beyaz, modern, ferah, güvenilir, profesyonel** bir
 tanıtım/satış sitesi. Yöneticinin net talebi bu beş sıfat. Hız önemli ama kalite ödün verilmeyecek.
