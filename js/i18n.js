@@ -180,6 +180,8 @@ window.I18N = {
       ok:"Teşekkürler! Talebiniz alındı, en kısa sürede dönüş yapacağız.",
       err:"Bir sorun oluştu. Lütfen tekrar deneyin veya doğrudan e-posta ile ulaşın.",
       note:"Bilgileriniz yalnızca size dönüş yapmak için kullanılır.",
+      privacyNote:"Gizliliğinizi %100 garanti ediyoruz – bilgileriniz asla paylaşılmayacaktır.",
+      privacyLink:"Gizlilik Bildirimi",
       mWeb:"Web",mMail:"E-posta",mPhone:"Telefon",mWa:"WhatsApp",
       ctaTitle:"Hızlı yanıt mı istiyorsunuz?",ctaText:"WhatsApp üzerinden ulaşın, uygulamanıza en uygun modeli birlikte belirleyelim.",ctaBtn:"WhatsApp'tan Yaz"
     },
@@ -339,6 +341,8 @@ window.I18N = {
       ok:"Thank you! Your request has been received; we'll get back to you shortly.",
       err:"Something went wrong. Please try again or contact us by e-mail.",
       note:"Your information is used only to get back to you.",
+      privacyNote:"We guarantee 100% privacy – your information will never be shared.",
+      privacyLink:"Privacy Statement",
       mWeb:"Web",mMail:"E-mail",mPhone:"Phone",mWa:"WhatsApp",
       ctaTitle:"Need a quick reply?",ctaText:"Reach us on WhatsApp and we'll pick the best model for your application together.",ctaBtn:"Message on WhatsApp"
     },

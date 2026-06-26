@@ -352,7 +352,14 @@ Multilingual interface support.</p>
         </div>
 
         <button type="submit" class="btn btn-accent btn-lg btn-block" data-i18n="contact.submit">Send Request</button>
-        <p class="form__note" data-i18n="contact.note">Your information is used only to get back to you.</p>
+        <p class="form__note" style="margin-top:16px;line-height:1.5;text-align:center;">
+          <span data-i18n="contact.privacyNote">We guarantee 100% privacy – your information will never be shared.</span>
+          <br>
+          <a href="privacy.html" target="_blank" style="color:var(--brand);font-weight:600;text-decoration:underline;display:inline-flex;align-items:center;gap:4px;margin-top:4px;font-size:0.82rem;">
+            <span data-i18n="contact.privacyLink">Privacy Statement</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" style="width:11px;height:11px;vertical-align:middle;"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14 21 3"/></svg>
+          </a>
+        </p>
         <div class="form__msg" id="formMsg" role="status"></div>
       </form>
 
