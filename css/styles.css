@@ -651,7 +651,7 @@ tbody td:first-child{font-family:var(--f-head);font-weight:600;color:var(--ink)}
   z-index: 2;
   opacity: 0.65;
   filter: blur(1px) brightness(0.72);
-  transform: translate(6%, -5%) scale(0.95); /* Shifted further up and right to make it visible */
+  transform: translate(8.5%, -7%) scale(0.945); /* Shifted further up and right to make it clearly visible */
 }
 
 .video-card:not(.active) .video-card__frame {
@@ -662,7 +662,7 @@ tbody td:first-child{font-family:var(--f-head);font-weight:600;color:var(--ink)}
 .video-stack:hover .video-card:not(.active) {
   opacity: 0.85;
   filter: blur(0.5px) brightness(0.85);
-  transform: translate(7.5%, -6%) scale(0.96);
+  transform: translate(10.5%, -9%) scale(0.955);
 }
 
 .video-stack:hover .video-card.active {
@@ -696,10 +696,10 @@ tbody td:first-child{font-family:var(--f-head);font-weight:600;color:var(--ink)}
     height: 95%;
   }
   .video-card:not(.active) {
-    transform: translate(5%, -4%) scale(0.95);
+    transform: translate(7%, -5.5%) scale(0.95);
   }
   .video-stack:hover .video-card:not(.active) {
-    transform: translate(6%, -5%) scale(0.96);
+    transform: translate(8.5%, -7%) scale(0.96);
   }
   .video-stack:hover .video-card.active {
     transform: translate(-0.5%, 1.5%) scale(1.01);
