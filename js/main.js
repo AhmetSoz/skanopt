@@ -311,6 +311,9 @@
       h.classList.toggle("scrolled",y>10);
       if(bar){ const max=document.documentElement.scrollHeight-window.innerHeight; bar.style.width=(max>0?(y/max*100):0)+"%"; }
       if(glow && y<900) glow.style.transform="translateY("+(y*0.18)+"px)";
+      if(y < 50){
+        $$(".nav a").forEach(l=>l.classList.remove("active"));
+      }
       ticking=false;
     }
     update();
