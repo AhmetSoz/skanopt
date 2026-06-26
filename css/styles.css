@@ -177,7 +177,7 @@ a.eyebrow:hover{
 .hero::after{content:"";position:absolute;inset:0;z-index:-1;opacity:.55;
   background-image:radial-gradient(rgba(var(--brand-rgb),.16) 1.3px,transparent 1.3px);background-size:26px 26px;
   -webkit-mask-image:radial-gradient(72% 60% at 72% 32%,#000,transparent 76%);mask-image:radial-gradient(72% 60% at 72% 32%,#000,transparent 76%)}
-.hero__grid{display:grid;grid-template-columns:1.15fr 1.4fr;gap:clamp(20px,3.5vw,56px);align-items:center}
+.hero__grid{display:grid;grid-template-columns:1fr 1.62fr;gap:clamp(20px,2.5vw,42px);align-items:center}
 .hero__title{font-size:clamp(2.2rem,5vw,3.8rem);margin:20px 0 18px}
 .hero__sub{font-size:clamp(1.02rem,1.6vw,1.2rem);color:var(--ink-soft);max-width:50ch}
 .hero__cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px}
@@ -625,8 +625,8 @@ tbody td:first-child{font-family:var(--f-head);font-weight:600;color:var(--ink)}
   position: absolute;
   top: 0;
   left: 0;
-  width: 94%; /* Increased from 90% for larger presentation */
-  height: 94%; /* Increased from 90% for larger presentation */
+  width: 96.5%; /* Maximum width within stack constraints */
+  height: 96.5%; /* Maximum height within stack constraints */
   border-radius: 24px;
   cursor: pointer;
   z-index: 1;
@@ -639,7 +639,7 @@ tbody td:first-child{font-family:var(--f-head);font-weight:600;color:var(--ink)}
   z-index: 5;
   opacity: 1;
   filter: none;
-  transform: translate(0, 3%) scale(1);
+  transform: translate(0, 2%) scale(1);
 }
 
 .video-card.active .video-card__frame {
@@ -651,7 +651,7 @@ tbody td:first-child{font-family:var(--f-head);font-weight:600;color:var(--ink)}
   z-index: 2;
   opacity: 0.55;
   filter: blur(1.5px) brightness(0.75);
-  transform: translate(6%, -3%) scale(0.94); /* Tighter spacing for larger display */
+  transform: translate(3.5%, -2%) scale(0.965); /* Tight overlap for much larger active area */
 }
 
 .video-card:not(.active) .video-card__frame {
@@ -662,11 +662,11 @@ tbody td:first-child{font-family:var(--f-head);font-weight:600;color:var(--ink)}
 .video-stack:hover .video-card:not(.active) {
   opacity: 0.8;
   filter: blur(0.5px) brightness(0.9);
-  transform: translate(7.5%, -4.5%) scale(0.95);
+  transform: translate(4.5%, -2.5%) scale(0.975);
 }
 
 .video-stack:hover .video-card.active {
-  transform: translate(-1%, 4%) scale(1.015);
+  transform: translate(-0.5%, 2.5%) scale(1.01);
 }
 
 .video-card__frame {
@@ -729,7 +729,7 @@ tbody td:first-child{font-family:var(--f-head);font-weight:600;color:var(--ink)}
 .video-swap-btn {
   position: absolute;
   top: 50%;
-  right: 5%; /* Aligned relative to the video card overlap */
+  right: 3.5%; /* Aligned relative to the video card overlap */
   transform: translate(50%, -50%);
   width: 48px;
   height: 48px;
