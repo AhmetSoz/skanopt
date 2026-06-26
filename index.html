@@ -301,8 +301,56 @@ Multilingual interface support.</p>
           <div class="field"><label for="f-name" data-i18n="contact.name">Full Name</label><input id="f-name" name="name" type="text" required></div>
           <div class="field"><label for="f-company" data-i18n="contact.company">Company</label><input id="f-company" name="company" type="text"></div>
         </div>
-        <div class="field"><label for="f-email" data-i18n="contact.email">E-mail</label><input id="f-email" name="email" type="email" required></div>
-        <div class="field"><label for="f-msg" data-i18n="contact.message">Your message / application</label><textarea id="f-msg" name="message" required></textarea></div>
+
+        <div class="field">
+          <label for="f-category" data-i18n="contact.categoryLabel">Please select product category. (required)</label>
+          <div class="select-wrapper" style="position:relative;">
+            <select id="f-category" name="category" required style="width:100%;padding:13px 15px;border:1.5px solid var(--line-2);border-radius:var(--radius-sm);font-family:inherit;font-size:.96rem;color:var(--ink);background:#fff;transition:.2s;-webkit-appearance:none;-moz-appearance:none;appearance:none;cursor:pointer;">
+              <option value="" disabled selected data-i18n="contact.selectCategory">select product category</option>
+              <option value="V Series" data-i18n="contact.catV">V Series (Compact · Area Scan)</option>
+              <option value="VR Series" data-i18n="contact.catVR">VR Series (Rotary Stage)</option>
+              <option value="VRE Series" data-i18n="contact.catVRE">VRE Series (High Precision / Long Parts)</option>
+              <option value="W Series" data-i18n="contact.catW">W Series (Large Parts / Line Scan)</option>
+              <option value="H Series" data-i18n="contact.catH">H Series (Full Automation)</option>
+              <option value="Other" data-i18n="contact.catOther">Other / General Inquiry</option>
+            </select>
+            <span class="select-arrow" style="position:absolute;right:15px;top:50%;transform:translateY(-50%);pointer-events:none;color:var(--ink-soft);font-size:0.8rem;">▼</span>
+          </div>
+        </div>
+
+        <div class="field">
+          <label data-i18n="contact.interestsLabel" style="display:block;font-family:var(--f-head);font-weight:600;font-size:.85rem;margin-bottom:10px;color:var(--ink)">Please check the item(s) you are interested in. (required)</label>
+          <div class="interests-grid" style="display:grid;grid-template-columns:repeat(auto-fit, minmax(180px, 1fr));gap:12px;margin-bottom:16px;">
+            <label class="chk-container" style="display:flex;align-items:center;gap:10px;font-size:0.95rem;cursor:pointer;user-select:none;font-weight:500;">
+              <input type="checkbox" name="interest" value="Talk to a Specialist" checked style="width:18px;height:18px;accent-color:var(--brand);cursor:pointer;">
+              <span data-i18n="contact.interestTalk">Talk to a Specialist</span>
+            </label>
+            <label class="chk-container" style="display:flex;align-items:center;gap:10px;font-size:0.95rem;cursor:pointer;user-select:none;font-weight:500;">
+              <input type="checkbox" name="interest" value="Pricing" checked style="width:18px;height:18px;accent-color:var(--brand);cursor:pointer;">
+              <span data-i18n="contact.interestPricing">Pricing</span>
+            </label>
+            <label class="chk-container" style="display:flex;align-items:center;gap:10px;font-size:0.95rem;cursor:pointer;user-select:none;font-weight:500;">
+              <input type="checkbox" name="interest" value="Other" checked style="width:18px;height:18px;accent-color:var(--brand);cursor:pointer;">
+              <span data-i18n="contact.interestOther">Other</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="f-msg" data-i18n="contact.messageLabel">Please share the details of your application or inquiry in the section below.</label>
+          <textarea id="f-msg" name="message" required></textarea>
+        </div>
+
+        <div class="email-section-header" style="margin-top:20px;border-top:1px solid var(--line);padding-top:20px;margin-bottom:15px;">
+          <h4 data-i18n="contact.emailTitle" style="font-family:var(--f-head);font-size:1.1rem;margin-bottom:6px;color:var(--ink)">Please Enter Your Email Address</h4>
+          <p data-i18n="contact.emailSub" style="font-size:0.8rem;color:var(--ink-soft);line-height:1.4;">If you have registered in the past, please enter your registered email address below. If you are not yet registered, please enter your email address below to complete your submission.</p>
+        </div>
+
+        <div class="field">
+          <label for="f-email" data-i18n="contact.emailLabel">Business E-mail Address (required)</label>
+          <input id="f-email" name="email" type="email" required>
+        </div>
+
         <button type="submit" class="btn btn-accent btn-lg btn-block" data-i18n="contact.submit">Send Request</button>
         <p class="form__note" data-i18n="contact.note">Your information is used only to get back to you.</p>
         <div class="form__msg" id="formMsg" role="status"></div>

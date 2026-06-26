@@ -346,7 +346,19 @@
       const c=I18N[lang].contact;
       msg.className="form__msg";
       if(!f.checkValidity()){ f.reportValidity(); return; }
-      const data=Object.fromEntries(new FormData(f).entries());
+      
+      const formData = new FormData(f);
+      const data = Object.fromEntries(formData.entries());
+      const interests = formData.getAll("interest");
+      
+      if(interests.length === 0){
+        msg.textContent = lang === "tr" ? "Lütfen ilgilendiğiniz konulardan en az birini seçin." : "Please select at least one interest.";
+        msg.className = "form__msg err";
+        return;
+      }
+      
+      data.interests = interests.join(", ");
+      
       const btn=f.querySelector("button[type=submit]"); const orig=btn.textContent; btn.disabled=true; btn.textContent=c.sending;
       try{
         if(SITE.formEndpoint){
@@ -356,7 +368,14 @@
         }else{
           // mailto yedeği
           const subj=encodeURIComponent("SKANOPT Demo/Teklif — "+(data.company||data.name||""));
-          const body=encodeURIComponent((c.name)+": "+(data.name||"")+"\n"+(c.company)+": "+(data.company||"")+"\n"+(c.email)+": "+(data.email||"")+"\n\n"+(data.message||""));
+          const body=encodeURIComponent(
+            c.name + ": " + (data.name||"") + "\n" +
+            c.company + ": " + (data.company||"") + "\n" +
+            c.emailLabel.replace(" (required)","").replace(" (zorunlu)","") + ": " + (data.email||"") + "\n" +
+            c.categoryLabel.replace(" (required)","").replace(" (zorunlu)","") + ": " + (data.category||"") + "\n" +
+            c.interestsLabel.replace(" (required)","").replace(" (zorunlu)","") + ": " + (data.interests||"") + "\n\n" +
+            c.messageLabel + ":\n" + (data.message||"")
+          );
           window.location.href="mailto:"+(SITE.email||"")+"?subject="+subj+"&body="+body;
           msg.textContent=c.ok; msg.className="form__msg ok";
         }
