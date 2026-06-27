@@ -185,7 +185,7 @@ window.I18N = {
       kvkkPre:"",
       kvkkLink:"KVKK Aydınlatma Metnini ve Gizlilik Politikasını okudum, onaylıyorum.",
       marketingConsent:"Ürünler, kampanyalar ve teknik bültenler hakkında ticari elektronik ileti almayı kabul ediyorum. (İsteğe bağlı)",
-      mWeb:"Web",mMail:"E-posta",mPhone:"Telefon",mWa:"WhatsApp",
+      mWeb:"Web",mMail:"E-posta",mPhone:"Telefon",mWa:"WhatsApp",mWaStatus:"Çevrimiçi & Hızlı Dönüş",
       ctaTitle:"Hızlı yanıt mı istiyorsunuz?",ctaText:"WhatsApp üzerinden ulaşın, uygulamanıza en uygun modeli birlikte belirleyelim.",ctaBtn:"WhatsApp'tan Yaz"
     },
     footer:{
@@ -349,7 +349,7 @@ window.I18N = {
       kvkkPre:"I have read and agree to the ",
       kvkkLink:"Privacy Policy and GDPR Clarification Text",
       marketingConsent:"I agree to receive commercial electronic communications (emails, newsletters) about products and campaigns. (Optional)",
-      mWeb:"Web",mMail:"E-mail",mPhone:"Phone",mWa:"WhatsApp",
+      mWeb:"Web",mMail:"E-mail",mPhone:"Phone",mWa:"WhatsApp",mWaStatus:"Online &amp; Fast Response",
       ctaTitle:"Need a quick reply?",ctaText:"Reach us on WhatsApp and we'll pick the best model for your application together.",ctaBtn:"Message on WhatsApp"
     },
     footer:{

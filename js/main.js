@@ -224,7 +224,6 @@
       if(SITE.web)   items.push({ic:"globe",lbl:c.mWeb, val:SITE.web, href:SITE.webUrl||("https://"+SITE.web), cls:""});
       if(SITE.email) items.push({ic:"mail",lbl:c.mMail, val:SITE.email, href:"mailto:"+SITE.email, cls:""});
       if(SITE.phoneDisplay) items.push({ic:"phone",lbl:c.mPhone, val:SITE.phoneDisplay, href:SITE.phoneE164?("tel:"+SITE.phoneE164):null, cls:""});
-      if(SITE.whatsappNumber) items.push({ic:"whatsapp",lbl:c.mWa, val:c.ctaBtn, href:waLink(), cls:"wa"});
       items.forEach(it=>{
         const tag=it.href?"a":"div";
         const e=el(tag,"method "+it.cls);
