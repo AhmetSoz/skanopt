@@ -774,3 +774,100 @@ tbody td:first-child{font-family:var(--f-head);font-weight:600;color:var(--ink)}
 .video-swap-btn:active {
   transform: translate(50%, -50%) scale(0.92);
 }
+
+/* ---------- modal ---------- */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+.modal__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(9, 64, 59, 0.6);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+.modal__container {
+  position: relative;
+  background: #ffffff;
+  border-radius: var(--radius);
+  max-width: 700px;
+  width: 100%;
+  max-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 24px 64px rgba(9, 64, 59, 0.25);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  animation: modal-fade-in 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 10002;
+  overflow: hidden;
+}
+.modal__header {
+  padding: 20px 24px;
+  border-bottom: 1px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.modal__title {
+  font-size: 1.2rem;
+  font-family: var(--f-head);
+  font-weight: 700;
+  color: var(--ink);
+  margin: 0;
+}
+.modal__close {
+  background: none;
+  border: none;
+  font-size: 2.2rem;
+  color: var(--ink-faint);
+  cursor: pointer;
+  transition: color 0.2s, transform 0.2s;
+  line-height: 1;
+  padding: 0 4px;
+}
+.modal__close:hover {
+  color: var(--brand);
+  transform: scale(1.1);
+}
+.modal__body {
+  padding: 24px;
+  overflow-y: auto;
+  font-size: 0.92rem;
+  color: var(--ink-light);
+  line-height: 1.6;
+}
+@keyframes modal-fade-in {
+  from { opacity: 0; transform: translateY(24px) scale(0.98); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+.kvkk-section h3 {
+  font-family: var(--f-head);
+  font-size: 0.98rem;
+  color: var(--brand);
+  margin-top: 20px;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+.kvkk-section p {
+  margin-bottom: 12px;
+}
+.kvkk-section ul {
+  margin-left: 20px;
+  margin-bottom: 16px;
+  list-style: disc;
+}
+.kvkk-section li {
+  margin-bottom: 6px;
+}

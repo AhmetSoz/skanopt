@@ -385,6 +385,112 @@
     });
   }
 
+  function setupKvkkModal(){
+    const modal = $("#kvkkModal");
+    const trigger = $("#kvkkTrigger");
+    const close = $("#kvkkClose");
+    const overlay = $("#kvkkOverlay");
+    const body = $("#kvkkModalBody");
+    const title = $("#kvkkTitle");
+    
+    if(!modal || !trigger) return;
+    
+    const trText = `
+      <div class="kvkk-section">
+        <h3 style="font-size:1rem;margin-top:16px;margin-bottom:6px;color:var(--brand);font-weight:600">1. VERİ SORUMLUSUNUN KİMLİĞİ</h3>
+        <p style="margin-bottom:12px">İşbu Aydınlatma Metni, 6698 sayılı Kişisel Verilerin Korunması Kanunu ("KVKK") uyarınca, <b>SKANOPT</b> ("Şirket" veya "Veri Sorumlusu") tarafından işletilen iletişim formu aracılığıyla toplanan kişisel verilerinizin işlenmesine ilişkin usul ve esasları açıklamak amacıyla hazırlanmıştır.</p>
+        
+        <h3 style="font-size:1rem;margin-top:16px;margin-bottom:6px;color:var(--brand);font-weight:600">2. İŞLENEN KİŞİSEL VERİLERİNİZ</h3>
+        <p style="margin-bottom:12px">İletişim formunu kullanmanız halinde aşağıdaki verileriniz işlenmektedir:</p>
+        <ul style="margin-left:20px;margin-bottom:12px;list-style:disc">
+          <li style="margin-bottom:4px"><b>Kimlik Bilgileri:</b> Adınız ve soyadınız.</li>
+          <li style="margin-bottom:4px"><b>İletişim Bilgileri:</b> E-posta adresiniz ve telefon numaranız.</li>
+          <li style="margin-bottom:4px"><b>Mesleki Bilgiler:</b> Çalıştığınız firma adı ve ilgilendiğiniz ürün/hizmet kategorisi.</li>
+          <li style="margin-bottom:4px"><b>Mesaj Detayı:</b> Formda paylaştığınız mesaj içeriği ve IP adresiniz.</li>
+        </ul>
+        
+        <h3 style="font-size:1rem;margin-top:16px;margin-bottom:6px;color:var(--brand);font-weight:600">3. VERİ İŞLEME AMAÇLARI VE HUKUKİ SEBEPLERİ</h3>
+        <p style="margin-bottom:12px">Kişisel verileriniz, KVKK'nın 5. maddesinde belirtilen hukuki sebepler çerçevesinde işlenmektedir:</p>
+        <ul style="margin-left:20px;margin-bottom:12px;list-style:disc">
+          <li style="margin-bottom:4px">Taleplerinizin ve sorularınızın cevaplandırılması amacıyla <i>"Bir sözleşmenin kurulması veya ifasıyla doğrudan doğruya ilgili olması"</i> ve <i>"Veri sorumlusunun hukuki yükümlülüğünü yerine getirebilmesi için zorunlu olması"</i> hukuki sebeplerine dayalı olarak.</li>
+          <li style="margin-bottom:4px">Kampanya, ürün tanıtımı ve teknik bülten gönderimleri amacıyla (isteğe bağlı onay vermeniz halinde) <i>"İlgili kişinin açık rızasının bulunması"</i> hukuki sebebine dayalı olarak.</li>
+        </ul>
+        
+        <h3 style="font-size:1rem;margin-top:16px;margin-bottom:6px;color:var(--brand);font-weight:600">4. VERİLERİN AKTARILMASI</h3>
+        <p style="margin-bottom:12px">Kişisel verileriniz, yasal yükümlülüklerin yerine getirilmesi amacıyla yetkili kamu kurum ve kuruluşları ile yargı mercilerine aktarılabilecek olup, bunun dışında üçüncü şahıslara veya ticari amaçlarla yurt dışına aktarılmamaktadır.</p>
+        
+        <h3 style="font-size:1rem;margin-top:16px;margin-bottom:6px;color:var(--brand);font-weight:600">5. İLGİLİ KİŞİNİN HAKLARI (KVKK MD. 11)</h3>
+        <p style="margin-bottom:12px">Kanun'un 11. maddesi kapsamında kişisel verilerinizin işlenip işlenmediğini öğrenme, düzeltilmesini talep etme ve silinmesini isteme haklarına sahipsiniz. Haklarınızı kullanmak için <b>info@skanopt.com</b> adresine yazılı başvuru yapabilirsiniz.</p>
+        
+        <hr style="margin:24px 0;border:0;border-top:1px solid #e2e8f0">
+        
+        <h2 style="font-size:1.15rem;margin-bottom:12px;color:var(--brand);font-family:var(--f-head);font-weight:700">GİZLİLİK POLİTİKASI</h2>
+        <p style="margin-bottom:12px">SKANOPT olarak ziyaretçilerimizin gizliliğini korumak en temel önceliklerimizden biridir. Sitemizde toplanan verilerin yetkisiz erişimlere karşı korunması amacıyla SSL şifreleme protokolü ve gerekli teknik güvenlik önlemleri aktif olarak uygulanmaktadır. Kullanıcı deneyimini iyileştirmek amacıyla kullanılan çerezler (cookies) yalnızca analitik amaçlı olup, kişisel kimlik tespiti yapmaz.</p>
+      </div>
+    `;
+    
+    const enText = `
+      <div class="kvkk-section">
+        <h3 style="font-size:1rem;margin-top:16px;margin-bottom:6px;color:var(--brand);font-weight:600">1. DATA CONTROLLER</h3>
+        <p style="margin-bottom:12px">This Clarification Text has been prepared in accordance with the Personal Data Protection Law No. 6698 ("KVKK") to explain the procedures and principles regarding the processing of your personal data collected via the contact form operated by <b>SKANOPT</b> ("Company" or "Data Controller").</p>
+        
+        <h3 style="font-size:1rem;margin-top:16px;margin-bottom:6px;color:var(--brand);font-weight:600">2. PROCESSED PERSONAL DATA</h3>
+        <p style="margin-bottom:12px">When you use the contact form, the following personal data is processed:</p>
+        <ul style="margin-left:20px;margin-bottom:12px;list-style:disc">
+          <li style="margin-bottom:4px"><b>Identity Information:</b> Full name.</li>
+          <li style="margin-bottom:4px"><b>Contact Information:</b> E-mail address and phone number.</li>
+          <li style="margin-bottom:4px"><b>Professional Information:</b> Company name and product/service category of interest.</li>
+          <li style="margin-bottom:4px"><b>Message Details:</b> The message content you share in the form and your IP address.</li>
+        </ul>
+        
+        <h3 style="font-size:1rem;margin-top:16px;margin-bottom:6px;color:var(--brand);font-weight:600">3. PURPOSES AND LEGAL GROUNDS FOR DATA PROCESSING</h3>
+        <p style="margin-bottom:12px">Your personal data is processed within the framework of the legal grounds specified in Article 5 of the KVKK:</p>
+        <ul style="margin-left:20px;margin-bottom:12px;list-style:disc">
+          <li style="margin-bottom:4px">To answer your requests and inquiries based on the legal grounds of <i>"Being directly related to the establishment or performance of a contract"</i> and <i>"Being mandatory for the data controller to fulfill its legal obligation"</i>.</li>
+          <li style="margin-bottom:4px">To send newsletters, product updates, and campaigns (subject to your optional consent) based on the legal ground of <i>"Having the explicit consent of the data subject"</i>.</li>
+        </ul>
+        
+        <h3 style="font-size:1rem;margin-top:16px;margin-bottom:6px;color:var(--brand);font-weight:600">4. DATA TRANSFER</h3>
+        <p style="margin-bottom:12px">Your personal data may be transferred to authorized public institutions and judicial authorities to fulfill legal obligations, and is not shared with other third parties or transferred abroad for commercial purposes.</p>
+        
+        <h3 style="font-size:1rem;margin-top:16px;margin-bottom:6px;color:var(--brand);font-weight:600">5. YOUR RIGHTS UNDER ARTICLE 11 OF KVKK</h3>
+        <p style="margin-bottom:12px">Within the scope of Article 11 of the KVKK, you have the right to learn whether your personal data is processed, to request correction, or to request deletion. To exercise your rights, you can contact us at <b>info@skanopt.com</b>.</p>
+        
+        <hr style="margin:24px 0;border:0;border-top:1px solid #e2e8f0">
+        
+        <h2 style="font-size:1.15rem;margin-bottom:12px;color:var(--brand);font-family:var(--f-head);font-weight:700">PRIVACY POLICY</h2>
+        <p style="margin-bottom:12px">Protecting the privacy of our visitors is one of our fundamental priorities. SSL encryption protocol and necessary technical security measures are actively implemented to protect the data collected on our site against unauthorized access. Cookies used to improve user experience are for analytical purposes only and do not identify individuals.</p>
+      </div>
+    `;
+    
+    function openModal(e){
+      e.preventDefault();
+      const currentLang = document.documentElement.lang || "en";
+      if(currentLang === "tr"){
+        title.textContent = "KVKK Aydınlatma Metni & Gizlilik Politikası";
+        body.innerHTML = trText;
+      } else {
+        title.textContent = "GDPR Clarification Text & Privacy Policy";
+        body.innerHTML = enText;
+      }
+      modal.style.display = "flex";
+      document.body.style.overflow = "hidden";
+    }
+    
+    function closeModal(){
+      modal.style.display = "none";
+      document.body.style.overflow = "";
+    }
+    
+    trigger.addEventListener("click", openModal);
+    close.addEventListener("click", closeModal);
+    overlay.addEventListener("click", closeModal);
+    
+    window.addEventListener("keydown", (e)=>{
+      if(e.key === "Escape" && modal.style.display === "flex") closeModal();
+    });
+  }
+
   function setupVideoStack() {
     const cards = $$(".video-card");
     if (cards.length < 2) return;
@@ -456,6 +562,7 @@
     $("#year").textContent=new Date().getFullYear();
     setLang(lang);     // metin + dinamik render + reveal
     setupHeader(); setupNav(); setupLang(); setupForm();
+    setupKvkkModal();
     setupVideoStack();
     setupReveal();
   });
