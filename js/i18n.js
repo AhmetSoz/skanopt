@@ -42,9 +42,9 @@ window.I18N = {
     hero:{
       badge:"Hassas Mühendislik",
       t1:"Optik Ölçüm\n",t2:"Hassas ve Modüler",t3:"",
-      sub:"- Yüksek Hassasiyetli Boyutsal Kontrol\n- Telesentrik Optik Ölçüm\n- Entegre Aydınlatma ve Yüksek Çözünürlüklü Kamera\n- Üretim hattına ve Robot hücresine kolay entegrasyon",
+      sub:"- Yüksek Hassasiyetli Boyutsal Kontrol\n- Telesentrik Optik Ölçüm\n- Entegre Aydınlatma ve Yüksek Çözünürlüklü Kamera\n- Üretim hattına ve robot hücresine kolay entegrasyon",
       stat1:"Yüksek Hassasiyet (VRE)",stat2:"Ölçüm Süresi",stat3:"Maks. Çözünürlük",secUnit:"sn",resolUnit:"MP",
-      trust1:"Marka Bağımsız PLC ve Robot Entegrasyonu",trust2:"Kullanıcı Kalibrasyonu",trust3:"Sürekli Online Üretici Desteği",
+      trust1:"Markadan Bağımsız PLC ve Robot Entegrasyonu",trust2:"Kullanıcı Kalibrasyonu",trust3:"Sürekli Çevrim İçi Üretici Desteği",
       f1s:"Tek çekim",f1b:"20 × 20 mm alan",f2s:"Ölçüm süresi",
       videoLabel1:"Ölçüm Cihazı",videoLabel2:"Matkap Ölçümü"
     },
@@ -52,69 +52,69 @@ window.I18N = {
       eyebrow:"Neden SKANOPT",title:"SKANOPT Hangi Alanlarda Fark Yaratır?",
       sub:"Yüksek hassasiyetli telesentrik teknolojisini;\nesnek entegrasyon, kullanıcı kalibrasyonu ve\nözgün mühendislik avantajlarıyla sunuyoruz.",
       cards:[
-        {icon:"rotary",t:"Modüler ve Esnek Yapı",d:"Atölye ortamında, hat kenarında veya\ndoğrudan konveyör ve robot hatlarında\ninline ölçüm için\nesnek montaj imkanı"},
-        {icon:"scan",t:"Çift Telesentrik Optik (Dual-Telecentric)",d:"Bozulmasız, derin odak alanı ve yüksek çözünürlüklü tek çekim alan tarama teknolojisiyle hatasız ölçüm"},
-        {icon:"plc",t:"PLC ve Robot Entegrasyonu",d:"Siemens, Mitsubishi, Fanuc, Omron gibi\npopüler PLC'ler ve robot kollarıyla\nEthernet I/O üzerinden doğrudan haberleşme"},
-        {icon:"calib",t:"Kullanıcı Dostu Kalibrasyon",d:"Yazılım arayüzünden yapılabilen pratik kalibrasyon altyapısı"},
-        {icon:"camera",t:"Endüstriyel Kamera Çözünürlüğü",d:"İhtiyaca uygun 5 MP ile 25 MP aralığında\nyüksek çözünürlüklü CMOS sensör yapılandırmaları"},
-        {icon:"truck",t:"Kısa Teslim Süreleri",d:"Sipariş üzerine esnek üretim planlaması, hızlı teslimat ve doğrudan üreticiden uzman teknik destek"}
+        {icon:"rotary",t:"Modüler ve Esnek Yapı",d:"Atölye ortamında, hat kenarında veya doğrudan konveyör ve robot hatlarında inline ölçüm için esnek montaj imkanı."},
+        {icon:"scan",t:"Çift Telesentrik Optik (Dual-Telecentric)",d:"Bozulmasız, derin odak alanı ve yüksek çözünürlüklü tek çekim alan tarama teknolojisiyle hatasız ölçüm."},
+        {icon:"plc",t:"PLC ve Robot Entegrasyonu",d:"Siemens, Mitsubishi, Fanuc, Omron gibi popüler PLC'ler ve robot kollarıyla Ethernet I/O üzerinden doğrudan haberleşme."},
+        {icon:"calib",t:"Kullanıcı Dostu Kalibrasyon",d:"Yazılım arayüzünden yapılabilen pratik kalibrasyon altyapısı."},
+        {icon:"camera",t:"Endüstriyel Kamera Çözünürlüğü",d:"İhtiyaca uygun 5 MP ile 25 MP aralığında yüksek çözünürlüklü CMOS sensör yapılandırmaları."},
+        {icon:"truck",t:"Kısa Teslim Süreleri",d:"Sipariş üzerine esnek üretim planlaması, hızlı teslimat ve doğrudan üreticiden uzman teknik destek."}
       ]
     },
     series:{
-      eyebrow:"Ürün Serileri",title:"Her Parça ve Hat İçin\nDoğru Model",
-      sub:"Kompakt sensör modüllerinden\nBüyük parça ölçüm ve tam otomasyon sistemlerine kadar\nBeş ürün ailesi.\nTüm modeller I/O hazır gelir.",
+      eyebrow:"Ürün Serileri",title:"Her Parça ve Hat İçin Doğru Model",
+      sub:"Kompakt sensör modüllerinden büyük parça ölçüm ve tam otomasyon sistemlerine kadar beş ürün ailesi. Tüm modeller I/O bağlantısına hazır gelir.",
       headers:{model:"Model",fovh:"Yatay FOV (mm)",fovv:"Dikey FOV (mm)",acc:"Hassasiyet (µm)"},
       note:"Görüş alanı (FOV) ve hassasiyet değerleri modele göredir. Uygulamanıza özel konfigürasyon için bize ulaşın.",
       order:["V","VR","VRE","W","H"],
       items:{
         V:{name:"V Serisi",tag:"Kompakt · Alan Kamerası",desc:"Kompakt gövde tasarımı, alan kamerası ve 0.4 saniyede ölçüm. Atölye ve hat kenarı kalite kontrol için ideal.",
-           feats:["0.4 saniyede ölçüm sonucu","Otomasyona uygun, I/O hazır gelir","Fabrika çıkışlı sistem kalibrasyonu","Otomatik raporlama ve veri entegrasyonu"]},
-        VR:{name:"VR Serisi",tag:"Opsiyonel Döner Tabla Entegrasyonu",desc:"V serisi sensör modülüne entegre 360° döner tabla opsiyonu ile mil, şaft ve dairesel parçalarda dairesellik, eşmerkezlilik ve salgı ölçümü.",
-           feats:["Dairesellik, eşmerkezlilik ve ovallik ölçümü","360° döner tabla entegrasyonu ile şaft/mil ölçümü","Otomasyona uygun, I/O hazır arayüz","CNC aşınma telafisi (wear offset) ve otomatik raporlama"]},
-        VRE:{name:"VRE Serisi",tag:"Ultra Hassas · Uzun Parça",desc:"Ultra yüksek hassasiyet ve dikeyde 100–600 mm uzun parça ölçüm desteği.",
-           feats:["0.001 µm çözünürlüğe varan hassasiyet","Dikeyde 100–600 mm ölçüm boyu","VR serisi entegrasyon opsiyonları","Uzun parça ve yüksek hassasiyet uygulamaları"]},
+           feats:["0.4 saniyede hızlı ölçüm sonucu.","Otomasyona hazır I/O bağlantı yapısı.","Fabrika çıkışlı sistem kalibrasyonu.","Otomatik raporlama ve veri entegrasyonu."]},
+        VR:{name:"VR Serisi",tag:"Opsiyonel Döner Tabla Entegrasyonu",desc:"V Serisi sensör modülüne entegre 360° döner tabla opsiyonu ile mil, şaft ve dairesel parçalarda dairesellik, eşmerkezlilik ve salgı ölçümü yapar.",
+           feats:["Dairesellik, eşmerkezlilik ve ovallik ölçümü.","360° döner tabla entegrasyonu ile şaft/mil ölçümü.","Otomasyona hazır I/O bağlantı arayüzü.","CNC aşınma telafisi (wear offset) ve otomatik raporlama."]},
+        VRE:{name:"VRE Serisi",tag:"Ultra Hassas · Uzun Parça",desc:"Ultra yüksek hassasiyet ve dikeyde 100–600 mm aralığında uzun parça ölçüm desteği.",
+           feats:["0.001 µm çözünürlüğe varan hassasiyet.","Dikeyde 100–600 mm ölçüm boyu.","VR Serisi entegrasyon opsiyonları.","Uzun parça ve yüksek hassasiyet uygulamaları."]},
         W:{name:"W Serisi",tag:"Büyük Parça · Çizgisel Kamera",desc:"Büyük ve uzun parçalar için çizgisel (lineer) kamera teknolojisine sahip telesentrik sistem.",
-           feats:["Büyük ve uzun parça ölçümü","Çizgisel kamera ile artırılmış hassasiyet","Dikeyde 300–1500 mm","WE modelleri ile daha yüksek hassasiyet"]},
+           feats:["Büyük ve uzun parça ölçümü.","Çizgisel kamera ile artırılmış hassasiyet.","Dikeyde 300–1500 mm ölçüm aralığı.","WE modelleri ile daha yüksek hassasiyet seviyesi."]},
         H:{name:"H Serisi",tag:"Hat Boyu Otomasyon",desc:"Tam otomasyon odaklı, 0.4 saniyede ölçüm yapabilen geniş modül yelpazesi.",
-           feats:["0.4 saniyede ölçüm","Geniş ölçüm aralığı, 10 model","Otomasyona uygun, I/O hazır","Sistem + kullanıcı kalibrasyonu"]}
+           feats:["0.4 saniyede hızlı ölçüm çevrimi.","Geniş ölçüm aralığı sunan 10 farklı model.","Otomasyona hazır, I/O bağlantısı.","Sistem ve kullanıcı kalibrasyonu."]}
       }
     },
     how:{
       eyebrow:"Nasıl Çalışır",title:"Parçadan Sonuca Dört Adım",
-      sub:"Telesentrik optik ve sub-piksel görüntü işleme ile operatör hatası olmadan, saniyeler içinde ölçüm.",
+      sub:"Telesentrik optik ve sub-piksel görüntü işleme ile operatör hatası olmadan, saniyeler içinde ölçüm gerçekleştirilir.",
       steps:[
-        {t:"Parça Yerleştirme",d:"Parça ölçüm alanına (konveyör veya\ndöner tabla opsiyonuna) yerleştirilir."},
-        {t:"Alan Tarama",d:"Ölçüm alanı tek çekimde\nyüksek çözünürlüklü CMOS sensörle taranır."},
-        {t:"Görüntü İşleme",d:"Z-Measure yazılımı sub-piksel hassasiyetle\nboyutsal değerleri çıkarır."},
-        {t:"Entegrasyon & Raporlama",d:"PLC / robot / CNC'ye aşınma telafisi\n(wear offset) veya OK/NOK sinyali gönderilir."}
+        {t:"Parça Yerleştirme",d:"Parça ölçüm alanına (konveyör veya döner tabla opsiyonuna) yerleştirilir."},
+        {t:"Alan Tarama",d:"Ölçüm alanı tek çekimde yüksek çözünürlüklü CMOS sensörle taranır."},
+        {t:"Görüntü İşleme",d:"Z-Measure yazılımı sub-piksel hassasiyetle boyutsal değerleri çıkarır."},
+        {t:"Entegrasyon & Raporlama",d:"PLC / robot / CNC'ye aşınma telafisi (wear offset) ya da OK/NOK sinyali gönderilir."}
       ]
     },
     auto:{
-      eyebrow:"Robot & Otomasyon",title:"Hattınıza Sorunsuz Entegre",
-      sub:"Marka bağımsız PLC, robot ve konveyör uyumluluğu.\nÖlçüm sonuçlarını doğrudan tezgâha ileterek\noperatör müdahalesini sıfıra indirir.",
+      eyebrow:"Robot & Otomasyon",title:"Hattınıza Sorunsuz Entegrasyon",
+      sub:"Markadan bağımsız PLC, robot ve konveyör uyumluluğu. Ölçüm sonuçlarını doğrudan tezgaha ileterek operatör müdahalesini sıfıra indirir.",
       videoTag:"Canlı inline ölçüm",videoTag2:"Robot hücresi — canlı",
       points:[
         {icon:"robot",t:"Robot & Konveyör",d:"Stäubli konveyör ve uFactory robot kolu entegrasyonu — Z-Measure'da hazır arayüz."},
         {icon:"plc",t:"Her PLC Markası",d:"Siemens, Mitsubishi, Fanuc, Omron — sahadan sorunsuz entegrasyon."},
-        {icon:"cnc",t:"CNC Wear Offset",d:"Ölçüm sonucunu doğrudan tezgâha aşınma telafisi olarak gönderir."},
+        {icon:"cnc",t:"CNC Aşınma Telafisi",d:"Ölçüm sonucunu doğrudan tezgaha aşınma telafisi olarak gönderir."},
         {icon:"sync",t:"Senkron Tetikleme",d:"'Şimdi ölç' komutunu konveyör bandı veya robot ile senkronize eder."}
       ]
     },
     sw:{
-      eyebrow:"Z-Measure Yazılımı",title:"Ölçümden raporlamaya tek arayüz",
-      sub:"Onlarca ölçüm tipi, sub-piksel hassasiyet, otomatik raporlama ve SPC.\nÇoklu dil destekli arayüz.",
+      eyebrow:"Z-Measure Yazılımı",title:"Ölçümden Raporlamaya Tek Arayüz",
+      sub:"Onlarca ölçüm tipi, sub-piksel hassasiyet, otomatik raporlama ve SPC. Çoklu dil destekli arayüz.",
       measHead:"Desteklenen Ölçüm Tipleri",
       measurements:["Döner Çap","Çap","Boy","Açı","Pah","Radyus","Vida (Adım + Çap)","Dairesellik","Diklik","Paralellik","Simetriklik","Salgı"],
       cards:[
-        {icon:"link",t:"Bağlantılar",d:"Robot haberleşmesi, ERP/SCADA entegrasyonu ve barkodla\nprogram seçimi."},
-        {icon:"cnc",t:"CNC Offset",d:"Tezgâha wear offset atama arayüzü —\noperatör müdahalesi sıfır."},
-        {icon:"calib",t:"Kalibrasyon",d:"Sistem fabrikada kalibre edilmiş olarak teslim edilir;\nkullanıcı dilediği zaman yeniden kalibre edebilir."},
-        {icon:"report",t:"Raporlama & SPC",d:"Otomatik raporlama ve SPC\nveri kaydı, kolay dışa aktarma."}
+        {icon:"link",t:"Bağlantılar",d:"Robot haberleşmesi, ERP/SCADA entegrasyonu ve barkodla program seçimi."},
+        {icon:"cnc",t:"CNC Offset",d:"Tezgaha wear offset atama arayüzü — operatör müdahalesi sıfır."},
+        {icon:"calib",t:"Kalibrasyon",d:"Sistem fabrikada kalibre edilmiş olarak teslim edilir; kullanıcı dilediği zaman yeniden kalibre edebilir."},
+        {icon:"report",t:"Raporlama & SPC",d:"Otomatik raporlama ve SPC veri kaydı, kolay dışa aktarma."}
       ],
       badges:["Windows 10 / 11","I/O Hazır","Çoklu Dil / Multilingual"]
     },
     cmp:{
-      eyebrow:"Öne Çıkan Özellikler",title:"Neden SKANOPT öne çıkıyor?",
+      eyebrow:"Öne Çıkan Özellikler",title:"Neden SKANOPT Öne Çıkıyor?",
       sub:"Pazar standartları ile teknik ve ticari karşılaştırma.",
       note:"Telesentrik optik ölçüm sistemlerinde özgün tasarım, doğrudan teknik destek ve yüksek esneklikle rekabetçi çözümler sunuyoruz.",
       feature:"Özellikler",
@@ -122,23 +122,23 @@ window.I18N = {
       rows:[
         {label:"Döner Tabla (Opsiyon)",cells:["❌ Genellikle yok / sınırlı","✓ Entegre edilebilir (360° Ölçüm)"]},
         {label:"Alan Tarama",cells:["Genellikle çizgisel tarama","✓ Tek çekimde hızlı alan tarama"]},
-        {label:"PLC Esnekliği",cells:["Sınırlı veya tek marka bağımlı","✓ Marka bağımsız (Tüm PLC & Robotlar)"]},
+        {label:"PLC Esnekliği",cells:["Sınırlı veya tek markaya bağımlı","✓ Markadan bağımsız (Tüm PLC & Robotlar)"]},
         {label:"Kamera (MP)",cells:["Maksimum 5 MP","✓ 5 MP - 25 MP seçenekleri"]},
-        {label:"Kullanıcı Kalibrasyon",cells:["❌ Genellikle yok (servis bağımlı)","✓ Yazılım dahil (Pratik kalibrasyon)"]},
+        {label:"Kullanıcı Kalibrasyonu",cells:["❌ Genellikle yok (servise bağımlı)","✓ Yazılım dahil (Pratik kalibrasyon)"]},
         {label:"Teslim Süresi",cells:["4 ile 16 hafta arası","✓ Sipariş bazlı hızlı teslimat"]},
         {label:"Doğrudan Destek",cells:["Distribütör veya bayi üzerinden","✓ Doğrudan üreticiden hızlı destek"]},
         {label:"Fiyat",cells:["Yüksek yatırım maliyeti","✓ Rekabetçi ve modüler fiyatlar"]}
       ]
     },
     sec:{
-      eyebrow:"Sektörler & Uygulamalar",title:"Hassas ölçüm gereken her yerde",
-      sub:"Otomotiv yan sanayiden implant ve beyaz eşyaya, kalite kontrolün kritik olduğu sektörlere yönelik.",
-      appsHead:"Örnek ölçülen parçalar",
+      eyebrow:"Sektörler & Uygulamalar",title:"Hassas Ölçüm Gereken Her Yerde",
+      sub:"Otomotiv yan sanayiden implant ve beyaz eşyaya, kalite kontrolün kritik olduğu sektörlere yönelik çözümler.",
+      appsHead:"Örnek Ölçülen Parçalar",
       sectors:[
         {icon:"car",t:"Otomotiv Yan Sanayi",d:"Şaft, piston, valf ve dişli ölçümünde 360° kontrol opsiyonu."},
-        {icon:"appliance",t:"Beyaz Eşya",d:"Yüksek hacimli üretimde hızlı\nboyutsal kalite kontrol."},
-        {icon:"implant",t:"İmplant & Medikal",d:"Yüksek hassasiyet gerektiren\ntıbbi parça ve iğneler."},
-        {icon:"chip",t:"Elektronik & Yarı İletken",d:"Konnektör pinleri, çip ve\nhassas elektronik parçalar."},
+        {icon:"appliance",t:"Beyaz Eşya",d:"Yüksek hacimli üretimde hızlı boyutsal kalite kontrol."},
+        {icon:"implant",t:"İmplant & Medikal",d:"Yüksek hassasiyet gerektiren tıbbi parça ve iğneler."},
+        {icon:"chip",t:"Elektronik & Yarı İletken",d:"Konnektör pinleri, çip ve hassas elektronik parçalar."},
         {icon:"cnc",t:"CNC & Metal İşleme",d:"0.4 sn ölçüm + CNC wear offset ile üretim kaybı sıfır."},
         {icon:"mold",t:"Plastik & Kalıp",d:"Enjeksiyon parçaları için ideal telesentrik ölçüm."},
         {icon:"aero",t:"Havacılık & Savunma",d:"Kritik toleranslı parçalarda yüksek tekrarlanabilirlik."},
@@ -147,7 +147,7 @@ window.I18N = {
       apps:["PCB","Dişli","Yay","Şaft / Mil","Vida","Segman","Medikal iğne","Otomotiv parçaları","Seramik","Kauçuk","Konnektör pini","Kesitler"]
     },
     ref:{
-      eyebrow:"Global Pazarlar",title:"Türkiye'den dünyaya",
+      eyebrow:"Global Pazarlar",title:"Türkiye'den Dünyaya",
       sub:"Küresel pazarda aktif satış, AB'ye ihracat ve ABD ortaklığı ile büyüyen bir ağ.",
       note:"CE sertifikasyon süreci devam etmektedir. Distribütör ve referans bilgileri talep üzerine paylaşılır.",
       items:[
@@ -157,40 +157,40 @@ window.I18N = {
       ]
     },
     contact:{
-      eyebrow:"İletişim",title:"Demo veya teklif için bize ulaşın",
+      eyebrow:"İletişim",title:"Demo veya Teklif İçin Bize Ulaşın",
       sub:"Uygulamanızı paylaşın, doğru konfigürasyonu birlikte belirleyelim. Hızlı ve kesintisiz teknik destek.",
-      name:"Ad Soyad",company:"Firma",email:"E-posta",phone:"Telefon",message:"Mesajınız / uygulamanız",
-      categoryLabel:"Lütfen ürün kategorisini seçin. (zorunlu)",
-      selectCategory:"ürün kategorisi seçin",
+      name:"Adı Soyadı",company:"Firma Adı",email:"E-posta",phone:"Telefon",message:"Mesajınız / Uygulamanız",
+      categoryLabel:"Lütfen ürün kategorisini seçin. (Zorunlu)",
+      selectCategory:"Ürün Kategorisi Seçin",
       catV:"V Serisi (Kompakt · Alan Kamerası)",
       catVR:"VR Serisi (Döner Tabla Entegrasyonu)",
       catVRE:"VRE Serisi (Ultra Hassas · Uzun Parçalar)",
       catW:"W Serisi (Büyük Parçalar · Çizgisel Kamera)",
       catH:"H Serisi (Hat Otomasyonu)",
       catOther:"Diğer / Genel Soru",
-      interestsLabel:"Lütfen ilgilendiğiniz konuları işaretleyin. (zorunlu)",
+      interestsLabel:"Lütfen ilgilendiğiniz konuları işaretleyin. (Zorunlu)",
       interestTalk:"Bir Uzmanla Görüşün",
       interestPricing:"Fiyat Teklifi",
       interestOther:"Diğer",
       messageLabel:"Lütfen uygulamanızın veya sorunuzun detaylarını aşağıdaki alanda paylaşın.",
       emailTitle:"Lütfen E-posta Adresinizi Girin",
       emailSub:"Eğer daha önce kayıt olduysanız, lütfen kayıtlı e-posta adresinizi girin. Henüz kayıt olmadıysanız, kaydınızı tamamlamak için e-posta adresinizi girin.",
-      emailLabel:"Şirket E-posta Adresi (zorunlu)",
-      submit:"Talebi Gönder",sending:"Gönderiliyor…",
+      emailLabel:"Şirket E-posta Adresi (Zorunlu)",
+      submit:"Talebi Gönder",sending:"Gönderiliyor...",
       ok:"Teşekkürler! Talebiniz alındı, en kısa sürede dönüş yapacağız.",
       err:"Bir sorun oluştu. Lütfen tekrar deneyin veya doğrudan e-posta ile ulaşın.",
       note:"Bilgileriniz yalnızca size dönüş yapmak için kullanılır.",
       privacyNote:"Gizliliğinizi %100 garanti ediyoruz – bilgileriniz asla paylaşılmayacaktır.",
       privacyLink:"Gizlilik Bildirimi",
       kvkkPre:"",
-      kvkkLink:"KVKK Aydınlatma Metnini ve Gizlilik Politikasını okudum, onaylıyorum.",
-      marketingConsent:"Ürünler, kampanyalar ve teknik bültenler hakkında ticari elektronik ileti almayı kabul ediyorum. (İsteğe bağlı)",
+      kvkkLink:"KVKK Aydınlatma Metni'ni ve Gizlilik Politikası'nı okudum, onaylıyorum.",
+      marketingConsent:"Ürünler, kampanyalar ve teknik bültenler hakkında ticari elektronik ileti almayı kabul ediyorum. (İsteğe Bağlı)",
       mWeb:"Web",mMail:"E-posta",mPhone:"Telefon",mWa:"WhatsApp",mWaStatus:"Çevrimiçi & Hızlı Dönüş",
-      ctaTitle:"Hızlı yanıt mı istiyorsunuz?",ctaText:"WhatsApp üzerinden ulaşın, uygulamanıza en uygun modeli birlikte belirleyelim.",ctaBtn:"WhatsApp'tan Yaz"
+      ctaTitle:"Hızlı Yanıt mı İstiyorsunuz?",ctaText:"WhatsApp üzerinden ulaşın, uygulamanıza en uygun modeli birlikte belirleyelim.",ctaBtn:"WhatsApp'tan Yaz"
     },
     footer:{
-      about:"Yüksek hassasiyetli modüler telesentrik\noptik ölçüm modülleri. Alan tarayan, PLC entegreli ve\ngelişmiş kalite kontrol çözümleri.",
-      quick:"Hızlı Linkler",contactH:"İletişim",rights:"Tüm hakları saklıdır.",disclaimer:"Modüler Optik Ölçüm Sistemleri"
+      about:"Yüksek hassasiyetli modüler telesentrik optik ölçüm modülleri. Alan tarayan, PLC entegreli ve gelişmiş kalite kontrol çözümleri.",
+      quick:"Hızlı Bağlantılar",contactH:"İletişim",rights:"Tüm Hakları Saklıdır.",disclaimer:"Modüler Optik Ölçüm Sistemleri"
     },
     a11y:{skip:"İçeriğe atla"}
   },
@@ -206,17 +206,17 @@ window.I18N = {
     hero:{
       badge:"Precision Engineering",
       t1:"Optical Measurement\n",t2:"Precise and Modular",t3:"",
-      sub:"- High-Precision Dimensional Control\n- Telecentric Optical Measurement\n- Integrated Lighting and High-Resolution Camera\n- Easy integration into production lines and robot cells",
+      sub:"- High-precision dimensional control\n- Telecentric optical measurement technology\n- Integrated lighting and high-resolution camera\n- Easy integration into production lines and robot cells",
       stat1:"High Accuracy (VRE)",stat2:"Measurement Speed",stat3:"Max. Resolution",secUnit:"s",resolUnit:"MP",
       trust1:"Brand-Independent PLC and Robot Integration",trust2:"User Calibration",trust3:"Continuous Online Manufacturer Support",
-      f1s:"Single shot",f1b:"20 × 20 mm field",f2s:"Measurement time",
+      f1s:"Single-shot",f1b:"20 × 20 mm field",f2s:"Measurement time",
       videoLabel1:"Measurement System",videoLabel2:"Drill Inspection"
     },
     why:{
       eyebrow:"Why SKANOPT",title:"Where SKANOPT Stands Apart",
       sub:"We offer high-precision telecentric technology\ncombined with flexible integration, user calibration, and\noriginal engineering advantages.",
       cards:[
-        {icon:"rotary",t:"Modular and Flexible Design",d:"Flexible mounting options for inline measurements\ndirectly on conveyor and robot lines, or offline\nworkshop inspection."},
+        {icon:"rotary",t:"Modular and Flexible Design",d:"Flexible mounting options for inline measurements directly on conveyor and robot lines, or offline workshop inspection."},
         {icon:"scan",t:"Dual-Telecentric Optics",d:"Distortion-free, wide depth of field, and high-resolution single-shot area scanning for error-free metrology."},
         {icon:"plc",t:"PLC & Robot Integration",d:"Direct communication with popular PLC brands (Siemens, Mitsubishi, Fanuc, Omron) and robot arms via Ethernet I/O."},
         {icon:"calib",t:"User-Friendly Calibration",d:"Practical calibration infrastructure accessible directly via the software interface."},
@@ -225,22 +225,22 @@ window.I18N = {
       ]
     },
     series:{
-      eyebrow:"Product Series",title:"The Right Model for\nEvery Part and Line",
-      sub:"From compact sensor modules\nto large-part measurement and full automation systems,\nfive product families.\nAll models ship I/O-ready.",
+      eyebrow:"Product Series",title:"The Right Model for Every Part and Line",
+      sub:"From compact sensor modules to large-part measurement and full automation systems, five product families. All models ship I/O-ready.",
       headers:{model:"Model",fovh:"Horizontal FOV (mm)",fovv:"Vertical FOV (mm)",acc:"Accuracy (µm)"},
       note:"Field of view (FOV) and accuracy values depend on the model. Contact us for a configuration tailored to your application.",
       order:["V","VR","VRE","W","H"],
       items:{
         V:{name:"V Series",tag:"Compact · Area Camera",desc:"Compact body design, area camera, and 0.4-second measurement speed. Ideal for workshop and line-side quality control.",
-           feats:["Measurement result in 0.4 s","Automation-ready, ships I/O-ready","Factory-calibrated system","Automatic reporting and data integration"]},
-        VR:{name:"VR Series",tag:"Optional Rotary Stage Integration",desc:"V-series sensor module combined with an optional 360° rotary stage for measuring roundness, concentricity, and ovality of shafts and cylindrical parts.",
-           feats:["Roundness, concentricity, and ovality measurements", "Shaft/pin metrology with 360° rotary stage integration", "Automation-ready, I/O-ready interface", "CNC wear offset and automatic reporting"]},
+           feats:["Measurement result in 0.4 s.","Automation-ready, ships I/O-ready.","Factory-calibrated system.","Automatic reporting and data integration."]},
+        VR:{name:"VR Series",tag:"Optional Rotary Stage Integration",desc:"V Series sensor module combined with an optional 360° rotary stage for measuring roundness, concentricity, and ovality of shafts and cylindrical parts.",
+           feats:["Roundness, concentricity, and ovality measurements.","Shaft/pin metrology with 360° rotary stage integration.","Automation-ready, I/O-ready interface.","CNC wear offset and automatic reporting."]},
         VRE:{name:"VRE Series",tag:"Ultra-Precise · Long Parts",desc:"Ultra-high accuracy and vertical measuring length of 100–600 mm.",
-           feats:["Accuracy down to 0.001 µm","Vertical measuring length 100–600 mm","VR series integration options","Long-part and high-precision applications"]},
+           feats:["Accuracy down to 0.001 µm.","Vertical measuring length 100–600 mm.","VR Series integration options.","Long-part and high-precision applications."]},
         W:{name:"W Series",tag:"Large Parts · Line Camera",desc:"For large and long parts. Uses a line camera in the telecentric system to boost accuracy.",
-           feats:["Large and long-part measurement","Higher accuracy with line camera","Vertical 300–1500 mm","Even higher accuracy with WE models"]},
+           feats:["Large and long-part measurement.","Higher accuracy with line camera.","Vertical 300–1500 mm.","Even higher accuracy with WE models."]},
         H:{name:"H Series",tag:"Line Automation",desc:"A wide range focused on full automation. Measurement in 0.4 seconds, 10 model options.",
-           feats:["Measurement in 0.4 s","Wide measuring range, 10 models","Automation-ready, I/O-ready","Factory + user calibration"]}
+           feats:["Measurement in 0.4 s.","Wide measuring range, 10 models.","Automation-ready, I/O-ready.","Factory + user calibration."]}
       }
     },
     how:{
@@ -255,7 +255,7 @@ window.I18N = {
     },
     auto:{
       eyebrow:"Robot & Automation",title:"Seamless Integration Into Your Line",
-      sub:"Brand-independent PLC, robot and conveyor compatibility.\nSends measurement results directly to the machine\nto reduce operator intervention to zero.",
+      sub:"Brand-independent PLC, robot and conveyor compatibility. Sends measurement results directly to the machine to reduce operator intervention to zero.",
       videoTag:"Live inline measurement",videoTag2:"Robot cell — live",
       points:[
         {icon:"robot",t:"Robot & Conveyor",d:"Stäubli conveyor and uFactory robot-arm integration — ready interface in Z-Measure."},
@@ -265,10 +265,10 @@ window.I18N = {
       ]
     },
     sw:{
-      eyebrow:"Z-Measure Software",title:"One interface from measurement to reporting",
-      sub:"Dozens of measurement types, sub-pixel accuracy, automatic reporting and SPC.\nMultilingual interface support.",
+      eyebrow:"Z-Measure Software",title:"One Interface from Measurement to Reporting",
+      sub:"Dozens of measurement types, sub-pixel accuracy, automatic reporting and SPC. Multilingual interface support.",
       measHead:"Supported Measurement Types",
-      measurements:["Rotary diameter","Diameter","Length","Angle","Chamfer","Radius","Thread (pitch + dia.)","Roundness","Perpendicularity","Parallelism","Symmetry","Runout"],
+      measurements:["Rotary Diameter","Diameter","Length","Angle","Chamfer","Radius","Thread (Pitch + Dia.)","Roundness","Perpendicularity","Parallelism","Symmetry","Runout"],
       cards:[
         {icon:"link",t:"Connectivity",d:"Robot communication, ERP/SCADA integration and barcode-based program selection."},
         {icon:"cnc",t:"CNC Offset",d:"Interface to assign wear offset to the machine — zero operator intervention."},
@@ -278,7 +278,7 @@ window.I18N = {
       badges:["Windows 10 / 11","I/O Ready","Multilingual Support"]
     },
     cmp:{
-      eyebrow:"Key Highlights",title:"Why SKANOPT stands out",
+      eyebrow:"Key Highlights",title:"Why SKANOPT Stands Out",
       sub:"Technical and commercial comparison of features with market standards.",
       note:"We offer competitive solutions in telecentric optical measurement systems with original design, direct manufacturer support, and high flexibility.",
       feature:"Features",
@@ -295,14 +295,14 @@ window.I18N = {
       ]
     },
     sec:{
-      eyebrow:"Industries & Applications",title:"Wherever precise measurement matters",
+      eyebrow:"Industries & Applications",title:"Wherever Precise Measurement Matters",
       sub:"From automotive suppliers to implants and home appliances — built for industries where quality control is critical.",
-      appsHead:"Example measured parts",
+      appsHead:"Example Measured Parts",
       sectors:[
-        {icon:"car",t:"Automotive Suppliers",d:"Shaft, piston, valf and gear measurement with optional 360° control."},
-        {icon:"appliance",t:"Home Appliances",d:"Fast dimensional quality control\nin high-volume production."},
-        {icon:"implant",t:"Implants & Medical",d:"Medical parts and needles\nthat demand high precision."},
-        {icon:"chip",t:"Electronics & Semiconductor",d:"Connector pins, chips and\nprecise electronic parts."},
+        {icon:"car",t:"Automotive Suppliers",d:"Shaft, piston, valve and gear measurement with optional 360° control."},
+        {icon:"appliance",t:"Home Appliances",d:"Fast dimensional quality control in high-volume production."},
+        {icon:"implant",t:"Implants & Medical",d:"Medical parts and needles that demand high precision."},
+        {icon:"chip",t:"Electronics & Semiconductor",d:"Connector pins, chips and precise electronic parts."},
         {icon:"cnc",t:"CNC & Metalworking",d:"0.4 s measurement + CNC wear offset means zero production loss."},
         {icon:"mold",t:"Plastics & Molding",d:"Ideal telecentric measurement for injection-molded parts."},
         {icon:"aero",t:"Aerospace & Defense",d:"High repeatability on parts with critical tolerances."},
@@ -311,7 +311,7 @@ window.I18N = {
       apps:["PCB","Gears","Springs","Shafts","Screws","Circlips","Medical needles","Automotive parts","Ceramics","Rubber","Connector pins","Cross-sections"]
     },
     ref:{
-      eyebrow:"Global Markets",title:"From Türkiye to the world",
+      eyebrow:"Global Markets",title:"From Türkiye to the World",
       sub:"Global sales presence, exports to the EU, and a US partnership — a growing network.",
       note:"CE certification is in progress. Distributor and reference details are shared on request.",
       items:[
@@ -321,26 +321,26 @@ window.I18N = {
       ]
     },
     contact:{
-      eyebrow:"Contact",title:"Reach us for a demo or quote",
+      eyebrow:"Contact",title:"Reach Us for a Demo or Quote",
       sub:"Share your application and let's define the right configuration together. Fast and seamless manufacturer technical support.",
-      name:"Full Name",company:"Company",email:"E-mail",phone:"Phone",message:"Your message / application",
-      categoryLabel:"Please select product category. (required)",
-      selectCategory:"select product category",
+      name:"Full Name",company:"Company",email:"E-mail",phone:"Phone",message:"Your Message / Application",
+      categoryLabel:"Please select product category. (Required)",
+      selectCategory:"Select Product Category",
       catV:"V Series (Compact · Area Scan)",
       catVR:"VR Series (Rotary Stage)",
       catVRE:"VRE Series (High Precision / Long Parts)",
       catW:"W Series (Large Parts / Line Scan)",
       catH:"H Series (Full Automation)",
       catOther:"Other / General Inquiry",
-      interestsLabel:"Please check the item(s) you are interested in. (required)",
+      interestsLabel:"Please check the item(s) you are interested in. (Required)",
       interestTalk:"Talk to a Specialist",
       interestPricing:"Pricing",
       interestOther:"Other",
       messageLabel:"Please share the details of your application or inquiry in the section below.",
       emailTitle:"Please Enter Your Email Address",
       emailSub:"If you have registered in the past, please enter your registered email address below. If you are not yet registered, please enter your email address below to complete your submission.",
-      emailLabel:"Business E-mail Address (required)",
-      submit:"Send Request",sending:"Sending…",
+      emailLabel:"Business E-mail Address (Required)",
+      submit:"Send Request",sending:"Sending...",
       ok:"Thank you! Your request has been received; we'll get back to you shortly.",
       err:"Something went wrong. Please try again or contact us by e-mail.",
       note:"Your information is used only to get back to you.",
@@ -353,8 +353,8 @@ window.I18N = {
       ctaTitle:"Need a quick reply?",ctaText:"Reach us on WhatsApp and we'll pick the best model for your application together.",ctaBtn:"Message on WhatsApp"
     },
     footer:{
-      about:"High-precision modular telecentric\noptical measurement sensors. Single-shot area scanning, PLC-integrated, advanced quality control solutions.",
-      quick:"Quick Links",contactH:"Contact",rights:"All rights reserved.",disclaimer:"Modular Optical Measurement Systems"
+      about:"High-precision modular telecentric optical measurement sensors. Single-shot area scanning, PLC-integrated, advanced quality control solutions.",
+      quick:"Quick Links",contactH:"Contact",rights:"All Rights Reserved.",disclaimer:"Modular Optical Measurement Systems"
     },
     a11y:{skip:"Skip to content"}
   }
