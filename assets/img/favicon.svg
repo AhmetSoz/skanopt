@@ -1,20 +1,58 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
-  <!-- Outer circle: bold dark teal -->
-  <circle cx="16" cy="16" r="11" fill="#092f2b" stroke="#0e6e66" stroke-width="2"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="none">
+  <defs>
+    <!-- Background Lens Gradients -->
+    <radialGradient id="lensCore" cx="50%" cy="50%" r="50%" fx="35%" fy="35%">
+      <stop offset="0%" stop-color="#00f3ff" />
+      <stop offset="60%" stop-color="#007d94" />
+      <stop offset="100%" stop-color="#051c21" />
+    </radialGradient>
+    <radialGradient id="lensPupil" cx="50%" cy="50%" r="50%" fx="35%" fy="35%">
+      <stop offset="0%" stop-color="#00d4ff" />
+      <stop offset="70%" stop-color="#003540" />
+      <stop offset="100%" stop-color="#02080a" />
+    </radialGradient>
+    <radialGradient id="shutterBg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#343a40" />
+      <stop offset="70%" stop-color="#212529" />
+      <stop offset="100%" stop-color="#141618" />
+    </radialGradient>
+  </defs>
+
+  <!-- 1. Vertical Cyan Glow Line (underneath) -->
+  <line x1="128" y1="8" x2="128" y2="248" stroke="#00f3ff" stroke-width="12" stroke-opacity="0.25" stroke-linecap="round" />
   
-  <!-- Center circle: bright cyan -->
-  <circle cx="16" cy="16" r="4.5" fill="#00f3ff"/>
+  <!-- 2. Outer Black Container Ring -->
+  <circle cx="128" cy="128" r="94" fill="#0f1112" />
+  <circle cx="128" cy="128" r="90" fill="url(#shutterBg)" stroke="#495057" stroke-width="1.5" />
   
-  <!-- Vertical cyan line: bold, stroke-width 2 -->
-  <line x1="16" y1="1" x2="16" y2="31" stroke="#00f3ff" stroke-width="2" stroke-linecap="round"/>
-  
-  <!-- Simple blade separators: dark lines radiating from the center -->
-  <g stroke="#092f2b" stroke-width="1.5">
-    <line x1="16" y1="11.5" x2="16" y2="5" />
-    <line x1="19.9" y1="13.75" x2="25.5" y2="10.5" />
-    <line x1="19.9" y1="18.25" x2="25.5" y2="21.5" />
-    <line x1="16" y1="20.5" x2="16" y2="27" />
-    <line x1="12.1" y1="18.25" x2="6.5" y2="21.5" />
-    <line x1="12.1" y1="13.75" x2="6.5" y2="10.5" />
+  <!-- 3. Aperture Blades (Curved separators) -->
+  <g stroke="#ffffff" stroke-width="1.8" stroke-opacity="0.85" fill="none">
+    <!-- Base curve path -->
+    <path id="bladeLine" d="M 128 90 Q 155 75, 191.64 64.36" />
+    <!-- Rotate 8 times -->
+    <use href="#bladeLine" transform="rotate(45 128 128)" />
+    <use href="#bladeLine" transform="rotate(90 128 128)" />
+    <use href="#bladeLine" transform="rotate(135 128 128)" />
+    <use href="#bladeLine" transform="rotate(180 128 128)" />
+    <use href="#bladeLine" transform="rotate(225 128 128)" />
+    <use href="#bladeLine" transform="rotate(270 128 128)" />
+    <use href="#bladeLine" transform="rotate(315 128 128)" />
   </g>
+  
+  <!-- 4. Metrology Ticks (Dial) -->
+  <circle cx="128" cy="128" r="48" fill="none" stroke="#00f3ff" stroke-width="1.5" stroke-dasharray="2, 4" stroke-opacity="0.7" />
+
+  <!-- 5. Central Lens Core -->
+  <circle cx="128" cy="128" r="38" fill="url(#lensCore)" stroke="#0f1112" stroke-width="2" />
+  <circle cx="128" cy="128" r="28" fill="none" stroke="#00f3ff" stroke-width="1.8" stroke-opacity="0.6" />
+  <circle cx="128" cy="128" r="18" fill="url(#lensPupil)" stroke="#0f1112" stroke-width="1" />
+  
+  <!-- Lens reflex detail -->
+  <path d="M 120 122 A 10 10 0 0 1 133 115" fill="none" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-opacity="0.6" />
+  <circle cx="134" cy="120" r="1.5" fill="#ffffff" fill-opacity="0.8" />
+
+  <!-- 6. Vertical Cyan Dimension Line (Front) -->
+  <line x1="128" y1="4" x2="128" y2="252" stroke="#00f3ff" stroke-width="3" stroke-linecap="round" />
+  <line x1="120" y1="4" x2="136" y2="4" stroke="#00f3ff" stroke-width="3" stroke-linecap="round" />
+  <line x1="120" y1="252" x2="136" y2="252" stroke="#00f3ff" stroke-width="3" stroke-linecap="round" />
 </svg>
